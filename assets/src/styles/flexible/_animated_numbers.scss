@@ -1,0 +1,57 @@
+.animated-numbers{
+
+    & .number-container{
+        aspect-ratio: 1;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 2.5rem;
+        max-width: 100%;
+        flex-grow: 0;
+        flex-shrink: 0;
+        
+        & .number-ring{
+            content: "";
+            display: block;
+            border: 4px solid $primary;
+            border-radius: 50%;
+            position: absolute;
+            width: calc(100% - 2rem);
+            top: 50%;
+            transform: translateY(-50%);
+            left: 1rem;
+            aspect-ratio: 1;
+            
+        }
+
+        & .number-label{
+            text-align: center;
+            font-size: 1.25rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1.15;
+            padding-bottom: 1rem;
+
+        }
+        
+
+        & .countup-animated-number{
+            font-size: 4.5rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1.1;
+            text-transform: uppercase;
+            padding-bottom: 0;
+
+            & .append,
+            & .prepend{
+                text-transform: none !important;
+            }
+            
+        }
+
+    }
+
+}

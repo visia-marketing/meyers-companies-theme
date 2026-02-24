@@ -1,0 +1,55 @@
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Theme @imports
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// 1. Your custom variables and variable overwrites.
+@import "common/variables";
+
+// 2. Import default variables and available mixins.
+@import "uikit/src/scss/variables-theme.scss";
+@import "uikit/src/scss/mixins-theme.scss";
+
+// 3. Your custom mixin overwrites.
+@mixin hook-card() { color: #000; }
+
+// 4. Import UIkit.
+@import "uikit/src/scss/uikit-theme.scss";
+
+
+// Slick Carousel
+@import "../../../node_modules/slick-carousel/slick/slick.scss";
+@import "../../../node_modules/slick-carousel/slick/slick-theme.scss";
+
+// Simplelightbox
+@import "../../../node_modules/simplelightbox/";
+
+// import AOS
+@import "../../../node_modules/aos/dist/aos.css";
+
+
+// Your custom styles
+@import "common/global-styles";
+@import "common/global-layouts";
+@import "common/helpers";
+@import "components/boxes";
+@import "components/breadcrumbs";
+@import "components/buttons";
+@import "components/forms";
+@import "components/misc";
+@import "components/tables";
+@import "components/wp-classes";
+@import "partials/page-content";
+@import "partials/page-header";
+@import "partials/posts";
+@import "partials/product";
+@import "partials/search";
+@import "partials/sidebar";
+@import "partials/site-header";
+@import "partials/site-footer";
+@import "partials/tinymce";
+@import "woocommerce/wc-archive";
+@import "woocommerce/wc-single";
+@import "flexible/flexible";
+@import "pages/home";
