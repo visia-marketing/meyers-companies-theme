@@ -2,9 +2,14 @@
   $page_header_content = get_field('page_header_content');
   $page_header_style = get_field('page_header_style');
   $show_page_header = get_field('show_page_header');
-  // if( is_front_page() ){
-  //   $show_page_header = false;
-  // }
+  $show_breadcrumbs = get_field('show_breadcrumbs');
+
+  if( is_front_page() ){
+    $show_page_header = false;
+
+    get_template_part('partials/home-page', 'hero');
+
+  }
 
   if( is_array( $page_header_content) ){
 
@@ -56,9 +61,13 @@
     }
     ?>
     <div class="page-header-content-wrapper fc-section fc-section-<?php echo $page_heading_background;?> page-header-<?php echo $page_heading_size; ?>">
-      <div class="uk-container">
-        <div class="small-12 large-8 large-offset-2 uk-text-center columns">
-          <div class="page-header-content">
+      <div class="uk-container uk-container-large uk-text-left uk-flex">
+          <div class="page-header-content uk-flex uk-flex-column uk-flex-center uk-margin-medium-top uk-margin-medium-bottom">
+
+          <?php if( $show_breadcrumbs ): ?>
+            <?php get_template_part('partials/page', 'breadcrumbs'); ?>
+          <?php endif; ?>
+
             <?php 
             $header_content = get_field('page_header_content');
           // if ( $page_heading || $page_sub_heading ): 
@@ -68,7 +77,7 @@
                   <?php echo esc_html($page_sub_heading); ?>
               </p>
               <?php endif; ?>
-              <h1 class="g-section-title">
+              <h1 class="uk-margin-remove">
                 <?php if ( $page_heading ): echo esc_html($page_heading); else: the_title(); endif; ?>
               </h1>
               <?php if ( !empty($page_heading_text) ): ?>
@@ -77,7 +86,6 @@
                 </p>
             <?php  endif; ?>
           </div>
-        </div>
       </div>
     </div>
   </header>

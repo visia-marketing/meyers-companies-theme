@@ -17,25 +17,33 @@
   }
 
   .fc-section {
-    padding: 30px 0;
+    // padding: 30px 0;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    @include breakpoint(medium) {
-      padding: 50px 0;
+     & > .fc-section-columns {
+      min-width: calc(100% - 4rem);
+      max-width: calc(100% - 4rem);
     }
 
-    &.fc-section-1 {
-      padding: 30px 0 30px;
+    // @include breakpoint(medium) {
+    //   padding: 50px 0;
+    // }
 
-      @include breakpoint(medium) {
-        padding: 70px 0 50px;
-      }
+    &.fc-section-1 {
+      // padding: 30px 0 30px;
+
+      // @include breakpoint(medium) {
+      //   padding: 70px 0 50px;
+      // }
 
     }
 
     &.fc-section-image {
-      background: rgba(6, 47, 110, 0.66); // radial-gradient(circle, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+      //background: rgba(6, 47, 110, 0.66); // radial-gradient(circle, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
       position: relative;
       background-blend-mode: multiply;
 
@@ -49,6 +57,19 @@
          bottom: 0;
         width: 100%;
         z-index: -1;
+      }
+
+      & > .background-image{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        display: block;
+        background-size: cover; 
+        background-position: center; 
       }
 
       h1, h2, h3, h4, h5, h6, p, li, a, .g-section-subtitle {
@@ -93,7 +114,7 @@ body *{
     background-color: $white;
   
     //h1, h2, h3, h4, h5, h6, p, a, li, blockquote, .g-style-section-title, .g-style-section-heading, .g-section-subtitle {
-    & * {
+    & *:not(.g-section-subtitle) {
       color: $black;
     }
   
@@ -104,10 +125,9 @@ body *{
   }
   
   & .fc-section-dark {
-    background-color: $black;
+    background-color: $blue;
   
-    //h1, h2, h3, h4, h5, h6, p, a, li, blockquote, .g-style-section-title, .g-style-section-heading, .g-section-subtitle {
-    & * {
+    & *:not(.g-section-subtitle) {
       color: #fff;
     }
   

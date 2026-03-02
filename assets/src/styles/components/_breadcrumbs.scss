@@ -1,16 +1,18 @@
 .page-breadcrumbs {
-  color: $black;
-  font-size: .925rem;
-  margin: 1.35rem 0 4rem;
-
-  span > a > span {
-    color: $black;
-    font-weight: 600;
+  color: $gray;
+  
+  & span.current-item{
+    color: $secondary;
   }
 
-  span {
-    font-size: .925rem;
-    font-weight: 400;
+  & *{
+    font-size:  0.9375rem;
+        font-weight: 600;
+  }
+
+  span > a > span {
+    color: $gray;
+
   }
 
 }
