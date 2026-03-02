@@ -6,18 +6,18 @@ body#tinymce {
 .g {
 
   &-section-subtitle {
-    color: $black;
+    color: $secondary;
     display: block;
     font-family: $sans;
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 0.975rem;
+    font-weight: 700;
     letter-spacing: 2px;
     line-height: 1.2;
     margin-bottom: 0px;
     text-transform: uppercase;
 
     @include breakpoint(medium) {
-      font-size: 17px;
+      font-size: 1.125rem;
       letter-spacing: 3.5px;
     }
 
@@ -50,14 +50,8 @@ body#tinymce {
     margin: 0 0 0;
   }
 
-  &-section-large-numbers {
-    color: $primary;
-    display: block;
-    font-family: $sans;
-    font-size: 90px;
-    font-weight: 300;
-    line-height: 1;
-    margin-bottom: 20px;
+  &-section-highlight-orange {
+    color: $secondary;
   }
 
   &-button.button {
@@ -104,4 +98,10 @@ body#tinymce {
 
   }
 
+}
+
+p:has(.g-section-subtitle) + h1,
+p:has(.g-section-subtitle) + h2,
+p:has(.g-section-subtitle) + h3{
+  margin-top: 0.5rem;
 }

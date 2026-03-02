@@ -14,7 +14,7 @@ $serif:     $sans;
 ///////////////////////////////////////////////
 
 // Common Colors
-$gray:        #898b8c;
+$gray:        #EEEDF2;
 $light-gray:  #e6e6e6;
 $medium-gray: #c8c8c8;
 $dark-gray:   #3A3A3A;
@@ -31,15 +31,16 @@ $grey-border: $gray-border;
 $white:       #ffffff;
 
 // Brand Colors - Set the brand colors here
-$yellow:       #FBA919;
+$orange:     #FF8200;
+$blue:       #002F86;
 $black:      #000000;
 
 $lightGrade: linear-gradient(0deg, rgba(255, 255, 255, 0.00) -6.56%, #EDF4FA 88.2%);
 $darkGrade: linear-gradient(270deg, rgba(0, 43, 73, 0.70) -5%, rgba(0, 34, 57, 0.70) 70%);
 
 
-$primary: $yellow;
-$secondary: $dark-gray;
+$primary: $blue;
+$secondary: $orange;
 $dark: darken($primary, 10%);
 
 
@@ -60,13 +61,13 @@ $sec-pad-xlarge:  9rem;
 
 
 // Top Bar
-$top-header-background: #f3f3f3;
+$top-header-background: $orange;
 $top-header-color: $black;
 $top-header-link-color: $black;
 
 // Main Header - this is confusing - header nav or headings
-$main-header-background: $light-gray;
-$main-header-link-color: $black;
+$main-header-background: $white;
+$main-header-link-color: $blue;
 $main-header-link-font: $sans;
 $main-header-button-background-color: $primary;
 $main-header-button-link-color: $white;
@@ -100,10 +101,12 @@ $global-color: #666 !default;
 $accordion-default-title-hover-color: $global-color !default;
 $accordion-default-content-margin-top: $global-margin !default;
 
+$global-2xlarge-font-size: 2.875rem;
+
 
 
 //Footer
-$footer-bg: $medium-gray;
+$footer-bg: $blue;
 
 $breakpoints: (
   'xsmall': $container-xsmall-max-width,
