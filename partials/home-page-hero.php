@@ -11,10 +11,10 @@
     }
     ?>
     <div class="page-header-content-wrapper fc-section fc-section-image page-header-hero">
-        <div class="uk-container uk-container-large uk-text-left uk-flex">
-            <div class="page-header-content uk-flex uk-flex-column uk-flex-center uk-margin-medium-top uk-margin-medium-bottom">
+        <div class="uk-container uk-container-large uk-margin-remove">
+            <div class="page-header-content uk-margin-left uk-margin-right uk-margin-remove@l">
 
-                <div class="uk-width-1-2">
+                <div class="uk-width-2xlarge">
                     <?php echo $home_hero_content; ?>
                 </div>
 

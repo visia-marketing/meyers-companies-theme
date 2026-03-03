@@ -5,11 +5,13 @@
 //////////////////////////////////////////////////////////////////////////////////////////////
 /// 
 
-$avenirNext: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
+$acumin: "acumin-pro", sans-serif;
+$acuminCondensed: "acumin-pro-condensed", sans-serif;
 $fontawesome: "Font Awesome 6 Free";
 
-$sans:      $avenirNext;
+$sans:      $acumin;
 $serif:     $sans;
+$condensed: $acuminCondensed;
 
 ///////////////////////////////////////////////
 
@@ -88,7 +90,10 @@ $offcanvas-close-position: 32px;
 $offcanvas-close-padding: 10px;
 $offcanvas-close-position-s: 16px;
 
+// $global-font-size: 16px !default;
+// $base-body-font-size: 1.375rem;
 
+$base-heading-font-weight: 700;
 $global-margin: 20px !default;
 $accordion-default-item-margin-top: $global-margin !default;
 $accordion-default-title-gap: 15px !default;
@@ -102,6 +107,13 @@ $accordion-default-title-hover-color: $global-color !default;
 $accordion-default-content-margin-top: $global-margin !default;
 
 $global-2xlarge-font-size: 2.875rem;
+
+
+// $width-small-width: 150px !default;
+// $width-medium-width: 300px !default;
+// $width-large-width: 450px !default;
+// $width-xlarge-width: 600px !default;
+$width-2xlarge-width: 800px;
 
 
 

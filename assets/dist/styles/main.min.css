@@ -338,7 +338,7 @@ h6, .uk-h6,
 .uk-heading-3xlarge {
   margin: 0 0 20px 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: normal;
+  font-weight: 700;
   color: #333;
   text-transform: none;
 }
@@ -8165,7 +8165,7 @@ ul.uk-nav-sub {
 }
 
 .uk-width-2xlarge {
-  width: 750px;
+  width: 800px;
 }
 
 /* Auto */
@@ -8237,7 +8237,7 @@ ul.uk-nav-sub {
     width: 600px;
   }
   .uk-width-2xlarge\@s {
-    width: 750px;
+    width: 800px;
   }
   /* Auto */
   .uk-width-auto\@s {
@@ -8328,7 +8328,7 @@ ul.uk-nav-sub {
     width: 600px;
   }
   .uk-width-2xlarge\@m {
-    width: 750px;
+    width: 800px;
   }
   /* Auto */
   .uk-width-auto\@m {
@@ -8419,7 +8419,7 @@ ul.uk-nav-sub {
     width: 600px;
   }
   .uk-width-2xlarge\@l {
-    width: 750px;
+    width: 800px;
   }
   /* Auto */
   .uk-width-auto\@l {
@@ -8510,7 +8510,7 @@ ul.uk-nav-sub {
     width: 600px;
   }
   .uk-width-2xlarge\@xl {
-    width: 750px;
+    width: 800px;
   }
   /* Auto */
   .uk-width-auto\@xl {
@@ -13247,11 +13247,11 @@ a, button, .button, [type=submit] {
 .button,
 .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button,
 .wpfFilterButton.wpfButton {
-  background-color: #002F86;
+  background-color: #FF8200;
   border-radius: 2px;
   border: none;
   color: #ffffff;
-  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
+  font-family: "acumin-pro-condensed", sans-serif;
   font-size: 13px !important;
   font-weight: 600;
   letter-spacing: 0.75px;
@@ -13271,7 +13271,7 @@ a, button, .button, [type=submit] {
 .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button.active,
 .wpfFilterButton.wpfButton:hover,
 .wpfFilterButton.wpfButton.active {
-  background-color: rgb(0, 34.478358209, 98.3);
+  background-color: rgb(219.3, 111.8, 0);
   color: #fff !important;
 }
 .button.grey,
@@ -13497,6 +13497,12 @@ a, button, .button, [type=submit] {
   padding-top: 15.5rem;
   padding-bottom: 11.5rem;
 }
+.fc-page-header .page-header-content-wrapper.page-header-hero p {
+  font-size: 1.375rem;
+}
+.fc-page-header .page-header-content-wrapper.page-header-hero h1 {
+  font-size: 3.75rem;
+}
 .fc-page-header .page-header-content-wrapper .page-header-content p:last-child {
   margin-bottom: 0;
 }
@@ -13510,7 +13516,7 @@ a, button, .button, [type=submit] {
 .post-single .post-content-wrapper .post-header .post-type {
   color: #000000;
   display: block;
-  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
+  font-family: "acumin-pro", sans-serif;
   font-size: 15px;
   letter-spacing: 3px;
   margin: 70px 0 30px;
@@ -13538,7 +13544,7 @@ a, button, .button, [type=submit] {
   text-transform: uppercase;
 }
 .post-single .post-content-wrapper .post-header .post-meta time {
-  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
+  font-family: "acumin-pro", sans-serif;
   font-size: 15px;
   letter-spacing: 1px;
 }
@@ -13549,7 +13555,7 @@ a, button, .button, [type=submit] {
 }
 
 .Xproduct_title.entry-title {
-  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
+  font-family: "acumin-pro", sans-serif;
   font-size: 50px;
   font-weight: 700;
   margin-top: 75px !important;
@@ -13642,11 +13648,11 @@ a, button, .button, [type=submit] {
 }
 .main-search .main-search-bar .main-search-form form label input::-moz-placeholder {
   color: #3A3A3A;
-  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
+  font-family: "acumin-pro", sans-serif;
 }
 .main-search .main-search-bar .main-search-form form label input::placeholder {
   color: #3A3A3A;
-  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
+  font-family: "acumin-pro", sans-serif;
 }
 .main-search .main-search-bar .main-search-form form button {
   margin-left: auto;
@@ -13926,7 +13932,7 @@ a, button, .button, [type=submit] {
     border-radius: 2px;
     border: none;
     color: #ffffff;
-    font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
+    font-family: "acumin-pro", sans-serif;
     font-size: 14px !important;
     font-weight: 600;
     letter-spacing: 1px;
@@ -14179,7 +14185,7 @@ a, button, .button, [type=submit] {
   border-radius: 5px;
   color: #fff;
   display: block;
-  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
+  font-family: "acumin-pro", sans-serif;
   font-size: 13px !important;
   font-weight: 500;
   margin: 10px auto 10px;
@@ -14426,7 +14432,7 @@ body#tinymce {
 .g-section-subtitle {
   color: #FF8200;
   display: block;
-  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
+  font-family: "acumin-pro", sans-serif;
   font-size: 0.975rem;
   font-weight: 700;
   letter-spacing: 2px;
@@ -14443,7 +14449,7 @@ body#tinymce {
 .g-section-title {
   color: #000000;
   display: block;
-  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
+  font-family: "acumin-pro", sans-serif;
   font-size: 26px;
   font-weight: 800;
   margin: 0 0 30px;
@@ -14461,7 +14467,7 @@ body#tinymce {
 .g-section-intro {
   color: #000000;
   display: block;
-  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
+  font-family: "acumin-pro", sans-serif;
   font-size: 16px;
   font-weight: 400;
   margin: 0 0 0;
@@ -14476,7 +14482,7 @@ body#tinymce {
   border: 1px solid #000000;
   color: #000000;
   display: inline-block;
-  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
+  font-family: "acumin-pro", sans-serif;
   font-size: 14px !important;
   font-weight: 600;
   margin-top: 1rem;
@@ -15571,9 +15577,6 @@ p:has(.g-section-subtitle) + h3 {
 .fc-page-header.page-header .page-header-content-wrapper {
   position: relative;
   z-index: 2;
-}
-.fc-page-header.page-header h1 {
-  font-weight: 500;
 }
 
 .fc-section-heading {

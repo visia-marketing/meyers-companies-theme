@@ -1,11 +1,11 @@
 .button,
 .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button,
 .wpfFilterButton.wpfButton {
-	background-color: $primary;
+	background-color: $secondary;
 	border-radius: 2px;
   border: none;
 	color: $white;
-	font-family: $sans;
+	font-family: $condensed;
 	font-size: 13px !important;
 	font-weight: 600;
   letter-spacing: .75px;
@@ -21,7 +21,7 @@
   }
 
 	&:hover, &.active {
-		background-color: darken($primary,7%);
+		background-color: darken($secondary,7%);
     color: #fff !important;
 	}
 
