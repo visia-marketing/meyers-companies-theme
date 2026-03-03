@@ -1,0 +1,26 @@
+//////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Font Awesome 7 Kit Helpers
+//
+// This file provides utilities for Font Awesome 7 Kit usage throughout the theme.
+// The Kit (@awesome.me/kit-f71e020b2c) is loaded via JavaScript and handles all icon rendering.
+//
+// Font Awesome 7 Syntax:
+// - Solid: fa-solid fa-[icon-name]
+// - Regular: fa-regular fa-[icon-name]
+// - Light: fa-light fa-[icon-name] (use if available in your Kit)
+// - Duotone: fa-duotone fa-[icon-name] (use if available in your Kit)
+// - Brands: fa-brands fa-[icon-name]
+//
+// Usage in HTML/PHP:
+//   <i class="fa-solid fa-arrow-right"></i>
+//   <i class="fa-regular fa-search"></i>
+//   <i class="fa-brands fa-github"></i>
+//
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+// Note: Font Awesome 7 Kit handles all font families automatically
+// If you need to style icons with CSS, use the standard FA 7 classes:
+// .fa-solid, .fa-regular, .fa-light, .fa-duotone, .fa-brands
+//
+// The Kit's injected CSS provides all necessary font declarations

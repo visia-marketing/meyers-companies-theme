@@ -42,7 +42,7 @@
                   <span class="search-permalink"><?php the_permalink(); ?></span>
                   <p><?php echo $excerpt; ?></p>
                   <?php 
-                    echo '<a href="' . get_the_permalink() . '" class="read-more">Read More <i class="fa-solid fa-aruk-container-right"></i></a>';
+                    echo '<a href="' . get_the_permalink() . '" class="read-more">Read More <i class="fa-solid fa-arrow-right-long"></i></a>';
                   ?>
                 </div>
               </div>      

@@ -13,7 +13,8 @@ module.exports = {
     devtool: 'source-map',
     output: {
         filename: 'assets/dist/scripts/[name].min.js',
-        path: path.resolve(__dirname)
+        path: path.resolve(__dirname),
+        publicPath: '/wp-content/themes/elkhart-plastics/'
     },
     externals: {
         jquery: 'jQuery'  // ✅ Tell webpack jQuery is external
@@ -54,10 +55,17 @@ module.exports = {
                 ]
             },
             {
+                test: /\.css$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader'
+                ]
+            },
+            {
                 test: /\.(woff|woff2|eot|ttf|otf)$/,
                 type: 'asset/resource',
                 generator: {
-                  filename: 'webfonts/[name][ext]'
+                  filename: 'assets/dist/webfonts/[name][ext]'
                 }
             },
             {

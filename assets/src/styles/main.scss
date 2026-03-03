@@ -7,6 +7,12 @@
 // 1. Your custom variables and variable overwrites.
 @import "common/variables";
 
+// Font Awesome Kit (installed via npm)
+@import "common/fontawesome-kit";
+
+// Font Awesome 6 helpers and standardization
+@import "common/fontawesome-helpers";
+
 // 2. Import default variables and available mixins.
 @import "uikit/src/scss/variables-theme.scss";
 @import "uikit/src/scss/mixins-theme.scss";
