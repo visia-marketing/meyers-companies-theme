@@ -20,6 +20,6 @@
   {
     "title": "Button with Arrow",
     "selector": "a",
-    "classes": "button button-arrow"
+    "classes": "uk-button uk-button-arrow"
   }
 ]
