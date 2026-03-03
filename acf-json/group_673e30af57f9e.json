@@ -78,11 +78,9 @@
             },
             "choices": {
                 "light": "White",
-                "grey": "Beige",
-                "light grid-svg": "White + Grid",
-                "grey grid-svg": "Beige + Grid",
-                "image": "Image",
-                "dark": "Dark Green"
+                "gray": "Gray",
+                "dark": "Blue",
+                "image": "Image"
             },
             "default_value": false,
             "return_format": "value",
@@ -301,7 +299,7 @@
             },
             "choices": {
                 "left": "Left",
-                "middle": "Center",
+                "center": "Center",
                 "right": "Right"
             },
             "default_value": false,
@@ -334,7 +332,7 @@
                 "uk-container uk-container-large": "Regular",
                 "uk-container uk-container-xlarge": "Large"
             },
-            "default_value": false,
+            "default_value": "uk-container uk-container-large",
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
@@ -383,5 +381,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1772476287
+    "modified": 1772548231
 }
