@@ -7,7 +7,9 @@
 
 $acumin: "acumin-pro", sans-serif;
 $acuminCondensed: "acumin-pro-condensed", sans-serif;
-$fontawesome: "Font Awesome 6 Free";
+
+// Font Awesome 7 Kit font families (automatically injected by Kit CSS)
+$fontawesome: 'Font Awesome 7 Free', 'Font Awesome 7 Pro', 'Font Awesome 7 Brands';
 
 $sans:      $acumin;
 $serif:     $sans;
