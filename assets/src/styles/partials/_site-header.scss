@@ -207,7 +207,7 @@ $top-header-link-color: $top-header-link-color;
           position: relative;
           display: flex;
           gap: 0.5rem;
-          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.55);
+          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
 
           transition: 
           transform 160ms ease,
@@ -232,7 +232,7 @@ $top-header-link-color: $top-header-link-color;
 
           &:hover{
             transform: translateY(-2px);
-            box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.45);
+            box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
           }
 
 
