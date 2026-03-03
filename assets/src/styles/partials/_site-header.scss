@@ -51,6 +51,8 @@ $top-header-link-color: $top-header-link-color;
   display: none;
 }
 
+
+
 @include breakpoint(medium) {
   
   .main-header .primary-navigation-wrapper {
@@ -63,7 +65,7 @@ $top-header-link-color: $top-header-link-color;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 30px;
+      gap: 2rem;
       height: 100%;
 
 
@@ -315,6 +317,8 @@ $top-header-link-color: $top-header-link-color;
   }
 
 }
+
+
 
 .top-header {
   background-color: $top-header-background;

@@ -32,6 +32,35 @@
             "save_options": 0
         },
         {
+            "key": "field_69a75c1e4470f",
+            "label": "Card Style",
+            "name": "card_style",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "15",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "basic": "Basic",
+                "primary": "Primary"
+            },
+            "default_value": "basic",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
             "key": "field_672b86eb2abcd",
             "label": "Cards Per Row",
             "name": "cards_per_row",
@@ -298,5 +327,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1771382958
+    "modified": 1772575811
 }
