@@ -299,7 +299,7 @@
             },
             "choices": {
                 "left": "Left",
-                "center": "Center",
+                "middle": "Center",
                 "right": "Right"
             },
             "default_value": false,
@@ -381,5 +381,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1772548231
+    "modified": 1772548607
 }
