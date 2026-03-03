@@ -95,6 +95,8 @@ $offcanvas-close-position-s: 16px;
 // $global-font-size: 16px !default;
 // $base-body-font-size: 1.375rem;
 
+
+$base-heading-font-family: $condensed;
 $base-heading-font-weight: 700;
 $global-margin: 20px !default;
 $accordion-default-item-margin-top: $global-margin !default;
@@ -108,8 +110,13 @@ $global-color: #666 !default;
 $accordion-default-title-hover-color: $global-color !default;
 $accordion-default-content-margin-top: $global-margin !default;
 
+$global-large-font-size: 2.5rem;
+$global-xlarge-font-size: 2.75rem;
 $global-2xlarge-font-size: 2.875rem;
 
+
+$base-h2-font-size-m: $global-large-font-size;
+$base-h3-font-size: $global-large-font-size;
 
 // $width-small-width: 150px !default;
 // $width-medium-width: 300px !default;

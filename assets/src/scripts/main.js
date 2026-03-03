@@ -21,6 +21,9 @@ import 'simple-lightbox';
 import AOS from 'aos';
 import { CountUp } from 'countup.js';
 
+// Font Awesome 7 Kit - all icons (standard + custom/pro icons)
+import '@awesome.me/kit-f71e020b2c';
+
 // If you only need specific modules:
 // import { Foundation, Accordion, Tabs } from 'foundation-sites';
 (function($) {
@@ -38,67 +41,109 @@ import { CountUp } from 'countup.js';
           duration: 1000,
           once: true,
         },
+
+        
       );
 
+        function hoverCardsInit(){
+          // get all elements with data-hover-card
+          const hoverCards = document.querySelectorAll('.cards-style--primary');
 
-
-        if (document.querySelector('.countup-animated-number')) {
-          const animatedNumbers = document.querySelectorAll('.countup-animated-number .number-span');
-        
-          animatedNumbers.forEach((element) => {
-            let targetNumber = parseInt(element.getAttribute('data-target'), 10);
-            let delayMs = parseInt(element.getAttribute('data-delay'), 10);
-            let startVal = parseInt(element.getAttribute('data-start'), 10) || 0;
-        
-            let countUp = new CountUp(element, targetNumber, {
-              duration: 2,
-              separator: ',',
-              enableScrollSpy: true,
-              scrollSpyOnce: true,
-              scrollSpyDelay: 0,
-              startVal: startVal,
-            });
-        
-            if (countUp.error) {
-              console.error(countUp.error);
+          hoverCards.forEach(card => {
+            // get the height of card-p ( if it exists )
+            const cardP = card.querySelector('.hover-panel');
+            let cardPHeight = 0;
+            if (cardP) {
+              cardPHeight = cardP.offsetHeight;
             }
+            // set p height to 0 and overflow to hidden
+            if (cardP) {
+              cardP.style.height = '0';
+              cardP.style.overflow = 'hidden';
+            }
+            // add mouseenter event to card
+            card.addEventListener('mouseenter', () => {
+              if (cardP) {
+                cardP.style.height = cardPHeight + 'px';
+              }
+            });
+            // add mouseleave event to card
+            card.addEventListener('mouseleave', () => {
+              if (cardP) {
+                cardP.style.height = '0';
+              }
+            });
+  
           });
+          
         }
 
-        //jQuery(function($) {
-          // Initialize all carousels
-          $('.carousel-wrapper').each(function() {
-            var $this = $(this);
-            var $slidesToShow = $this.data('slides-to-show');
-            var $duration = $this.data('duration');
+        // wait until whole page is loaded
+        jQuery(document).ready(function($) {
+          setTimeout(
+            hoverCardsInit(),
+            500
+          )
+        });
+
+
+
+      if (document.querySelector('.countup-animated-number')) {
+        const animatedNumbers = document.querySelectorAll('.countup-animated-number .number-span');
       
-        
-            $this.slick({
-              infinite: true,
-              slidesToShow: $slidesToShow,
-              duration: $duration,
-              slidesToScroll: 1,
-              arrows: true,
-              dots: false,
-              prevArrow: '<button type="button" class="slick-prev cards-prev"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="41" viewBox="0 0 23 41" fill="none"> <path d="M21.123 1.5L2.12129 20.5018L21.123 39.5035" stroke="#062F6E" stroke-width="3" stroke-linecap="round"/></svg></button>',
-              nextArrow: '<button type="button" class="slick-next cards-next"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="41" viewBox="0 0 23 41" fill="none"><path d="M1.5 39.5034L20.5018 20.5017L1.5 1.4999" stroke="#062F6E" stroke-width="3" stroke-linecap="round"/></svg></button>',
-              responsive: [
-                {
-                  breakpoint: 1024,
-                  settings: {
-                    slidesToShow: 2,
-                  }
-                },
-                {
-                  breakpoint: 768,
-                  settings: {
-                    slidesToShow: 1,
-                  }
-                },
-              ]
-            });
+        animatedNumbers.forEach((element) => {
+          let targetNumber = parseInt(element.getAttribute('data-target'), 10);
+          let delayMs = parseInt(element.getAttribute('data-delay'), 10);
+          let startVal = parseInt(element.getAttribute('data-start'), 10) || 0;
+      
+          let countUp = new CountUp(element, targetNumber, {
+            duration: 2,
+            separator: ',',
+            enableScrollSpy: true,
+            scrollSpyOnce: true,
+            scrollSpyDelay: 0,
+            startVal: startVal,
           });
-        //});
+      
+          if (countUp.error) {
+            console.error(countUp.error);
+          }
+        });
+      }
+
+
+      $('.carousel-wrapper').each(function() {
+        var $this = $(this);
+        var $slidesToShow = $this.data('slides-to-show');
+        var $duration = $this.data('duration');
+  
+    
+        $this.slick({
+          infinite: true,
+          slidesToShow: $slidesToShow,
+          duration: $duration,
+          slidesToScroll: 1,
+          arrows: true,
+          dots: false,
+          prevArrow: '<button type="button" class="slick-prev cards-prev"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="41" viewBox="0 0 23 41" fill="none"> <path d="M21.123 1.5L2.12129 20.5018L21.123 39.5035" stroke="#062F6E" stroke-width="3" stroke-linecap="round"/></svg></button>',
+          nextArrow: '<button type="button" class="slick-next cards-next"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="41" viewBox="0 0 23 41" fill="none"><path d="M1.5 39.5034L20.5018 20.5017L1.5 1.4999" stroke="#062F6E" stroke-width="3" stroke-linecap="round"/></svg></button>',
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 2,
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+              }
+            },
+          ]
+        });
+      });
+
 
         
       
