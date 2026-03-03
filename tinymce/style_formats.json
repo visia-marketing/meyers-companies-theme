@@ -12,9 +12,9 @@
     "wrapper": true
   },
   {
-    "title": "Large Number - Red",
+    "title": "Highlight Orange",
     "inline": "span",
-    "classes": "g-section-large-numbers",
+    "classes": "g-section-highlight-orange",
     "wrapper": true
   },
   {

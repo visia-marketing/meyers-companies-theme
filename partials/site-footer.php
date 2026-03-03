@@ -11,7 +11,7 @@ if ( $footer_form && (!empty($footer_form['heading']) || !empty($footer_form['ti
 <?php endif; */ ?>
 
 <footer class="main-footer">
-  <div class="uk-container uk-flex">   
+  <div class="uk-container uk-container-xlarge uk-flex">   
     <div class="uk-width-1-1@xs uk-width-1-5@m">
       <div class="footer-logo uk-margin-medium-right">
         <a href="<?= esc_url(home_url('/')); ?>"><img src="<?php the_field('footer_logo', 'option');?>" alt="<?php bloginfo('name'); ?>"></a>
@@ -44,7 +44,7 @@ if ( $footer_form && (!empty($footer_form['heading']) || !empty($footer_form['ti
       </div>
     </div>
   </div>
-  <div class="uk-container uk-margin-top">
+  <div class="uk-container  uk-container-xlarge uk-margin-top">
     <?php if( have_rows('footer_badges', 'options') ): ?>
       <div class="footer-badges">
           <?php while (have_rows('footer_badges', 'options')): the_row(); 
@@ -64,7 +64,7 @@ if ( $footer_form && (!empty($footer_form['heading']) || !empty($footer_form['ti
       </div>
     <?php endif; ?>
   </div>
-  <div class="uk-container uk-margin-top">
+  <div class="uk-container  uk-container-xlarge uk-margin-top">
     <div class="footer-copyright">
       <div class="copyright">
         <?php echo get_field('copyright', 'options');?>
@@ -76,7 +76,7 @@ if ( $footer_form && (!empty($footer_form['heading']) || !empty($footer_form['ti
       ?>
     </div>
   </div>
-  <div class="uk-container">
+  <div class="uk-container  uk-container-xlarge">
     <div class="small-12 columns">
       <strong class="footer-tagline">
         <?php echo get_field('footer_tagline', 'options');?>

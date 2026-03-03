@@ -43,7 +43,7 @@
     }
 
     &.fc-section-image {
-      background: rgba(6, 47, 110, 0.66); // radial-gradient(circle, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+      //background: rgba(6, 47, 110, 0.66); // radial-gradient(circle, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
       position: relative;
       background-blend-mode: multiply;
 
@@ -114,7 +114,7 @@ body *{
     background-color: $white;
   
     //h1, h2, h3, h4, h5, h6, p, a, li, blockquote, .g-style-section-title, .g-style-section-heading, .g-section-subtitle {
-    & * {
+    & *:not(.g-section-subtitle) {
       color: $black;
     }
   
@@ -125,10 +125,9 @@ body *{
   }
   
   & .fc-section-dark {
-    background-color: $black;
+    background-color: $blue;
   
-    //h1, h2, h3, h4, h5, h6, p, a, li, blockquote, .g-style-section-title, .g-style-section-heading, .g-section-subtitle {
-    & * {
+    & *:not(.g-section-subtitle) {
       color: #fff;
     }
   
