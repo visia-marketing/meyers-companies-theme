@@ -51,7 +51,7 @@ if ( $source === 'default' ){
 
             <?php if( is_array($button) ): ?>
                 <?php if( array_key_exists('url', $button) ): ?>
-                    <a href="<?php echo esc_url( $button['url'] ); ?>" class="button" <?php if( $button['target'] ): ?> target="<?php echo esc_attr( $button['target'] ); ?>" <?php endif; ?>>
+                    <a href="<?php echo esc_url( $button['url'] ); ?>" class="uk-button" <?php if( $button['target'] ): ?> target="<?php echo esc_attr( $button['target'] ); ?>" <?php endif; ?>>
                         <?php echo esc_html( $button['title'] ); ?>
                     </a>
                 <?php endif; ?>
