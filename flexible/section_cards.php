@@ -65,7 +65,7 @@ switch ($per_row) {
         <div class="<?php echo $class; ?>" <?php if($aos != false): ?>data-aos="<?php echo $aos; ?>" data-aos-duration="<?php echo $aos_duration; ?>" data-aos-delay="<?php echo $delay; ?>"<?php endif; ?>>
             <div class="uk-height-1-1 uk-flex uk-flex-column uk-position-relative uk-card--inner">
 
-                <?php $image = wp_get_attachment_image($card['card_icon'] ?? 0, 'thumbnail', false, array( 'class' => 'uk-width-1-1')); ?>
+                <?php $image = wp_get_attachment_image($card['card_icon'] ?? 0, 'full', false, array( 'class' => 'uk-width-1-1')); ?>
 
                 <?php if( $image ): ?>
                     <div class="card-media uk-card-media-top">
@@ -89,7 +89,7 @@ switch ($per_row) {
                             <?php endif; ?>
 
                             <?php if( $card_url != ''): ?>
-                                <span class="uk-button <?php if( $card_style == 'primary'): ?> uk-button-text <?php endif; ?> uk-button-arrow uk-flex uk-flex-inline">
+                                <span class="uk-button <?php if( str_contains($card_style, 'primary') ): ?> uk-button-text <?php endif; ?> uk-button-arrow uk-flex uk-flex-inline">
                                     <?php echo $card_title ; ?>
                                 </span>
                             <?php endif; ?>

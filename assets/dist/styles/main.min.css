@@ -15493,8 +15493,14 @@ p:has(.g-section-subtitle) + h3 {
   overflow: hidden;
 }
 
-.fc-section-cards .uk-card.cards-style--primary h3, .fc-section-cards .uk-card.cards-style--primary p, .fc-section-cards .uk-card.cards-style--primary span {
+.fc-section-cards .uk-card.cards-style--primary h3, .fc-section-cards .uk-card.cards-style--primary p {
   color: #ffffff;
+}
+.fc-section-cards .uk-card.cards-style--primary span {
+  color: #FF8200 !important;
+}
+.fc-section-cards .uk-card.cards-style--primary span:after {
+  color: #FF8200;
 }
 .fc-section-cards .uk-card.cards-style--primary.tall .uk-card--inner {
   border-radius: 1.25rem;
@@ -15530,7 +15536,7 @@ p:has(.g-section-subtitle) + h3 {
 .fc-section-cards .uk-card.cards-style--primary .uk-card--inner .card-body:hover {
   background-position: 0% 33%;
 }
-.fc-section-cards .uk-card.cards-style--primary .uk-card--inner .card-body:hover .hover-panel {
+.fc-section-cards .uk-card.cards-style--primary .uk-card--inner .card-body:hover .hover-panel--1 {
   transition: height 0.2s ease-in-out, opacity 0.25s ease-in 0.15s;
   opacity: 1;
 }
@@ -15553,6 +15559,9 @@ p:has(.g-section-subtitle) + h3 {
 }
 .fc-section-cards .uk-card.cards-style--primary .uk-card--inner .card-body .hover-panel--1 .uk-button.uk-button-text:hover:after {
   color: #ffffff;
+}
+.fc-section-cards .uk-card.cards-style--primary .uk-card--inner .card-body:has(.hover-panel--0) {
+  background-position: 0% 25%;
 }
 .fc-section-cards .uk-card.cards-style--basic {
   overflow: hidden;
@@ -15618,11 +15627,16 @@ p:has(.g-section-subtitle) + h3 {
   }
 }
 
-.fc-section-dark .card-body .hover-panel *:not(h3) {
-  color: #000000;
+.fc-section-dark .cards-style--basic *:not(h3, span) {
+  color: #000000 !important;
 }
-.fc-section-dark .uk-card.cards-style--basic a.card-body h3 {
-  color: #002F86;
+
+.fc-section-dark .cards-style--basic h3 {
+  color: #002F86 !important;
+}
+
+.fc-section-dark .cards-style--primary *:not(h3, span) {
+  color: #ffffff !important;
 }
 
 .fc-section-columns + .fc-section-cards {
