@@ -369,27 +369,27 @@ h1, .uk-h1 {
 
 h2, .uk-h2 {
   font-size: 2.125rem;
-  line-height: 1.3;
+  line-height: 1;
 }
 
 h3, .uk-h3 {
   font-size: 2.5rem;
-  line-height: 1.4;
+  line-height: 1;
 }
 
 h4, .uk-h4 {
   font-size: 1.25rem;
-  line-height: 1.4;
+  line-height: 1;
 }
 
 h5, .uk-h5 {
   font-size: 16px;
-  line-height: 1.4;
+  line-height: 1;
 }
 
 h6, .uk-h6 {
   font-size: 0.875rem;
-  line-height: 1.4;
+  line-height: 1;
 }
 
 /* Tablet landscape and bigger */
@@ -3086,7 +3086,7 @@ select.uk-form-width-xsmall {
  ========================================================================== */
 .uk-card-title {
   font-size: 2.5rem;
-  line-height: 1.4;
+  line-height: 1;
 }
 
 /* Badge
@@ -13264,6 +13264,7 @@ a, button, .button, [type=submit] {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.45);
   line-height: 1.5;
   display: inline-flex;
+  letter-spacing: 0.04rem;
 }
 .uk-button:first-child {
   margin-left: 0;
@@ -13305,6 +13306,14 @@ a, button, .button, [type=submit] {
   content: "\f178";
   font-family: "Font Awesome 7 Free", "Font Awesome 7 Pro", "Font Awesome 7 Brands";
   font-weight: 400;
+}
+.uk-button-text {
+  background: unset;
+  box-shadow: unset;
+  padding: 0;
+}
+.uk-button-text:hover, .uk-button-text:active, .uk-button-text:focus-visible {
+  box-shadow: unset;
 }
 
 .gform_wrapper.gravity-theme.uavionix_wrapper .gform_button {
@@ -14483,48 +14492,18 @@ body#tinymce {
 .g-section-highlight-orange {
   color: #FF8200;
 }
-.g-button.button {
-  margin-right: 10px;
-  background-color: transparent;
-  border-radius: 2px;
-  border: 1px solid #000000;
-  color: #000000;
-  display: inline-block;
-  font-family: "acumin-pro", sans-serif;
-  font-size: 14px !important;
-  font-weight: 600;
-  margin-top: 1rem;
-  letter-spacing: 1.5px;
-  padding: 8px 34px 8px 20px;
-  position: relative;
-  text-transform: uppercase;
-}
-.g-button.button a {
-  position: relative;
-}
-.g-button.button:before {
-  font-family: "Font Awesome 7 Free", "Font Awesome 7 Pro", "Font Awesome 7 Brands";
-  content: "\f054";
-  font-weight: 900;
-  position: absolute;
-  top: 8px;
-  right: 14px;
-  height: 30px;
-  font-size: 14px;
-  width: 8px;
-}
-.g-button.button i {
-  margin-left: 14px;
-}
-.g-button.button:hover, .g-button.button.active {
-  background-color: rgb(0, 34.478358209, 98.3);
-  color: #fff;
-}
 
 p:has(.g-section-subtitle) + h1,
 p:has(.g-section-subtitle) + h2,
 p:has(.g-section-subtitle) + h3 {
   margin-top: 0.5rem;
+}
+
+.fc-section-dark a.uk-button-text {
+  color: #FF8200 !important;
+}
+.fc-section-dark a.uk-button-text:after {
+  color: #FF8200 !important;
 }
 
 .wc-card {
@@ -15517,6 +15496,15 @@ p:has(.g-section-subtitle) + h3 {
 .fc-section-cards .uk-card.cards-style--primary h3, .fc-section-cards .uk-card.cards-style--primary p, .fc-section-cards .uk-card.cards-style--primary span {
   color: #ffffff;
 }
+.fc-section-cards .uk-card.cards-style--primary.tall .uk-card--inner {
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+.fc-section-cards .uk-card.cards-style--primary.tall .uk-card--inner .card-media img {
+  aspect-ratio: 3/4;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .fc-section-cards .uk-card.cards-style--primary .uk-card--inner {
   border-radius: 1.25rem;
   overflow: hidden;
@@ -15553,6 +15541,18 @@ p:has(.g-section-subtitle) + h3 {
   padding-bottom: 0.5rem;
   opacity: 0;
   transition: opacity 0.25s ease-in, height 0.4s ease-in-out 0.1s;
+}
+.fc-section-cards .uk-card.cards-style--primary .uk-card--inner .card-body .hover-panel .uk-button.uk-button-text {
+  color: #FF8200;
+}
+.fc-section-cards .uk-card.cards-style--primary .uk-card--inner .card-body .hover-panel .uk-button.uk-button-text:after {
+  color: #FF8200;
+}
+.fc-section-cards .uk-card.cards-style--primary .uk-card--inner .card-body .hover-panel .uk-button.uk-button-text:hover {
+  color: #ffffff;
+}
+.fc-section-cards .uk-card.cards-style--primary .uk-card--inner .card-body .hover-panel .uk-button.uk-button-text:hover:after {
+  color: #ffffff;
 }
 .fc-section-cards .uk-card.cards-style--basic .uk-card--inner {
   background: #fff;
@@ -15851,6 +15851,38 @@ p:has(.g-section-subtitle) + h3 {
   text-transform: none !important;
 }
 
+.featured-callout .callout-background {
+  border-radius: 1rem;
+}
+.featured-callout .callout-background--gray {
+  background-color: #EEEDF2;
+}
+.featured-callout .callout-background--gray h2 {
+  color: #002F86 !important;
+}
+.featured-callout .callout-background--blue {
+  background-color: #002F86;
+}
+.featured-callout .callout-background--orange {
+  background-color: #FF8200;
+}
+.featured-callout .callout-background--white {
+  background-color: #ffffff;
+}
+.featured-callout .callout-background--white h2 {
+  color: #002F86 !important;
+}
+
+body .fc-section-dark .callout-background--gray *:not(.uk-button, .g-section-subtitle, h2),
+body .fc-section-dark .callout-background--white *:not(.uk-button, .g-section-subtitle, h2) {
+  color: #000000 !important;
+}
+
+body .fc-section-dark .callout-background--gray h2,
+body .fc-section-dark .callout-background--white h2 {
+  color: #002F86 !important;
+}
+
 .fc-wrapper .top-border > .fc-section-heading,
 .fc-page-header .top-border > .fc-section-heading {
   border-top: 1px solid #000000;
@@ -15937,8 +15969,11 @@ p:has(.g-section-subtitle) + h3 {
 body * .background--light, body * .fc-section-light {
   background-color: #ffffff;
 }
-body * .background--light *:not(.g-section-subtitle), body * .fc-section-light *:not(.g-section-subtitle) {
+body * .background--light *:not(.g-section-subtitle, h1, h2, h3, h4, h5, h6), body * .fc-section-light *:not(.g-section-subtitle, h1, h2, h3, h4, h5, h6) {
   color: #000000;
+}
+body * .background--light h1, body * .background--light h2, body * .background--light h3, body * .background--light h4, body * .background--light h5, body * .fc-section-light h1, body * .fc-section-light h2, body * .fc-section-light h3, body * .fc-section-light h4, body * .fc-section-light h5 {
+  color: #002F86;
 }
 body * .background--light a.button.grey, body * .fc-section-light a.button.grey {
   color: #002F86;
