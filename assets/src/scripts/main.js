@@ -51,7 +51,7 @@ import '@awesome.me/kit-f71e020b2c';
 
           hoverCards.forEach(card => {
             // get the height of card-p ( if it exists )
-            const cardP = card.querySelector('.hover-panel');
+            const cardP = card.querySelector('.hover-panel--1');
             let cardPHeight = 0;
             if (cardP) {
               cardPHeight = cardP.offsetHeight;

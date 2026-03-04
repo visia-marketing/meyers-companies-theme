@@ -15537,21 +15537,21 @@ p:has(.g-section-subtitle) + h3 {
 .fc-section-cards .uk-card.cards-style--primary .uk-card--inner .card-body > *:not(.uk-button) {
   max-width: 33rem;
 }
-.fc-section-cards .uk-card.cards-style--primary .uk-card--inner .card-body .hover-panel {
+.fc-section-cards .uk-card.cards-style--primary .uk-card--inner .card-body .hover-panel--1 {
   padding-bottom: 0.5rem;
   opacity: 0;
   transition: opacity 0.25s ease-in, height 0.4s ease-in-out 0.1s;
 }
-.fc-section-cards .uk-card.cards-style--primary .uk-card--inner .card-body .hover-panel .uk-button.uk-button-text {
+.fc-section-cards .uk-card.cards-style--primary .uk-card--inner .card-body .hover-panel--1 .uk-button.uk-button-text {
   color: #FF8200;
 }
-.fc-section-cards .uk-card.cards-style--primary .uk-card--inner .card-body .hover-panel .uk-button.uk-button-text:after {
+.fc-section-cards .uk-card.cards-style--primary .uk-card--inner .card-body .hover-panel--1 .uk-button.uk-button-text:after {
   color: #FF8200;
 }
-.fc-section-cards .uk-card.cards-style--primary .uk-card--inner .card-body .hover-panel .uk-button.uk-button-text:hover {
+.fc-section-cards .uk-card.cards-style--primary .uk-card--inner .card-body .hover-panel--1 .uk-button.uk-button-text:hover {
   color: #ffffff;
 }
-.fc-section-cards .uk-card.cards-style--primary .uk-card--inner .card-body .hover-panel .uk-button.uk-button-text:hover:after {
+.fc-section-cards .uk-card.cards-style--primary .uk-card--inner .card-body .hover-panel--1 .uk-button.uk-button-text:hover:after {
   color: #ffffff;
 }
 .fc-section-cards .uk-card.cards-style--basic .uk-card--inner {

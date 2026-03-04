@@ -4,6 +4,8 @@ $cards = get_sub_field('cards');
 $display = get_sub_field('cards_display'); // Grid or Slider
 $per_row = get_sub_field('cards_per_row'); // 3, 4, 5
 
+$hover = get_sub_field('hover_effect');
+
 $aos = get_sub_field('animate_in');
 $aos_duration = 0;
 $aos_step = 0;
@@ -78,7 +80,7 @@ switch ($per_row) {
                             <?php echo $card['card_title']; ?>
                         </h3>
 
-                        <div class="hover-panel">
+                        <div class="hover-panel hover-panel--<?php echo $hover ?: 0; ?>">
                     
                             <?php if( $card['card_description'] != ''): ?>
                             <p class="card-p uk-margin-remove-top uk-margin-small-bottom">
