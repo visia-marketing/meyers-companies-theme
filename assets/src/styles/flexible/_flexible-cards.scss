@@ -89,9 +89,24 @@
 
         // ── Basic Style ────────────────────────────────────────────────
         &.cards-style--basic{
+            overflow: hidden;
+            margin-bottom: 0.5rem;
+            filter: drop-shadow( 3px 3px 8px rgba(0,0,0,0.25) );
+            
+            &:has( .hover-panel--1 ){
+                transition: transform 0.15s ease-in-out, filter 0.2s ease-in-out;
+
+                &:hover{
+                    transform: translateY(-1rem);
+                    filter: drop-shadow( 3px 13px 16px rgba(0,0,0,0.25) );
+                }
+            }
+
+            
 
             & .uk-card--inner{
-                background: #fff;
+                border-radius: 1.25rem 1.25rem 0 0;
+                overflow: hidden;
                 height: 100%;
             }
 
@@ -100,15 +115,19 @@
                     aspect-ratio: 3/2;
                     object-fit: cover;
                     min-width: 100%;
-                    border-radius:1.25rem;
                     overflow: hidden;
                 }
             }
 
+            & div.card-body,
             & a.card-body{
                 padding: 2rem;
+                padding-bottom: 4rem;
                 color: $black;
                 text-decoration: none;   
+                background: $white;
+                border-radius: 0 0 1.25rem 1.25rem;
+                
 
                 & h3{
                     font-size: 1.75rem;
@@ -147,6 +166,20 @@
             }
         }
     }
+
+}
+
+.fc-section-dark{
+
+    & .card-body .hover-panel *:not(h3){
+        color: $black;
+    }
+
+    & .uk-card.cards-style--basic a.card-body h3{
+        color: $blue;
+    }
+
+
 
 }
 

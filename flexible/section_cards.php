@@ -73,7 +73,7 @@ switch ($per_row) {
                     </div>
                 <?php endif; ?>
 
-                    <a href="<?php echo esc_url($card_url ?: '#'); ?>" class="card-body uk-card-body uk-flex uk-flex-column uk-flex-right uk-flex-top uk-height-1-1">
+                    <<?php if( $card_url != ''): ?>a href="<?php echo esc_url($card_url ?: '#'); ?>" <?php else:?>div<?php endif;?> class="card-body uk-card-body uk-flex uk-flex-column uk-flex-right uk-flex-top uk-height-1-1">
 
 
                         <h3 class="card-title uk-card-title uk-margin-remove-top uk-margin-small-bottom">
@@ -88,14 +88,14 @@ switch ($per_row) {
                             </p>
                             <?php endif; ?>
 
-                            <?php if( $card['card_description'] != ''): ?>
+                            <?php if( $card_url != ''): ?>
                                 <span class="uk-button <?php if( $card_style == 'primary'): ?> uk-button-text <?php endif; ?> uk-button-arrow uk-flex uk-flex-inline">
                                     <?php echo $card_title ; ?>
                                 </span>
                             <?php endif; ?>
                         </div>
 
-                    </a>
+                    </<?php if( $card_url != ''): ?>a<?php else:?>div<?php endif;?>>
 
 
             </div>
