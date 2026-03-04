@@ -15554,8 +15554,21 @@ p:has(.g-section-subtitle) + h3 {
 .fc-section-cards .uk-card.cards-style--primary .uk-card--inner .card-body .hover-panel--1 .uk-button.uk-button-text:hover:after {
   color: #ffffff;
 }
+.fc-section-cards .uk-card.cards-style--basic {
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+  filter: drop-shadow(3px 3px 8px rgba(0, 0, 0, 0.25));
+}
+.fc-section-cards .uk-card.cards-style--basic:has(.hover-panel--1) {
+  transition: transform 0.15s ease-in-out, filter 0.2s ease-in-out;
+}
+.fc-section-cards .uk-card.cards-style--basic:has(.hover-panel--1):hover {
+  transform: translateY(-1rem);
+  filter: drop-shadow(3px 13px 16px rgba(0, 0, 0, 0.25));
+}
 .fc-section-cards .uk-card.cards-style--basic .uk-card--inner {
-  background: #fff;
+  border-radius: 1.25rem 1.25rem 0 0;
+  overflow: hidden;
   height: 100%;
 }
 .fc-section-cards .uk-card.cards-style--basic .card-media img {
@@ -15563,13 +15576,15 @@ p:has(.g-section-subtitle) + h3 {
   -o-object-fit: cover;
      object-fit: cover;
   min-width: 100%;
-  border-radius: 1.25rem;
   overflow: hidden;
 }
 .fc-section-cards .uk-card.cards-style--basic a.card-body {
   padding: 2rem;
+  padding-bottom: 4rem;
   color: #000000;
   text-decoration: none;
+  background: #ffffff;
+  border-radius: 0 0 1.25rem 1.25rem;
 }
 .fc-section-cards .uk-card.cards-style--basic a.card-body h3 {
   font-size: 1.75rem;
@@ -15601,6 +15616,13 @@ p:has(.g-section-subtitle) + h3 {
   .fc-section-cards .slick-arrow.slick-next {
     right: -3rem !important;
   }
+}
+
+.fc-section-dark .card-body .hover-panel *:not(h3) {
+  color: #000000;
+}
+.fc-section-dark .uk-card.cards-style--basic a.card-body h3 {
+  color: #002F86;
 }
 
 .fc-section-columns + .fc-section-cards {
