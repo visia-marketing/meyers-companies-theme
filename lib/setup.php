@@ -96,6 +96,8 @@ function setup() {
 		update_option( 'visia_image_sizes_set', true );
 	}
 
+    add_image_size( 'elk-product-thumb', 450, 579, true);
+
 
   /**
    * Post Formats

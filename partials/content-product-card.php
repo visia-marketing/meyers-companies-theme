@@ -10,7 +10,7 @@ if( array_key_exists( 'prod_id', $args ) ){
 
     <div class="uk-card-media-top">
         <a href="<?php echo get_the_permalink($id); ?>" >
-            <?php echo get_the_post_thumbnail($id, 'large') ?: '<div class="placeholder"></div>'; ?>
+            <?php echo get_the_post_thumbnail($id, 'elk-product-thumb') ?: '<div class="placeholder"></div>'; ?>
         </a>
     </div>
 
