@@ -15626,6 +15626,43 @@ p:has(.g-section-subtitle) + h3 {
     right: -3rem !important;
   }
 }
+.fc-section-cards.product-cards {
+  filter: drop-shadow(3px 3px 8px rgba(0, 0, 0, 0.25));
+}
+.fc-section-cards.product-cards .uk-card {
+  border-radius: 1.125rem;
+  background: #ffffff;
+}
+.fc-section-cards.product-cards .uk-card .uk-card-media-top {
+  padding: 1.2rem 4.3rem 0 4.3rem;
+}
+.fc-section-cards.product-cards .uk-card .uk-card-media-top .placeholder {
+  background: #f1f2f3;
+  width: 19rem;
+  aspect-ratio: 3/4;
+  position: relative;
+}
+.fc-section-cards.product-cards .uk-card .uk-card-media-top .placeholder:after {
+  content: "Placeholder";
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: gray;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fc-section-cards.product-cards .uk-card .card-body {
+  padding: 2rem 1.8rem 3rem;
+}
+.fc-section-cards.product-cards .uk-card .card-body h3 {
+  font-size: 1.5rem;
+}
+.fc-section-cards.product-cards .uk-card .card-body .uk-button-text, .fc-section-cards.product-cards .uk-card .card-body .uk-button-text:after {
+  color: #FF8200;
+}
 
 .fc-section-dark .cards-style--basic *:not(h3, span) {
   color: #000000 !important;
@@ -15637,6 +15674,14 @@ p:has(.g-section-subtitle) + h3 {
 
 .fc-section-dark .cards-style--primary *:not(h3, span) {
   color: #ffffff !important;
+}
+
+.fc-section-dark .product-cards h3 {
+  color: #002F86 !important;
+}
+
+.fc-section-dark .product-cards p {
+  color: #000000 !important;
 }
 
 .fc-section-columns + .fc-section-cards {
@@ -15931,6 +15976,10 @@ body .fc-section-dark .callout-background--white h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.fc-wrapper .fc-section > .uk-container,
+.fc-page-header .fc-section > .uk-container {
+  width: 100%;
 }
 .fc-wrapper .fc-section > .fc-section-columns,
 .fc-page-header .fc-section > .fc-section-columns {
