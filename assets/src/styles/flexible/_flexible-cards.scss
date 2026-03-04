@@ -192,12 +192,14 @@
             background: $white;
             
             & .uk-card-media-top{
-                padding:  1.2rem  4.3rem 0  4.3rem;
+                padding:  1.2rem  3rem 0  3rem;
+
 
                 & .placeholder{
                     background: #f1f2f3;
-                    width: 19rem;
-                    aspect-ratio: 3/4;
+                    aspect-ratio: 16/18;
+                    width: 100%;
+
                     position: relative;
 
                     &:after{

@@ -15634,12 +15634,12 @@ p:has(.g-section-subtitle) + h3 {
   background: #ffffff;
 }
 .fc-section-cards.product-cards .uk-card .uk-card-media-top {
-  padding: 1.2rem 4.3rem 0 4.3rem;
+  padding: 1.2rem 3rem 0 3rem;
 }
 .fc-section-cards.product-cards .uk-card .uk-card-media-top .placeholder {
   background: #f1f2f3;
-  width: 19rem;
-  aspect-ratio: 3/4;
+  aspect-ratio: 16/18;
+  width: 100%;
   position: relative;
 }
 .fc-section-cards.product-cards .uk-card .uk-card-media-top .placeholder:after {
