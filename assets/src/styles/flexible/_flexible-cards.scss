@@ -12,6 +12,22 @@
                 color: $white;
             }
 
+            &.tall{
+
+                & .uk-card--inner{
+                    border-radius:1.25rem;
+                    overflow: hidden;
+
+                    .card-media{
+                        & img{
+                            aspect-ratio: 3/4;
+                            object-fit: cover;
+                        }
+                    }
+                }
+
+            }
+
             & .uk-card--inner{
                 border-radius:1.25rem;
                 overflow: hidden;
@@ -52,6 +68,20 @@
                         padding-bottom: 0.5rem;
                         opacity: 0;
                         transition: opacity 0.25s ease-in, height 0.4s ease-in-out 0.1s;
+
+                        & .uk-button.uk-button-text{
+                            color: $secondary;
+                            &:after{
+                                color: $secondary;
+                            }
+
+                            &:hover{
+                                color: $white;
+                                 &:after{
+                                    color: $white;
+                                }
+                            }
+                        }
                     }
                 }
             }

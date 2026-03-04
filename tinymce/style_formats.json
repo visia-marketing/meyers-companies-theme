@@ -21,5 +21,11 @@
     "title": "Button with Arrow",
     "selector": "a",
     "classes": "uk-button uk-button-arrow"
+  },
+    {
+    "title": "Text Button",
+    "selector": "a",
+    "classes": "uk-button uk-button-text"
   }
+  
 ]
