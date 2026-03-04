@@ -15636,6 +15636,11 @@ p:has(.g-section-subtitle) + h3 {
 .fc-section-cards.product-cards .uk-card .uk-card-media-top {
   padding: 1.2rem 3rem 0 3rem;
 }
+.fc-section-cards.product-cards .uk-card .uk-card-media-top img {
+  aspect-ratio: 16/18;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 .fc-section-cards.product-cards .uk-card .uk-card-media-top .placeholder {
   background: #f1f2f3;
   aspect-ratio: 16/18;
