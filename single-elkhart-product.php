@@ -2,21 +2,7 @@
   
   <article class="page page-<?php global $post; echo $post->post_name; ?>">
 
-    
-    <?php get_template_part('partials/page-header'); ?>
-
-		
-    <section class="page-content-wrapper">
-      <div class="uk-container">
-        <div class="uk-width-1-1">
-					
-          <div class="page-content">
-            <?php the_content(); ?>
-          </div>
-          
-        </div>
-      </div>
-    </section>
+    <?php get_flexible_content(); ?>
 
   </article>
   
