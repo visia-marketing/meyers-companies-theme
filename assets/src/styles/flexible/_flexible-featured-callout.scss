@@ -1,0 +1,47 @@
+
+.featured-callout{
+
+
+
+    & .callout-background{
+        border-radius: 1rem;
+
+        &--gray{
+            background-color: $gray;
+
+            & h2{
+                color: $blue !important;
+            }
+        }
+
+        &--blue{
+            background-color: $primary;
+        }
+
+        &--orange{
+            background-color: $orange;
+        }
+
+        &--white{
+            background-color: $white;
+
+            & h2{
+                color: $blue !important;
+            }
+        }
+
+
+    }
+
+}
+
+
+body .fc-section-dark .callout-background--gray *:not(.uk-button, .g-section-subtitle, h2),
+body .fc-section-dark .callout-background--white *:not(.uk-button, .g-section-subtitle, h2){
+    color: $black !important;
+}
+
+body .fc-section-dark .callout-background--gray h2,
+body .fc-section-dark .callout-background--white h2{
+    color: $blue !important;
+}

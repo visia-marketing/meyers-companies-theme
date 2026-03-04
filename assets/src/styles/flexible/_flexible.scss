@@ -7,6 +7,8 @@
 
 @import "../flexible/animated_numbers";
 
+@import "../flexible/flexible-featured-callout";
+
 .fc-wrapper,
 .fc-page-header
 {
@@ -114,8 +116,16 @@ body *{
     background-color: $white;
   
     //h1, h2, h3, h4, h5, h6, p, a, li, blockquote, .g-style-section-title, .g-style-section-heading, .g-section-subtitle {
-    & *:not(.g-section-subtitle) {
+    & *:not(.g-section-subtitle, h1, h2, h3, h4, h5, h6) {
       color: $black;
+    }
+
+    & h1,
+    & h2,
+    & h3,
+    & h4,
+    & h5{
+      color: $blue;
     }
   
     a.button.grey {

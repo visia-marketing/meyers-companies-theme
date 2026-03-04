@@ -1,5 +1,5 @@
 <?php 
-  $page_header_content = get_field('page_header_content');
+  $page_heading = get_field('page_heading');
   $page_header_style = get_field('page_header_style');
   $show_page_header = get_field('show_page_header');
   $show_breadcrumbs = get_field('show_breadcrumbs');
@@ -11,24 +11,6 @@
 
   }
 
-  if( is_array( $page_header_content) ){
-
-    if( array_key_exists( 'heading', $page_header_content) ){
-      if( $page_header_content['heading'] ){
-        $page_heading = $page_header_content['heading'];
-      }    
-    }
-    if( array_key_exists( 'sub_heading', $page_header_content) ){
-      if( $page_header_content['sub_heading'] ){
-        $page_sub_heading = $page_header_content['sub_heading'];
-      }    
-    }
-    if( array_key_exists( 'heading_text', $page_header_content) ){
-      if( $page_header_content['heading_text'] ){
-        $page_heading_text = $page_header_content['heading_text'];
-      }    
-    }
-  }
 
   if( is_array( $page_header_style) ){
     if( array_key_exists( 'background', $page_header_style) ){
@@ -68,23 +50,10 @@
             <?php get_template_part('partials/page', 'breadcrumbs'); ?>
           <?php endif; ?>
 
-            <?php 
-            $header_content = get_field('page_header_content');
-          // if ( $page_heading || $page_sub_heading ): 
-            ?>
-              <?php if ( !empty($page_sub_heading) ): ?>
-                <p class="g-section-subtitle">
-                  <?php echo esc_html($page_sub_heading); ?>
-              </p>
-              <?php endif; ?>
               <h1 class="uk-margin-remove">
                 <?php if ( $page_heading ): echo esc_html($page_heading); else: the_title(); endif; ?>
               </h1>
-              <?php if ( !empty($page_heading_text) ): ?>
-                <p>
-                    <?php echo esc_html($page_heading_text); ?>
-                </p>
-            <?php  endif; ?>
+
           </div>
       </div>
     </div>

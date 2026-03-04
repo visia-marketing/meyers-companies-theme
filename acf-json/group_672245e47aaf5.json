@@ -108,6 +108,13 @@
                 "operator": "==",
                 "value": "3"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "elkhart-product"
+            }
         ]
     ],
     "menu_order": 2,
@@ -122,5 +129,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1761232261
+    "modified": 1772639141
 }

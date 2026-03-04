@@ -32,6 +32,15 @@
     &.page-header-hero{
       padding-top: 15.5rem;
       padding-bottom: 11.5rem;
+
+      & p{
+        font-size: 1.375rem;
+      }
+
+      & h1{
+        font-size: 3.75rem;
+        font-family: $sans;
+      }
     }
 
     .page-header-content {

@@ -51,7 +51,7 @@
   }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1410px) {
   .hide-for-large {
     display: none !important;
   }
@@ -60,13 +60,13 @@
 .show-for-large {
   display: none !important;
 }
-@media (min-width: 1400px) {
+@media (min-width: 1410px) {
   .show-for-large {
     display: block !important;
   }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1800px) {
   .hide-for-extra-large {
     display: none !important;
   }
@@ -75,7 +75,7 @@
 .show-for-extra-large {
   display: none !important;
 }
-@media (min-width: 1600px) {
+@media (min-width: 1800px) {
   .show-for-extra-large {
     display: block !important;
   }
@@ -337,8 +337,8 @@ h6, .uk-h6,
 .uk-heading-2xlarge,
 .uk-heading-3xlarge {
   margin: 0 0 20px 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: normal;
+  font-family: "acumin-pro-condensed", sans-serif;
+  font-weight: 700;
   color: #333;
   text-transform: none;
 }
@@ -368,28 +368,28 @@ h1, .uk-h1 {
 }
 
 h2, .uk-h2 {
-  font-size: 1.7rem;
-  line-height: 1.3;
+  font-size: 2.125rem;
+  line-height: 1;
 }
 
 h3, .uk-h3 {
-  font-size: 1.5rem;
-  line-height: 1.4;
+  font-size: 2.5rem;
+  line-height: 1;
 }
 
 h4, .uk-h4 {
   font-size: 1.25rem;
-  line-height: 1.4;
+  line-height: 1;
 }
 
 h5, .uk-h5 {
   font-size: 16px;
-  line-height: 1.4;
+  line-height: 1;
 }
 
 h6, .uk-h6 {
   font-size: 0.875rem;
-  line-height: 1.4;
+  line-height: 1;
 }
 
 /* Tablet landscape and bigger */
@@ -398,7 +398,7 @@ h6, .uk-h6 {
     font-size: 2.875rem;
   }
   h2, .uk-h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 }
 /* Lists
@@ -2065,7 +2065,7 @@ select.uk-form-width-xsmall {
   /* 3 */
   padding: 0;
   /* 4 */
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   line-height: 1.4;
 }
 
@@ -2808,11 +2808,11 @@ select.uk-form-width-xsmall {
 }
 
 .uk-container-large {
-  max-width: 1400px;
+  max-width: 1410px;
 }
 
 .uk-container-xlarge {
-  max-width: 1600px;
+  max-width: 1800px;
 }
 
 .uk-container-expand {
@@ -2859,11 +2859,11 @@ select.uk-form-width-xsmall {
   }
   .uk-container-expand-left.uk-container-large,
   .uk-container-expand-right.uk-container-large {
-    max-width: calc(50% + (1400px / 2) - 40px);
+    max-width: calc(50% + (1410px / 2) - 40px);
   }
   .uk-container-expand-left.uk-container-xlarge,
   .uk-container-expand-right.uk-container-xlarge {
-    max-width: calc(50% + (1600px / 2) - 40px);
+    max-width: calc(50% + (1800px / 2) - 40px);
   }
 }
 /* Item
@@ -3085,8 +3085,8 @@ select.uk-form-width-xsmall {
 /* Title
  ========================================================================== */
 .uk-card-title {
-  font-size: 1.5rem;
-  line-height: 1.4;
+  font-size: 2.5rem;
+  line-height: 1;
 }
 
 /* Badge
@@ -4027,7 +4027,7 @@ select.uk-form-width-xsmall {
   padding-left: 12px;
   padding-right: 12px;
   background: transparent;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   border: 1px solid #e5e5e5;
 }
 
@@ -4484,7 +4484,7 @@ select.uk-form-width-xsmall {
 /* Title
  ========================================================================== */
 .uk-modal-title {
-  font-size: 2rem;
+  font-size: 2.75rem;
   line-height: 1.3;
 }
 
@@ -6026,7 +6026,7 @@ ul.uk-nav-sub {
 /* Primary modifier
  ========================================================================== */
 .uk-nav-primary {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   line-height: 1.5;
 }
 
@@ -8165,7 +8165,7 @@ ul.uk-nav-sub {
 }
 
 .uk-width-2xlarge {
-  width: 750px;
+  width: 800px;
 }
 
 /* Auto */
@@ -8237,7 +8237,7 @@ ul.uk-nav-sub {
     width: 600px;
   }
   .uk-width-2xlarge\@s {
-    width: 750px;
+    width: 800px;
   }
   /* Auto */
   .uk-width-auto\@s {
@@ -8328,7 +8328,7 @@ ul.uk-nav-sub {
     width: 600px;
   }
   .uk-width-2xlarge\@m {
-    width: 750px;
+    width: 800px;
   }
   /* Auto */
   .uk-width-auto\@m {
@@ -8419,7 +8419,7 @@ ul.uk-nav-sub {
     width: 600px;
   }
   .uk-width-2xlarge\@l {
-    width: 750px;
+    width: 800px;
   }
   /* Auto */
   .uk-width-auto\@l {
@@ -8510,7 +8510,7 @@ ul.uk-nav-sub {
     width: 600px;
   }
   .uk-width-2xlarge\@xl {
-    width: 750px;
+    width: 800px;
   }
   /* Auto */
   .uk-width-auto\@xl {
@@ -8627,7 +8627,7 @@ ul.uk-nav-sub {
 /* Style modifiers
  ========================================================================== */
 .uk-text-lead {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   line-height: 1.5;
   color: #333;
 }
@@ -8653,7 +8653,7 @@ ul.uk-nav-sub {
 }
 
 .uk-text-large {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   line-height: 1.5;
 }
 
@@ -9896,7 +9896,7 @@ iframe[data-uk-cover] {
  */
 .uk-logo {
   /* 1 */
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   color: #333;
   /* 2 */
@@ -12683,14 +12683,14 @@ iframe[data-uk-cover] {
 
 /* Slider */
 .slick-loading .slick-list {
-  background: #fff url(../../../assets/dist/styles/images/ajax-loader.gif) center center no-repeat;
+  background: #fff url(/wp-content/themes/elkhart-plastics/assets/dist/styles/images/ajax-loader.gif) center center no-repeat;
 }
 
 /* Icons */
 @font-face {
   font-family: "slick";
-  src: url(../../../webfonts/slick.eot);
-  src: url(../../../webfonts/slick.eot?#iefix) format("embedded-opentype"), url(../../../webfonts/slick.woff) format("woff"), url(../../../webfonts/slick.ttf) format("truetype"), url(../../../assets/dist/styles/images/slick.svg#slick) format("svg");
+  src: url(/wp-content/themes/elkhart-plastics/assets/dist/webfonts/slick.eot);
+  src: url(/wp-content/themes/elkhart-plastics/assets/dist/webfonts/slick.eot?#iefix) format("embedded-opentype"), url(/wp-content/themes/elkhart-plastics/assets/dist/webfonts/slick.woff) format("woff"), url(/wp-content/themes/elkhart-plastics/assets/dist/webfonts/slick.ttf) format("truetype"), url(/wp-content/themes/elkhart-plastics/assets/dist/styles/images/slick.svg#slick) format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -13244,66 +13244,76 @@ a, button, .button, [type=submit] {
   color: #EEEDF2;
 }
 
-.button,
-.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button,
-.wpfFilterButton.wpfButton {
-  background-color: #002F86;
-  border-radius: 2px;
+@media (prefers-reduced-motion: reduce) {
+  .uk-button {
+    transition: none;
+  }
+}
+.uk-button {
+  background-color: #FF8200;
+  border-radius: 2rem;
   border: none;
   color: #ffffff;
-  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
-  font-size: 13px !important;
-  font-weight: 600;
-  letter-spacing: 0.75px;
+  font-family: "acumin-pro-condensed", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
   margin: 1rem 0 0 0;
-  min-height: 24px;
-  padding: 8px 16px 8px 16px;
+  padding: 0.54rem 2rem;
   text-transform: uppercase;
   text-align: center;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.45);
+  line-height: 1.5;
+  display: inline-flex;
+  letter-spacing: 0.04rem;
 }
-.button i,
-.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button i,
-.wpfFilterButton.wpfButton i {
-  margin-left: 11px;
+.uk-button:first-child {
+  margin-left: 0;
 }
-.button:hover, .button.active,
-.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button:hover,
-.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button.active,
-.wpfFilterButton.wpfButton:hover,
-.wpfFilterButton.wpfButton.active {
-  background-color: rgb(0, 34.478358209, 98.3);
-  color: #fff !important;
+.uk-button:last-child {
+  margin-right: 0;
 }
-.button.grey,
-.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button.grey,
-.wpfFilterButton.wpfButton.grey {
-  background-color: #f3f3f3;
-  color: #002F86 !important;
+@media screen and (max-width: 950px) {
+  .uk-button {
+    margin: 0.5rem;
+  }
 }
-.button.grey:hover, .button.grey.active,
-.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button.grey:hover,
-.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button.grey.active,
-.wpfFilterButton.wpfButton.grey:hover,
-.wpfFilterButton.wpfButton.grey.active {
-  background-color: #002F86;
-  color: #fff !important;
+.uk-button {
+  transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease, color 160ms ease;
 }
-.button.button-arrow,
-.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button.button-arrow,
-.wpfFilterButton.wpfButton.button-arrow {
-  padding-right: 40px;
+.uk-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.45);
+}
+.uk-button:active {
+  transform: translateY(0px);
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.45);
+}
+.uk-button:focus-visible {
+  outline: none;
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.45);
+}
+.uk-button.uk-button-large {
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+}
+.uk-button-arrow {
   position: relative;
+  display: inline-flex;
+  gap: 0.5rem;
 }
-.button.button-arrow:after,
-.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button.button-arrow:after,
-.wpfFilterButton.wpfButton.button-arrow:after {
+.uk-button-arrow:after {
   color: #fff;
   content: "\f178";
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-  position: absolute;
-  right: 15px;
-  top: 7.5px;
+  font-family: "Font Awesome 7 Free", "Font Awesome 7 Pro", "Font Awesome 7 Brands";
+  font-weight: 400;
+}
+.uk-button-text {
+  background: unset;
+  box-shadow: unset;
+  padding: 0;
+}
+.uk-button-text:hover, .uk-button-text:active, .uk-button-text:focus-visible {
+  box-shadow: unset;
 }
 
 .gform_wrapper.gravity-theme.uavionix_wrapper .gform_button {
@@ -13312,7 +13322,7 @@ a, button, .button, [type=submit] {
   position: relative;
 }
 .gform_wrapper.gravity-theme.uavionix_wrapper .gform_button:before {
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 7 Free", "Font Awesome 7 Pro", "Font Awesome 7 Brands";
   content: "\f054";
   font-weight: 900;
   position: absolute;
@@ -13497,6 +13507,13 @@ a, button, .button, [type=submit] {
   padding-top: 15.5rem;
   padding-bottom: 11.5rem;
 }
+.fc-page-header .page-header-content-wrapper.page-header-hero p {
+  font-size: 1.375rem;
+}
+.fc-page-header .page-header-content-wrapper.page-header-hero h1 {
+  font-size: 3.75rem;
+  font-family: "acumin-pro", sans-serif;
+}
 .fc-page-header .page-header-content-wrapper .page-header-content p:last-child {
   margin-bottom: 0;
 }
@@ -13510,7 +13527,7 @@ a, button, .button, [type=submit] {
 .post-single .post-content-wrapper .post-header .post-type {
   color: #000000;
   display: block;
-  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
+  font-family: "acumin-pro", sans-serif;
   font-size: 15px;
   letter-spacing: 3px;
   margin: 70px 0 30px;
@@ -13538,7 +13555,7 @@ a, button, .button, [type=submit] {
   text-transform: uppercase;
 }
 .post-single .post-content-wrapper .post-header .post-meta time {
-  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
+  font-family: "acumin-pro", sans-serif;
   font-size: 15px;
   letter-spacing: 1px;
 }
@@ -13549,7 +13566,7 @@ a, button, .button, [type=submit] {
 }
 
 .Xproduct_title.entry-title {
-  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
+  font-family: "acumin-pro", sans-serif;
   font-size: 50px;
   font-weight: 700;
   margin-top: 75px !important;
@@ -13642,11 +13659,11 @@ a, button, .button, [type=submit] {
 }
 .main-search .main-search-bar .main-search-form form label input::-moz-placeholder {
   color: #3A3A3A;
-  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
+  font-family: "acumin-pro", sans-serif;
 }
 .main-search .main-search-bar .main-search-form form label input::placeholder {
   color: #3A3A3A;
-  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
+  font-family: "acumin-pro", sans-serif;
 }
 .main-search .main-search-bar .main-search-form form button {
   margin-left: auto;
@@ -13827,7 +13844,7 @@ a, button, .button, [type=submit] {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 2rem;
     height: 100%;
   }
   .main-header .primary-navigation-wrapper .primary-navigation > li {
@@ -13863,7 +13880,7 @@ a, button, .button, [type=submit] {
   }
   .main-header .primary-navigation-wrapper .primary-navigation > li.has-submenu > a:after {
     content: "\f078";
-    font-family: "Font Awesome 6 Free";
+    font-family: "Font Awesome 7 Free", "Font Awesome 7 Pro", "Font Awesome 7 Brands";
     font-size: 14px;
     position: absolute;
     right: 2px;
@@ -13923,23 +13940,29 @@ a, button, .button, [type=submit] {
   }
   .main-header .primary-navigation-wrapper .primary-navigation > li:last-child a {
     background-color: #FF8200;
-    border-radius: 2px;
+    border-radius: 2rem;
     border: none;
     color: #ffffff;
-    font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
-    font-size: 14px !important;
-    font-weight: 600;
-    letter-spacing: 1px;
-    padding: 8px 40px 8px 16px;
+    font-family: "acumin-pro-condensed", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.44rem 2rem;
     text-transform: uppercase;
     position: relative;
+    display: flex;
+    gap: 0.5rem;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
+    transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease, color 160ms ease;
+  }
+  .main-header .primary-navigation-wrapper .primary-navigation > li:last-child a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
   }
   .main-header .primary-navigation-wrapper .primary-navigation > li:last-child a:after {
     color: #fff;
     content: "\f178";
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    position: absolute;
+    font-family: "Font Awesome 7 Free", "Font Awesome 7 Pro", "Font Awesome 7 Brands";
+    font-weight: 400;
     right: 15px;
   }
   .main-header .primary-navigation-wrapper .primary-navigation > li:last-child a a {
@@ -14042,7 +14065,7 @@ a, button, .button, [type=submit] {
   padding-left: 16px;
 }
 .top-header .top-header-navigation li.top-menu-fa-email:before, .top-header .top-header-navigation li.top-menu-fa-phone:before {
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 7 Free", "Font Awesome 7 Pro", "Font Awesome 7 Brands";
   font-size: 12px;
   position: absolute;
   font-weight: 900;
@@ -14090,7 +14113,7 @@ a, button, .button, [type=submit] {
   width: 18px;
   height: 18px;
   border: none;
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 7 Free", "Font Awesome 7 Pro", "Font Awesome 7 Brands";
   content: "+";
   border: none;
   position: absolute;
@@ -14104,7 +14127,7 @@ a, button, .button, [type=submit] {
   width: 18px;
   height: 18px;
   border: none;
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 7 Free", "Font Awesome 7 Pro", "Font Awesome 7 Brands";
   font-weight: 900;
   content: "\f068";
   border: none;
@@ -14131,7 +14154,7 @@ a, button, .button, [type=submit] {
   width: 15px;
   height: 15px;
   border: none;
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 7 Free", "Font Awesome 7 Pro", "Font Awesome 7 Brands";
   font-weight: 900;
   font-size: 11px;
   content: "+";
@@ -14147,7 +14170,7 @@ a, button, .button, [type=submit] {
   width: 15px;
   height: 15px;
   border: none;
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 7 Free", "Font Awesome 7 Pro", "Font Awesome 7 Brands";
   font-weight: 900;
   content: "\f068";
   border: none;
@@ -14179,7 +14202,7 @@ a, button, .button, [type=submit] {
   border-radius: 5px;
   color: #fff;
   display: block;
-  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
+  font-family: "acumin-pro", sans-serif;
   font-size: 13px !important;
   font-weight: 500;
   margin: 10px auto 10px;
@@ -14426,7 +14449,7 @@ body#tinymce {
 .g-section-subtitle {
   color: #FF8200;
   display: block;
-  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
+  font-family: "acumin-pro", sans-serif;
   font-size: 0.975rem;
   font-weight: 700;
   letter-spacing: 2px;
@@ -14443,7 +14466,7 @@ body#tinymce {
 .g-section-title {
   color: #000000;
   display: block;
-  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
+  font-family: "acumin-pro", sans-serif;
   font-size: 26px;
   font-weight: 800;
   margin: 0 0 30px;
@@ -14461,7 +14484,7 @@ body#tinymce {
 .g-section-intro {
   color: #000000;
   display: block;
-  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
+  font-family: "acumin-pro", sans-serif;
   font-size: 16px;
   font-weight: 400;
   margin: 0 0 0;
@@ -14469,48 +14492,18 @@ body#tinymce {
 .g-section-highlight-orange {
   color: #FF8200;
 }
-.g-button.button {
-  margin-right: 10px;
-  background-color: transparent;
-  border-radius: 2px;
-  border: 1px solid #000000;
-  color: #000000;
-  display: inline-block;
-  font-family: "Avenir Next", Avenir, "Canada Type Gibson", sans-serif;
-  font-size: 14px !important;
-  font-weight: 600;
-  margin-top: 1rem;
-  letter-spacing: 1.5px;
-  padding: 8px 34px 8px 20px;
-  position: relative;
-  text-transform: uppercase;
-}
-.g-button.button a {
-  position: relative;
-}
-.g-button.button:before {
-  font-family: "Font Awesome 6 Free";
-  content: "\f054";
-  font-weight: 900;
-  position: absolute;
-  top: 8px;
-  right: 14px;
-  height: 30px;
-  font-size: 14px;
-  width: 8px;
-}
-.g-button.button i {
-  margin-left: 14px;
-}
-.g-button.button:hover, .g-button.button.active {
-  background-color: rgb(0, 34.478358209, 98.3);
-  color: #fff;
-}
 
 p:has(.g-section-subtitle) + h1,
 p:has(.g-section-subtitle) + h2,
 p:has(.g-section-subtitle) + h3 {
   margin-top: 0.5rem;
+}
+
+.fc-section-dark a.uk-button-text {
+  color: #FF8200 !important;
+}
+.fc-section-dark a.uk-button-text:after {
+  color: #FF8200 !important;
 }
 
 .wc-card {
@@ -15500,47 +15493,117 @@ p:has(.g-section-subtitle) + h3 {
   overflow: hidden;
 }
 
-.fc-section-cards .cards {
-  padding-right: 1rem;
-  padding-left: 1rem;
+.fc-section-cards .uk-card.cards-style--primary h3, .fc-section-cards .uk-card.cards-style--primary p {
+  color: #ffffff;
 }
-.fc-section-cards .card-body {
-  background: #fff;
+.fc-section-cards .uk-card.cards-style--primary span {
+  color: #FF8200 !important;
 }
-.fc-section-cards .content-cards {
-  background: #fff;
-  margin-bottom: 2.5rem;
+.fc-section-cards .uk-card.cards-style--primary span:after {
+  color: #FF8200;
+}
+.fc-section-cards .uk-card.cards-style--primary.tall .uk-card--inner {
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+.fc-section-cards .uk-card.cards-style--primary.tall .uk-card--inner .card-media img {
+  aspect-ratio: 3/4;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.fc-section-cards .uk-card.cards-style--primary .uk-card--inner {
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+.fc-section-cards .uk-card.cards-style--primary .uk-card--inner .card-media img {
+  aspect-ratio: 4/3;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.fc-section-cards .uk-card.cards-style--primary .uk-card--inner .card-body {
+  background: linear-gradient(180deg, rgba(0, 47, 134, 0) 0%, var(--ELK-Blue, rgba(0, 47, 134, 0.95)) 57.47%);
+  background-size: 100% 400%;
+  background-position: 0% 0%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  transition: background-position 0.5s ease-out;
+}
+.fc-section-cards .uk-card.cards-style--primary .uk-card--inner .card-body:hover {
+  background-position: 0% 33%;
+}
+.fc-section-cards .uk-card.cards-style--primary .uk-card--inner .card-body:hover .hover-panel--1 {
+  transition: height 0.2s ease-in-out, opacity 0.25s ease-in 0.15s;
+  opacity: 1;
+}
+.fc-section-cards .uk-card.cards-style--primary .uk-card--inner .card-body > *:not(.uk-button) {
+  max-width: 33rem;
+}
+.fc-section-cards .uk-card.cards-style--primary .uk-card--inner .card-body .hover-panel--1 {
+  padding-bottom: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.25s ease-in, height 0.4s ease-in-out 0.1s;
+}
+.fc-section-cards .uk-card.cards-style--primary .uk-card--inner .card-body .hover-panel--1 .uk-button.uk-button-text {
+  color: #FF8200;
+}
+.fc-section-cards .uk-card.cards-style--primary .uk-card--inner .card-body .hover-panel--1 .uk-button.uk-button-text:after {
+  color: #FF8200;
+}
+.fc-section-cards .uk-card.cards-style--primary .uk-card--inner .card-body .hover-panel--1 .uk-button.uk-button-text:hover {
+  color: #ffffff;
+}
+.fc-section-cards .uk-card.cards-style--primary .uk-card--inner .card-body .hover-panel--1 .uk-button.uk-button-text:hover:after {
+  color: #ffffff;
+}
+.fc-section-cards .uk-card.cards-style--primary .uk-card--inner .card-body:has(.hover-panel--0) {
+  background-position: 0% 25%;
+}
+.fc-section-cards .uk-card.cards-style--basic {
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+  filter: drop-shadow(3px 3px 8px rgba(0, 0, 0, 0.25));
+}
+.fc-section-cards .uk-card.cards-style--basic:has(.hover-panel--1) {
+  transition: transform 0.15s ease-in-out, filter 0.2s ease-in-out;
+}
+.fc-section-cards .uk-card.cards-style--basic:has(.hover-panel--1):hover {
+  transform: translateY(-1rem);
+  filter: drop-shadow(3px 13px 16px rgba(0, 0, 0, 0.25));
+}
+.fc-section-cards .uk-card.cards-style--basic .uk-card--inner {
+  border-radius: 1.25rem 1.25rem 0 0;
+  overflow: hidden;
   height: 100%;
 }
-.fc-section-cards .content-cards--inner {
-  padding: 2rem;
+.fc-section-cards .uk-card.cards-style--basic .card-media img {
+  aspect-ratio: 3/2;
+  -o-object-fit: cover;
+     object-fit: cover;
+  min-width: 100%;
+  overflow: hidden;
 }
-.fc-section-cards .content-cards--inner h3 a {
+.fc-section-cards .uk-card.cards-style--basic div.card-body, .fc-section-cards .uk-card.cards-style--basic a.card-body {
+  padding: 2rem;
+  padding-bottom: 4rem;
+  color: #000000;
+  text-decoration: none;
+  background: #ffffff;
+  border-radius: 0 0 1.25rem 1.25rem;
+}
+.fc-section-cards .uk-card.cards-style--basic div.card-body h3, .fc-section-cards .uk-card.cards-style--basic a.card-body h3 {
   font-size: 1.75rem;
   font-style: normal;
   font-weight: 700;
   line-height: 1.3;
   color: #000000;
 }
-.fc-section-cards .content-cards--inner > a {
-  color: #000000;
-  font-size: 1.125rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1.45;
-  text-decoration-line: underline;
-  text-decoration-style: solid;
-  -webkit-text-decoration-skip-ink: none;
-          text-decoration-skip-ink: none;
-  text-decoration-thickness: auto;
-  text-underline-offset: auto;
-  text-underline-position: from-font;
-}
-.fc-section-cards .content-cards img {
-  aspect-ratio: 3/2;
-  -o-object-fit: cover;
-     object-fit: cover;
-  min-width: 100%;
+.fc-section-cards .uk-card.cards-style--basic div.card-body span, .fc-section-cards .uk-card.cards-style--basic a.card-body span {
+  color: #ffffff !important;
 }
 .fc-section-cards .slick-arrow {
   height: 100% !important;
@@ -15564,6 +15627,18 @@ p:has(.g-section-subtitle) + h3 {
   }
 }
 
+.fc-section-dark .cards-style--basic *:not(h3, span) {
+  color: #000000 !important;
+}
+
+.fc-section-dark .cards-style--basic h3 {
+  color: #002F86 !important;
+}
+
+.fc-section-dark .cards-style--primary *:not(h3, span) {
+  color: #ffffff !important;
+}
+
 .fc-section-columns + .fc-section-cards {
   margin-top: 2rem;
 }
@@ -15571,9 +15646,6 @@ p:has(.g-section-subtitle) + h3 {
 .fc-page-header.page-header .page-header-content-wrapper {
   position: relative;
   z-index: 2;
-}
-.fc-page-header.page-header h1 {
-  font-weight: 500;
 }
 
 .fc-section-heading {
@@ -15815,6 +15887,38 @@ p:has(.g-section-subtitle) + h3 {
   text-transform: none !important;
 }
 
+.featured-callout .callout-background {
+  border-radius: 1rem;
+}
+.featured-callout .callout-background--gray {
+  background-color: #EEEDF2;
+}
+.featured-callout .callout-background--gray h2 {
+  color: #002F86 !important;
+}
+.featured-callout .callout-background--blue {
+  background-color: #002F86;
+}
+.featured-callout .callout-background--orange {
+  background-color: #FF8200;
+}
+.featured-callout .callout-background--white {
+  background-color: #ffffff;
+}
+.featured-callout .callout-background--white h2 {
+  color: #002F86 !important;
+}
+
+body .fc-section-dark .callout-background--gray *:not(.uk-button, .g-section-subtitle, h2),
+body .fc-section-dark .callout-background--white *:not(.uk-button, .g-section-subtitle, h2) {
+  color: #000000 !important;
+}
+
+body .fc-section-dark .callout-background--gray h2,
+body .fc-section-dark .callout-background--white h2 {
+  color: #002F86 !important;
+}
+
 .fc-wrapper .top-border > .fc-section-heading,
 .fc-page-header .top-border > .fc-section-heading {
   border-top: 1px solid #000000;
@@ -15901,8 +16005,11 @@ p:has(.g-section-subtitle) + h3 {
 body * .background--light, body * .fc-section-light {
   background-color: #ffffff;
 }
-body * .background--light *:not(.g-section-subtitle), body * .fc-section-light *:not(.g-section-subtitle) {
+body * .background--light *:not(.g-section-subtitle, h1, h2, h3, h4, h5, h6), body * .fc-section-light *:not(.g-section-subtitle, h1, h2, h3, h4, h5, h6) {
   color: #000000;
+}
+body * .background--light h1, body * .background--light h2, body * .background--light h3, body * .background--light h4, body * .background--light h5, body * .fc-section-light h1, body * .fc-section-light h2, body * .fc-section-light h3, body * .fc-section-light h4, body * .fc-section-light h5 {
+  color: #002F86;
 }
 body * .background--light a.button.grey, body * .fc-section-light a.button.grey {
   color: #002F86;
