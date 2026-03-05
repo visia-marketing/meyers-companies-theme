@@ -6,7 +6,7 @@ if( array_key_exists( 'prod_id', $args ) ){
 
 
 
-<div class="uk-card uk-margin-medium-bottom">
+<div class="uk-card uk-margin-medium-bottom uk-margin-medium-right">
 
     <div class="uk-card-media-top">
         <a href="<?php echo get_the_permalink($id); ?>" class="uk-flex uk-width-1-1">

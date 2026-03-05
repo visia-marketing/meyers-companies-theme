@@ -298,7 +298,7 @@
                 "id": ""
             },
             "choices": {
-                "left": "Left",
+                "stretch": "Left",
                 "middle": "Center",
                 "right": "Right"
             },
@@ -381,5 +381,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1772548607
+    "modified": 1772739422
 }

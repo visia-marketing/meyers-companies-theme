@@ -36,9 +36,9 @@ $parent_pages_query = new WP_Query( $args );
 
 ?>
 
-    <div class="uk-flex uk-grid-medium <?php if(  $parent_pages_query->found_posts < 3 ): ?>uk-flex-center<?php else: ?>uk-flex-left <?php endif;?> fc-section-cards product-cards" uk-grid>
+    <div class="uk-flex uk-grid fc-section-cards product-cards">
         <?php foreach( $parent_pages_query->posts as $elk_prod ): ?>
-            <div class="uk-width-1-2 uk-width-1-3@m">
+            <div class="uk-width-1-1 uk-width-1-3@m uk-padding-remove">
                 <?php get_template_part( 'partials/content', 'product-card', array('prod_id' => $elk_prod->ID) ); ?>
             </div>
         <?php endforeach; ?>

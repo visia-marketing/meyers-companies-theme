@@ -132,6 +132,12 @@ body *{
     & .uk-button-text{
       color: $blue !important;
     }
+
+    & .cards-style--primary{
+      & h3{
+        color: $white !important;
+      }
+    }
   
     a.button.grey {
       color: $primary;
