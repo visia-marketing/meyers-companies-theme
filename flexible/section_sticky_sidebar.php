@@ -17,18 +17,23 @@ $sections = get_sub_field('sections');
 
         <?php foreach( $sections as $i => $section): ?>
 
-            <?php
-            
-            if($section['settings']['custom_link']){
-                $section_id = $section['settings']['custom_link_section'];
-            } else{
-                $section_id = 'section_'.$i;
-            }
-            ?>
+            <?php if(!$section['settings']['custom_link']): ?>
 
-            <div class="uk-background-muted uk-height-large uk-margin-large-bottom" id="<?php echo$section_id ;?>">
-                <?php print_r($section); ?> 
-            </div>
+                <?php
+                
+                if($section['settings']['custom_link']){
+                    $section_id = $section['settings']['custom_link_section'];
+                } else{
+                    $section_id = 'section_'.$i;
+                }
+                ?>
+
+                <div class="uk-background-muted uk-height-large uk-margin-large-bottom" id="<?php echo $section_id ;?>">
+                    <?php print_r($section); ?> 
+                </div>
+
+            <?php endif; ?>
+
         <?php endforeach; ?>
 
     </div>
@@ -57,7 +62,7 @@ $sections = get_sub_field('sections');
                     <?php endif; ?>
 
                     <li class="uk-margin-small-bottom">
-                        <a href="#<?php echo $section_id;?>" class="uk-flex uk-flex-inline uk-flex-center uk-margin-small-bottom">
+                        <a href="#<?php echo $section_id;?>" uk-scroll="offset: 100" class="uk-flex uk-flex-inline uk-flex-center uk-margin-small-bottom">
                             <?php echo wp_get_attachment_image( $section['settings']['section_icon'], 'full', true, array( 'class' => 'uk-preserve', 'uk-svg' => '')  );?>
                             <?php echo $section['settings']['section_title'];?>
                         </a>
