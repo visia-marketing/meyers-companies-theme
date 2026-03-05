@@ -28,15 +28,34 @@
     margin: 0;
     padding: 0;
 
-    @include breakpoint(medium) {}
+    
+
+    li:has(ul) + li{
+      
+
+      @include breakpoint(medium) {
+        margin-top: 30px;
+      }
+    }
+
 
     li {
       padding: 0;
+      margin-bottom: 16px;
+
+      & + li:has(ul){
+
+        @include breakpoint(medium) {
+          margin-bottom: 0;
+          margin-top: 30px;
+        }
+      }
+
 
       > a {
         color: $white;
         display: inline-block;
-        font-size: 15px;
+        font-size: 1.0625rem;
         font-weight: 700;
         line-height: 30px;
         padding: 0;
@@ -45,7 +64,6 @@
 
       ul {
         list-style: none;
-        margin: 0 0 30px;
         padding: 0;
 
         li {
@@ -55,7 +73,7 @@
           a {
             color: $white;
             display: inline-block;
-            font-size: 15px;
+            font-size: 1.0625rem;
             font-weight: 400;
             line-height: 1.2;
             padding: 11px 0;
