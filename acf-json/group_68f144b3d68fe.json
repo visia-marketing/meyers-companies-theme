@@ -358,6 +358,38 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_69a8bc55ee3fc": {
+                    "key": "layout_69a8bc55ee3fc",
+                    "name": "section_sticky_sidebar",
+                    "label": "Sticky Sidebar + Content",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_69a8bc6aee3ff",
+                            "label": "Sticky Sidebar",
+                            "name": "sticky_sidebar",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_69a8bb4cd5ee3"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -384,5 +416,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1772649394
+    "modified": 1772665989
 }

@@ -27,7 +27,7 @@
     align-items: center;
 
     & > .uk-container{
-      width: 100%;
+      // width: 100%;
     }
 
      & > .fc-section-columns {
@@ -120,7 +120,7 @@ body *{
     background-color: $white;
   
     //h1, h2, h3, h4, h5, h6, p, a, li, blockquote, .g-style-section-title, .g-style-section-heading, .g-section-subtitle {
-    & *:not(.g-section-subtitle, h1, h2, h3, h4, h5, h6) {
+    & *:not(.uk-button, .g-section-subtitle, h1, h2, h3, h4, h5, h6) {
       color: $black;
     }
 
@@ -128,8 +128,9 @@ body *{
     & h2,
     & h3,
     & h4,
-    & h5{
-      color: $blue;
+    & h5
+    & .uk-button-text{
+      color: $blue !important;
     }
   
     a.button.grey {
@@ -159,7 +160,7 @@ body *{
   }
 
   & .background--image.background--light{
-    & * {
+    & *:not( .uk-button ) {
       color: $black;
     }
   }
@@ -177,49 +178,12 @@ body *{
 
 
 .fc-section-cta {
-  padding: 80px 0;
-  
-  &:after {
-    content: "";
-    position: absolute;
-    left: 10%;
-    top: 0;
-    height: 150%;
-    width: 300px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    opacity: .5;
+
+  & h2{
+    font-family: $sans;
+    font-size: 3.125rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 1;
   }
-  
-
-  .flex {
-    display: flex;
-    flex-direction:column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-
-    @include breakpoint(medium) {
-      flex-direction: row;
-      gap: 50px;
-    }
-
-    h6 {
-      font-size: 22px;
-      margin-bottom: 0;
-      text-align: center;
-
-      @include breakpoint(medium) {
-        flex-direction: row;
-        text-align: left;
-      }
-
-    }
-
-    .button {
-      margin: 0;
-    }
-
-  }
-
 }
