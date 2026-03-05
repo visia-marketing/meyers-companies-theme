@@ -43,21 +43,23 @@ if ( $source === 'default' ){
 
 <div class="fc-section-cta fc-section-columns call-to-action call-to-action--<?php echo $source;?> call-to-action-<?php echo $background; ?> background--<?php echo $background;?> background--<?php echo $content_color;?>" id="<?php echo $cta_id; ?>">
 
-    <div class="call-to-action--inner uk-container">
+    <div class="call-to-action--inner uk-container uk-flex uk-padding-medium">
 
-        <div class="uk-width-1-1 uk-width-4-5 uk-margin-auto-left uk-margin-auto-right">
+        <div class="uk-width-1-1 uk-width-4-5@m uk-margin-auto-left uk-margin-auto-right">
             <?php echo $content; ?>
 
+        </div>
 
+        <div class="uk-width-1-1 uk-width-1-5@m uk-flex uk-flex-left uk-flex-middle">
             <?php if( is_array($button) ): ?>
                 <?php if( array_key_exists('url', $button) ): ?>
-                    <a href="<?php echo esc_url( $button['url'] ); ?>" class="uk-button" <?php if( $button['target'] ): ?> target="<?php echo esc_attr( $button['target'] ); ?>" <?php endif; ?>>
+                    <a href="<?php echo esc_url( $button['url'] ); ?>" class="uk-button uk-button-secondary uk-margin-remove" <?php if( $button['target'] ): ?> target="<?php echo esc_attr( $button['target'] ); ?>" <?php endif; ?>>
                         <?php echo esc_html( $button['title'] ); ?>
                     </a>
                 <?php endif; ?>
             <?php endif; ?>
-
         </div>
+        
 
         
 

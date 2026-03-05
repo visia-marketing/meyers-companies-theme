@@ -9,7 +9,7 @@
       background-color: $secondary;
       border-radius: 2rem;
       border: none;
-      color: $white;
+      
       font-family: $condensed;
       font-size: 1rem;
       font-weight: 700;
@@ -21,6 +21,13 @@
       line-height: 1.5;
       display: inline-flex;
       letter-spacing: 0.04rem;
+
+      &:not(.uk-button-text){
+        color: $white;
+        &:hover{
+          color: $white;
+        }
+      }
 
     &:first-child{
         margin-left: 0;
@@ -79,6 +86,7 @@
       background: unset;
       box-shadow: unset;
       padding: 0;
+      
 
       &:hover,
       &:active,
@@ -87,8 +95,18 @@
       }
     }
 
+    &-secondary{
+      background-color: $blue;
+    }
+
 
     
+}
+
+p:has( .uk-button + .uk-button ){
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
 }
 
 

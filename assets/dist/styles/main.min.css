@@ -13253,7 +13253,6 @@ a, button, .button, [type=submit] {
   background-color: #FF8200;
   border-radius: 2rem;
   border: none;
-  color: #ffffff;
   font-family: "acumin-pro-condensed", sans-serif;
   font-size: 1rem;
   font-weight: 700;
@@ -13265,6 +13264,12 @@ a, button, .button, [type=submit] {
   line-height: 1.5;
   display: inline-flex;
   letter-spacing: 0.04rem;
+}
+.uk-button:not(.uk-button-text) {
+  color: #ffffff;
+}
+.uk-button:not(.uk-button-text):hover {
+  color: #ffffff;
 }
 .uk-button:first-child {
   margin-left: 0;
@@ -13314,6 +13319,15 @@ a, button, .button, [type=submit] {
 }
 .uk-button-text:hover, .uk-button-text:active, .uk-button-text:focus-visible {
   box-shadow: unset;
+}
+.uk-button-secondary {
+  background-color: #002F86;
+}
+
+p:has(.uk-button + .uk-button) {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
 }
 
 .gform_wrapper.gravity-theme.uavionix_wrapper .gform_button {
@@ -15493,6 +15507,38 @@ p:has(.g-section-subtitle) + h3 {
   overflow: hidden;
 }
 
+body .sticky-sidebar ul > li a {
+  position: relative;
+}
+body .sticky-sidebar ul > li a:before {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #FF8200;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transition: width 0.2s ease-in-out;
+}
+body .sticky-sidebar ul > li.uk-active a:before {
+  width: 100%;
+}
+body .sticky-sidebar ul > li a svg * {
+  fill: #FF8200;
+}
+body .sticky-sidebar ul > li a {
+  font-family: "acumin-pro-condensed", sans-serif;
+  color: #002F86 !important;
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  gap: 0.5rem;
+}
+
 .fc-section-cards .uk-card.cards-style--primary h3, .fc-section-cards .uk-card.cards-style--primary p {
   color: #ffffff;
 }
@@ -15982,10 +16028,6 @@ body .fc-section-dark .callout-background--white h2 {
   flex-direction: column;
   align-items: center;
 }
-.fc-wrapper .fc-section > .uk-container,
-.fc-page-header .fc-section > .uk-container {
-  width: 100%;
-}
 .fc-wrapper .fc-section > .fc-section-columns,
 .fc-page-header .fc-section > .fc-section-columns {
   min-width: calc(100% - 4rem);
@@ -16059,11 +16101,11 @@ body .fc-section-dark .callout-background--white h2 {
 body * .background--light, body * .fc-section-light {
   background-color: #ffffff;
 }
-body * .background--light *:not(.g-section-subtitle, h1, h2, h3, h4, h5, h6), body * .fc-section-light *:not(.g-section-subtitle, h1, h2, h3, h4, h5, h6) {
+body * .background--light *:not(.uk-button, .g-section-subtitle, h1, h2, h3, h4, h5, h6), body * .fc-section-light *:not(.uk-button, .g-section-subtitle, h1, h2, h3, h4, h5, h6) {
   color: #000000;
 }
-body * .background--light h1, body * .background--light h2, body * .background--light h3, body * .background--light h4, body * .background--light h5, body * .fc-section-light h1, body * .fc-section-light h2, body * .fc-section-light h3, body * .fc-section-light h4, body * .fc-section-light h5 {
-  color: #002F86;
+body * .background--light h1, body * .background--light h2, body * .background--light h3, body * .background--light h4, body * .background--light h5 body * .background--light .uk-button-text, body * .fc-section-light h1, body * .fc-section-light h2, body * .fc-section-light h3, body * .fc-section-light h4, body * .background--light h5 body * .fc-section-light .uk-button-text, body * .fc-section-light h5 body * .background--light .uk-button-text, body * .fc-section-light h5 body * .fc-section-light .uk-button-text {
+  color: #002F86 !important;
 }
 body * .background--light a.button.grey, body * .fc-section-light a.button.grey {
   color: #002F86;
@@ -16080,53 +16122,19 @@ body * .fc-section-dark a.button.grey {
 body * .fc-section-grey, body * .fc-section-gray, body * .background--gray, body * .background--grey {
   background-color: #F6F5F3;
 }
-body * .background--image.background--light * {
+body * .background--image.background--light *:not(.uk-button) {
   color: #000000;
 }
 body * .background--image.background--dark * {
   color: #fff;
 }
 
-.fc-section-cta {
-  padding: 80px 0;
-}
-.fc-section-cta:after {
-  content: "";
-  position: absolute;
-  left: 10%;
-  top: 0;
-  height: 150%;
-  width: 300px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  opacity: 0.5;
-}
-.fc-section-cta .flex {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-}
-@media (min-width: 1100px) {
-  .fc-section-cta .flex {
-    flex-direction: row;
-    gap: 50px;
-  }
-}
-.fc-section-cta .flex h6 {
-  font-size: 22px;
-  margin-bottom: 0;
-  text-align: center;
-}
-@media (min-width: 1100px) {
-  .fc-section-cta .flex h6 {
-    flex-direction: row;
-    text-align: left;
-  }
-}
-.fc-section-cta .flex .button {
-  margin: 0;
+.fc-section-cta h2 {
+  font-family: "acumin-pro", sans-serif;
+  font-size: 3.125rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 1;
 }
 
 .home-page .home-hero .home-hero-slides {
