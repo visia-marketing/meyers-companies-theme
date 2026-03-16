@@ -21,8 +21,6 @@ import 'simple-lightbox';
 import AOS from 'aos';
 import { CountUp } from 'countup.js';
 
-// Font Awesome 7 Kit - all icons (standard + custom/pro icons)
-import '@awesome.me/kit-f71e020b2c';
 
 (function($) {
 
