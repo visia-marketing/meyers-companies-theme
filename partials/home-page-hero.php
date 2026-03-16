@@ -4,7 +4,7 @@
 ?>
 
 
-<header class="fc-page-header page-header" id="home_hero_<?php echo get_the_ID();?>">
+<header class="fc-page-header page-header" id="home_hero_<?php echo absint(get_the_ID()); ?>">
     <?php 
     if(  $home_hero_background_image ){
         echo wp_get_attachment_image( $home_hero_background_image, 'large', false, array( "class" => "page-header-image" ) );
@@ -15,7 +15,7 @@
             <div class="page-header-content uk-margin-left uk-margin-right uk-margin-remove@l">
 
                 <div class="uk-width-2xlarge">
-                    <?php echo $home_hero_content; ?>
+                    <?php echo wp_kses_post($home_hero_content); ?>
                 </div>
 
             </div>

@@ -138,24 +138,16 @@ body *{
         color: $white !important;
       }
     }
-  
-    a.button.grey {
-      color: $primary;
-    }
-  
+
   }
-  
+
   & .fc-section-dark {
     background-color: $blue;
-  
+
     & *:not(.g-section-subtitle) {
       color: #fff;
     }
-  
-    a.button.grey {
-      color: $primary;
-    }
-  
+
   }
   
   & .fc-section-grey,

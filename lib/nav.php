@@ -1,8 +1,8 @@
 <?php
 /**
  * Custom Navigation Walker for WordPress Menus
- * 
- * Creates cleaner HTML markup for navigation menus with Foundation framework support.
+ *
+ * Creates cleaner HTML markup for navigation menus.
  * Extends WordPress's Walker_Nav_Menu class to customize menu output.
  */
 
@@ -30,8 +30,7 @@ class Roots_Nav_Walker extends Walker_Nav_Menu {
    * @param array $args Array of wp_nav_menu() arguments
    */
   function start_lvl(&$output, $depth = 0, $args = array()) {
-    // Foundation-specific classes for vertical dropdown submenus
-    $output .= "\n<ul class=\"submenu menu vertical\" data-submenu>\n";
+    $output .= "\n<ul class=\"submenu\">\n";
   }
 
   /**
@@ -51,14 +50,8 @@ class Roots_Nav_Walker extends Walker_Nav_Menu {
     // Let parent class build the initial HTML
     parent::start_el($item_html, $item, $depth, $args);
 
-    /**
-     * Handle dropdown toggles for top-level items with children
-     * Currently commented out - likely for Bootstrap dropdown compatibility
-     */
     if ($item->is_dropdown && ($depth === 0)) {
-      // Bootstrap dropdown toggle markup (currently disabled)
-      // $item_html = str_replace('<a', '<a class="dropdown-toggle" data-toggle="dropdown" data-target="#"', $item_html);
-      // $item_html = str_replace('</a>', ' <b class="caret"></b></a>', $item_html);
+      // Dropdown parent — handled via CSS hover
     }
     /**
      * Handle divider menu items
@@ -99,7 +92,7 @@ class Roots_Nav_Walker extends Walker_Nav_Menu {
 
     // Add Foundation's 'has-submenu' class to parent items
     if ($element->is_dropdown) {
-      $element->classes[] = 'has-submenu'; // Foundation class (Bootstrap would use 'has-dropdown')
+      $element->classes[] = 'has-submenu';
     }
 
     // Let parent class handle the rest of the display

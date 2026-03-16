@@ -22,8 +22,6 @@ if ($aos == 'no_animation') {
 
 }
 
-// $card_style = 'primary';
-
 $class = ' uk-card uk-margin-bottom card-background--image cards-style--'.$card_style;
 
 switch ($per_row) {
@@ -89,7 +87,7 @@ switch ($per_row) {
                             <?php endif; ?>
 
                             <?php if( $card_url != ''): ?>
-                                <span class="uk-button <?php if( str_contains($card_style, 'primary') ): ?> uk-button-text <?php endif; ?> uk-button-arrow uk-flex uk-flex-inline">
+                                <span class="uk-button <?php if( strpos($card_style, 'primary') !== false ): ?> uk-button-text <?php endif; ?> uk-button-arrow uk-flex uk-flex-inline">
                                     <?php echo $card_title ; ?>
                                 </span>
                             <?php endif; ?>

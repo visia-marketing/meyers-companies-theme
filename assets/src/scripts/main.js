@@ -24,8 +24,6 @@ import { CountUp } from 'countup.js';
 // Font Awesome 7 Kit - all icons (standard + custom/pro icons)
 import '@awesome.me/kit-f71e020b2c';
 
-// If you only need specific modules:
-// import { Foundation, Accordion, Tabs } from 'foundation-sites';
 (function($) {
 
   // Use this variable to set up the common and page specific functions. If you
@@ -78,12 +76,8 @@ import '@awesome.me/kit-f71e020b2c';
           
         }
 
-        // wait until whole page is loaded
-        jQuery(document).ready(function($) {
-          setTimeout(
-            hoverCardsInit(),
-            500
-          )
+        jQuery(document).ready(function() {
+          setTimeout(hoverCardsInit, 500);
         });
 
 
@@ -163,16 +157,6 @@ import '@awesome.me/kit-f71e020b2c';
     // All Other Pages.
     'page': {
       init: function() {
-        
-        // Accordion
-        $('.accordion-topic').click(function(){
-          $(this).next('.accordion-response').slideToggle(500).toggleClass('current');
-          $(this).toggleClass('current');
-          $(this).parents('.accordion').siblings().find('.accordion-topic').slideUp(500);
-          $(this).parents('.accordion').siblings().find('.accordion-response').removeClass('current');
-        });
-        
-
       }
     },
   };

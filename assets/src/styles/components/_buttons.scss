@@ -17,7 +17,6 @@
       padding: 0.54rem 2rem;
       text-transform: uppercase;
       text-align: center;
-      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.45);
       line-height: 1.5;
       display: inline-flex;
       letter-spacing: 0.04rem;
@@ -42,25 +41,21 @@
     }
     
 
-    transition: 
+    transition:
         transform 160ms ease,
-        box-shadow 160ms ease,
         background-color 160ms ease,
         color 160ms ease;
 
         &:hover{
             transform: translateY(-2px);
-            box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.45);
         }
 
         &:active{
             transform: translateY(0px);
-            box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.45);
         }
 
         &:focus-visible {
             outline: none;
-            box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.45);
         }
 
     &.uk-button-large{
@@ -84,15 +79,7 @@
 
     &-text{
       background: unset;
-      box-shadow: unset;
       padding: 0;
-      
-
-      &:hover,
-      &:active,
-      &:focus-visible{
-        box-shadow: unset;
-      }
     }
 
     &-secondary{

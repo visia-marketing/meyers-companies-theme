@@ -11,7 +11,7 @@ $content = get_sub_field('callout_content');
 
 <div class="featured-callout">
 
-    <div class="callout-background callout-background--<?php echo $background_color; ?>">
+    <div class="callout-background callout-background--<?php echo esc_attr($background_color); ?>">
 
         <div class="uk-padding">
 
@@ -19,7 +19,7 @@ $content = get_sub_field('callout_content');
 
                 <div class="uk-width-1-1 uk-width-1-2@m">
                     <?php if( $content ): ?>
-                        <?php echo $content; ?>
+                        <?php echo wp_kses_post($content); ?>
                     <?php endif; ?>
                 </div>
 

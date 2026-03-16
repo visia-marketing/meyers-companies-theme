@@ -2,8 +2,6 @@
 
 $sections = get_sub_field('sections');
 
-// print_r( $sections );
-
 ?>
 
 
@@ -19,17 +17,9 @@ $sections = get_sub_field('sections');
 
             <?php if(!$section['settings']['custom_link']): ?>
 
-                <?php
-                
-                if($section['settings']['custom_link']){
-                    $section_id = $section['settings']['custom_link_section'];
-                } else{
-                    $section_id = 'section_'.$i;
-                }
-                ?>
+                <?php $section_id = 'section_' . $i; ?>
 
-                <div class="uk-background-muted uk-height-large uk-margin-large-bottom" id="<?php echo $section_id ;?>">
-                    <?php print_r($section); ?> 
+                <div class="uk-background-muted uk-height-large uk-margin-large-bottom" id="<?php echo esc_attr($section_id); ?>">
                 </div>
 
             <?php endif; ?>
