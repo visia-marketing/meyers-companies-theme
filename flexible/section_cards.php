@@ -48,6 +48,7 @@ switch ($per_row) {
     <?php if($display == "carousel"): ?>
         <div id="<?php echo $rand_id;?>" class="fc-section-cards carousel-wrapper"  data-slides-to-show="<?php echo $per_row; ?>" data-duration="<?php echo $aos_duration; ?>" data-step="<?php echo $aos_step; ?>">
     <?php else: ?>
+        <div class="cards-grid-outer">
         <div id="<?php echo $rand_id;?>" class="fc-section-cards uk-width-1-1 grid-container uk-grid uk-grid-medium uk-grid-match">
     <?php endif; ?>
     <?php $delay = 0; ?>
@@ -107,6 +108,7 @@ switch ($per_row) {
         <?php endforeach; ?>
 
     </div>
+    <?php if($display != "carousel"): ?></div><?php endif; ?>
 
 <?php if($display == "carousel"): ?>
 
