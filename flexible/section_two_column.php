@@ -39,12 +39,12 @@ switch ($column_ratio) {
 
       <div class="uk-width-1-1@s <?php echo esc_attr($left_col); ?> uk-flex-stretch content column">
         <div class="content uk-width-1-1 uk-flex uk-flex-column uk-height-1-1 uk-flex-stretch uk-flex-<?php echo esc_attr($content_alignment); ?>">
-          <?php echo wp_kses_post(get_sub_field('column_1')); ?>
+          <?php echo do_shortcode(wp_kses_post(get_sub_field('column_1'))); ?>
         </div>
       </div>
       <div class="uk-width-1-1@s <?php echo esc_attr($right_col); ?> uk-flex-stretch column">
         <div class="content uk-width-1-1 uk-flex uk-flex-column uk-height-1-1 uk-flex-<?php echo esc_attr($content_alignment); ?>">
-          <?php echo wp_kses_post(get_sub_field('column_2')); ?>
+          <?php echo do_shortcode(wp_kses_post(get_sub_field('column_2'))); ?>
         </div>
       </div>
 

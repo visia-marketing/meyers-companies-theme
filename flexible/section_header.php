@@ -10,7 +10,7 @@
           <?php endif; ?>
 
           <?php if ( get_sub_field('section_heading') ): ?>
-            <p class="g-section-intro"><?php echo wp_kses_post(get_sub_field('section_heading')); ?></p>
+            <p class="g-section-intro"><?php echo do_shortcode(wp_kses_post(get_sub_field('section_heading'))); ?></p>
           <?php endif; ?>
         </div>
       </div>
