@@ -1,3 +1,9 @@
+h3 {
+  @include breakpoint(medium) {
+    font-size: 1.85rem;
+  }
+}
+
 // Ensure all UIkit containers fill available width up to their max-width
 .uk-container {
   width: 100%;
