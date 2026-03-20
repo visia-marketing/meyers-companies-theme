@@ -4,17 +4,17 @@
 
       <div>
         <div class="content content-columns">
-          <?php echo do_shortcode(wp_kses_post(get_sub_field('column_1'))); ?>
+          <?php echo do_shortcode(wp_kses_post(get_sub_field('column_1', false))); ?>
         </div>
       </div>
       <div>
         <div class="content content-columns">
-          <?php echo do_shortcode(wp_kses_post(get_sub_field('column_2'))); ?>
+          <?php echo do_shortcode(wp_kses_post(get_sub_field('column_2', false))); ?>
         </div>
       </div>
       <div>
         <div class="content content-columns">
-          <?php echo do_shortcode(wp_kses_post(get_sub_field('column_3'))); ?>
+          <?php echo do_shortcode(wp_kses_post(get_sub_field('column_3', false))); ?>
         </div>
       </div>
 

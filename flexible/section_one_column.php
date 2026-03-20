@@ -36,6 +36,6 @@ switch ($column_width) {
   <?php get_template_part('flexible/section_header'); ?>
 
     <div class="content uk-width-<?php echo esc_attr($column_width); ?>">
-      <?php echo do_shortcode(wp_kses_post(get_sub_field('column_1'))); ?>
+      <?php echo do_shortcode(wp_kses_post(get_sub_field('column_1', false))); ?>
     </div>
 
