@@ -46,6 +46,26 @@
             "preview_size": "medium"
         },
         {
+            "key": "field_top_header_text",
+            "label": "Top Header Text",
+            "name": "top_header_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Text displayed on the far left of the top orange bar (e.g. ENGINEERED PLASTIC SOLUTIONS)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_65dca61d5d546",
             "label": "Call To Action Bar",
             "name": "",

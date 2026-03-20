@@ -1,3 +1,15 @@
+// Ensure all UIkit containers fill available width up to their max-width
+.uk-container {
+  width: 100%;
+  box-sizing: border-box;
+
+  &.uk-container-xsmall { max-width: $container-xsmall-max-width; }
+  &.uk-container-small  { max-width: $container-small-max-width; }
+  &.uk-container-large  { max-width: $container-large-max-width; }
+  &.uk-container-xlarge { max-width: $container-xlarge-max-width; }
+  &.uk-container-expand { max-width: none; }
+}
+
 // Some global styles for sections of content
 html, body {
   -webkit-font-smoothing: antialiased;

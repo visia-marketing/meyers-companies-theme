@@ -1,17 +1,23 @@
 .page-breadcrumbs {
-  color: $gray;
+  color: $elk-gray !important;
   
+  nav {
+    font-size:  0.9375rem !important;
+    font-weight: 400;
+    color: $elk-gray !important;
+  }
+
   & span.current-item{
-    color: $secondary;
+    color: $secondary !important;
   }
 
   & *{
-    font-size:  0.9375rem;
-        font-weight: 600;
+    font-size:  0.9375rem !important;
+    font-weight: 400;
   }
 
   span > a > span {
-    color: $gray;
+    color: $elk-gray !important;
 
   }
 

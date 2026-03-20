@@ -1,0 +1,50 @@
+{
+    "key": "group_691f88df2536e",
+    "title": "COMPONENT: Download Grid",
+    "fields": [
+        {
+            "key": "field_691f88df05ace",
+            "label": "Select Downloads",
+            "name": "download_ids",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "Select one or more downloads to display in the grid.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "dlm_download"
+            ],
+            "post_status": "",
+            "taxonomy": "",
+            "return_format": "object",
+            "multiple": 1,
+            "allow_null": 0,
+            "ui": 1,
+            "allow_in_bindings": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1742428800
+}

@@ -194,10 +194,10 @@ $top-header-link-color: $top-header-link-color;
           border-radius: 2rem;
           border: none;
           color: $white;
-          font-family: $condensed;
+          //font-family: $condensed;
           font-size: 1rem;
           font-weight: 700;
-          padding: 0.44rem 2rem;
+          padding: 0.65rem 2rem;
           text-transform: uppercase;
           position: relative;
           display: flex;
@@ -264,39 +264,85 @@ $top-header-link-color: $top-header-link-color;
     gap: 30px;
   }
 
+  .top-header-text {
+    color: #fff;
+    font-family: $sans;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1.95px;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
   .top-header-search {
-    background-color: #f4f4f4;
     display: flex;
-    margin: 6px 0;
-    padding: 0 5px;
-  
-    @include breakpoint(medium) {
-      //float: right;
-    }
-  
-    form, label {
+    align-items: center;
+    margin: 0;
+
+    .search-form {
       display: flex;
       align-items: center;
-      
-
-      i {
-        color: #fff;
-        margin: 0;
-      }
-
+      background-color: #fff;
+      border: 0.5px solid #f07a00;
+      border-radius: 30px;
+      height: 28px;
+      width: 176px;
+      padding: 0 10px 0 14px;
+      overflow: hidden;
     }
-  
+
+    label {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      margin: 0;
+    }
+
     input {
       border: none;
-      margin-bottom: 0;
-      max-height: 2rem;
+      background: transparent;
+      margin: 0;
+      padding: 0;
+      font-size: 13px;
+      color: $black;
+      width: 100%;
+      height: 100%;
+      outline: none;
+      box-shadow: none;
+
+      &:focus,
+      &:active {
+        outline: none;
+        border: none;
+        box-shadow: none;
+      }
+
+      &::placeholder {
+        color: #aaa;
+        font-family: $sans;
+      }
     }
 
     button {
-      height: 100%;
+      background: transparent;
+      border: none;
+      padding: 0;
       margin: 0;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      line-height: 1;
+
+      i {
+        color: $black;
+        font-size: 12px;
+      }
+
+      &:hover i {
+        color: $primary;
+      }
     }
-  
+
   }
   
 
@@ -322,10 +368,10 @@ $top-header-link-color: $top-header-link-color;
       }
 
       &.top-menu-fa-email,
-      &.top-menu-fa-phone {
+      &.top-menu-fa-phone,
+      &.icon-tele {
         position: relative;
-        padding-left: 16px;
-        
+        padding-left: 20px;
 
         &:before {
           font-family: $fontawesome;
@@ -344,6 +390,12 @@ $top-header-link-color: $top-header-link-color;
 
       &.top-menu-fa-phone::before {
         content: "\f095";
+      }
+
+      &.icon-tele::before {
+        content: "\e11b";
+        font-size: 14px;
+        margin-top: -9px;
       }
 
     }
