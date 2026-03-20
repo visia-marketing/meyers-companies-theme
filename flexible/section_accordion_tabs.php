@@ -40,7 +40,7 @@
                       <h4><?php echo esc_html(get_sub_field('heading')); ?></h4>
                       <i class="fa-solid fa-chevron-right"></i>
                     </a>
-                    <div class="uk-accordion-content accordion-response"><?php echo do_shortcode(wp_kses_post(get_sub_field('content', false))); ?></div>
+                    <div class="uk-accordion-content accordion-response"><?php echo get_sub_field('content'); ?></div>
                   </li>
                 <?php endwhile; ?>
               </div>
