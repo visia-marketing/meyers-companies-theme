@@ -1,7 +1,7 @@
 <?php
 
-$selected = get_sub_field('product');
-$per_row  = get_sub_field('per_row') ?: 3;
+$selected  = get_sub_field('products');
+$per_row   = get_sub_field('per_row') ?: 3;
 $col_class = $per_row == 4 ? 'uk-width-1-2@s uk-width-1-4@m' : 'uk-width-1-2@s uk-width-1-3@m';
 
 $args = array(
