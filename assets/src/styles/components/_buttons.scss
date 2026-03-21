@@ -11,7 +11,7 @@
       border: none;
       
       font-family: $sans;
-      font-size: 1rem;
+      font-size: .975rem;
       font-weight: 700;
       margin: 1rem 0 0 0;
       padding: 0.65rem 2rem;
@@ -33,30 +33,31 @@
     }
 
     &:last-child{
-        margin-right: 0;
+        //margin-right: 0;
+        margin-right: auto;
     }
    
     @media screen and (max-width: 950px) {
         margin: 0.5rem;
     }
     
-
+    
     transition:
-        transform 160ms ease,
-        background-color 160ms ease,
-        color 160ms ease;
+      transform 160ms ease,
+      background-color 160ms ease,
+      color 160ms ease;
 
-        &:hover{
-            transform: translateY(-2px);
-        }
+      &:hover{
+          transform: translateY(-2px);
+      }
 
-        &:active{
-            transform: translateY(0px);
-        }
+      &:active{
+          transform: translateY(0px);
+      }
 
-        &:focus-visible {
-            outline: none;
-        }
+      &:focus-visible {
+          outline: none;
+      }
 
     &.uk-button-large{
         padding-top: 1.2rem;
@@ -71,7 +72,7 @@
       
       &:after {
         color: #fff;
-        content: "\f178";
+        content: "\f061";
         font-family: $fontawesome;
         font-weight: 400;
       }

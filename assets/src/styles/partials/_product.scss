@@ -1,5 +1,37 @@
 /* TTEEMMPMP */
 
+.product-cards {
+  > div { display: flex; }
+
+  .uk-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .card-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+
+      a.uk-button { margin-top: auto; }
+    }
+  }
+
+  .card-body {
+    padding: 0.6rem 0.85rem 0.85rem;
+
+    .card-title {
+      margin-bottom: 0.5rem;
+      a { color: inherit; }
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+  }
+}
+
 .Xwoocommerce-breadcrumb {
   display: none;
 }

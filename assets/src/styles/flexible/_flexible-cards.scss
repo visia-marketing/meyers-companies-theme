@@ -195,13 +195,16 @@
         & .uk-card{
             border-radius: 1.125rem;
             background: $white;
+            overflow: hidden;
             
             & .uk-card-media-top{
-                padding:  1.2rem  3rem 0  3rem;
+                background-color: #f8f8f8; 
+                padding:  1rem;
 
                 & img{
                     aspect-ratio: 16/18;
                     object-fit: contain;
+                    max-height: 220px;
                     
                 }
 
@@ -230,7 +233,7 @@
             }
 
             & .card-body{
-                padding: 2rem 1.8rem 3rem;
+                padding: 1.125rem;
 
                 & h3{
                     font-size: 1.5rem;

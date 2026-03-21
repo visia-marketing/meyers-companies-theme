@@ -129,8 +129,13 @@ body *{
     background-color: $white;
   
     //h1, h2, h3, h4, h5, h6, p, a, li, blockquote, .g-style-section-title, .g-style-section-heading, .g-section-subtitle {
-    & *:not(.uk-button, .g-section-subtitle, h1, h2, h3, h4, h5, h6) {
+    & *:not(.uk-button, .g-section-subtitle, h1, h2, h3, h4, h5, h6, a) {
       color: $black;
+    }
+
+    & p a {
+      color: $primary;
+      &:hover { color: $secondary; }
     }
 
     & h1,

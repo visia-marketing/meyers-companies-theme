@@ -4,9 +4,7 @@ if( array_key_exists( 'prod_id', $args ) ){
 }
 ?>
 
-
-
-<div class="uk-card uk-margin-medium-bottom uk-margin-medium-right">
+<div class="uk-card uk-margin-medium-bottom">
 
     <div class="uk-card-media-top">
         <a href="<?php echo esc_url(get_the_permalink($id)); ?>" class="uk-flex uk-width-1-1">
@@ -15,9 +13,14 @@ if( array_key_exists( 'prod_id', $args ) ){
     </div>
 
     <div class="card-body">
-        <h3 class="card-title"><?php echo esc_html(get_the_title($id)); ?></h3>
-        <p><?php echo wp_kses_post(get_the_excerpt($id)); ?></p>
-
+        <h3 class="card-title"><a href="<?php echo esc_url(get_the_permalink($id)); ?>"><?php echo esc_html(get_the_title($id)); ?></a></h3>
+        <p><?php
+            $excerpt = get_post_field('post_excerpt', $id);
+            if ( ! $excerpt ) {
+                $excerpt = wp_trim_words(get_post_field('post_content', $id), 35);
+            }
+            echo wp_kses_post($excerpt);
+        ?></p>
         <a class="uk-button uk-button-arrow uk-button-text" href="<?php echo esc_url(get_the_permalink($id)); ?>">View Product</a>
     </div>
 

@@ -25,21 +25,13 @@
         },
         {
             "key": "field_69a87af3edada",
-            "label": "Choose a Parent Product",
-            "name": "parent_product",
+            "label": "Choose Products",
+            "name": "product",
             "aria-label": "",
             "type": "relationship",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_69a87b39edadb",
-                        "operator": "!=",
-                        "value": "1"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -55,11 +47,37 @@
             ],
             "return_format": "id",
             "min": 1,
-            "max": 1,
+            "max": 0,
             "allow_in_bindings": 0,
             "elements": "",
             "bidirectional": 0,
             "bidirectional_target": []
+        },
+        {
+            "key": "field_69a87af3per_row",
+            "label": "Columns Per Row",
+            "name": "per_row",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "3": "3 Columns",
+                "4": "4 Columns"
+            },
+            "default_value": "3",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0
         }
     ],
     "location": [
@@ -81,5 +99,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1772649731
+    "modified": 1774110174
 }

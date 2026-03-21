@@ -16,6 +16,11 @@ h3 {
   &.uk-container-expand { max-width: none; }
 }
 
+p a {
+  color: $primary;
+  &:hover { color: $secondary; }
+}
+
 // Some global styles for sections of content
 html, body {
   -webkit-font-smoothing: antialiased;
