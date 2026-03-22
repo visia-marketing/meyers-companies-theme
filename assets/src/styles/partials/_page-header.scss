@@ -1,14 +1,11 @@
 .fc-page-header {
   display: flex;
-  //height: 100px;
   position: relative;
   overflow: hidden;
 
-
-   & .uk-container:has(.page-header-content){
+  & .uk-container:has(.page-header-content){
     width: 100%;
   }
-
 
   & img.page-header-image{
     position: absolute;
@@ -20,8 +17,9 @@
   }
 
   .page-header-content-wrapper {
-    //background-color: $primary;
     align-self: flex-end;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     width: 100%;
 
     &.page-header-expanded{

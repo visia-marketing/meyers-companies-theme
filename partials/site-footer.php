@@ -2,13 +2,13 @@
 
   <div class="uk-container uk-container-xlarge uk-flex uk-flex-wrap">   
 
-    <div class="uk-width-1-1@s uk-width-1-1@m uk-width-1-2@xl uk-margin-medium-bottom uk-margin-remove-bottom@m">
+    <div class="uk-width-1-1@s uk-width-1-1@m uk-width-1-3@xl uk-margin-medium-bottom uk-margin-remove-bottom@m">
       <div class="footer-logo">
         <a href="<?= esc_url(home_url('/')); ?>"><img src="<?php echo esc_url(get_field('footer_logo', 'options'));?>" alt="<?php bloginfo('name'); ?>" loading="lazy"></a>
       </div>
     </div>
 
-    <div class="uk-width-1-1@s uk-width-1-1@m uk-width-1-2@xl  uk-margin-medium-bottom uk-margin-remove-bottom@m">
+    <div class="uk-width-1-1@s uk-width-1-1@m uk-width-2-3@xl  uk-margin-medium-bottom uk-margin-remove-bottom@m">
       <div class="uk-grid uk-grid-small">
 
         <div class="uk-width-1-1@s uk-width-1-4@m ">   
@@ -37,12 +37,17 @@
 
         <div class="uk-width-1-1@s uk-width-1-4@m">
           <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-top@m">
-            <p class="connect">Connect with Us</p>
 
+            <?php $footer_contact = get_field('footer_contact_info', 'options'); ?>
+            <?php if( $footer_contact ): ?>
+              <div class="footer-contact-info uk-margin-small-bottom">
+                <?php echo wp_kses_post($footer_contact); ?>
+              </div>
+            <?php endif; ?>
             <?php $social_media = get_field('social_media', 'options'); ?>
             <div class="social-icons uk-margin-small-top uk-flex uk-flex-wrap uk-flex-left">
               <?php foreach( $social_media as $social ): ?>
-                <a href="<?php echo esc_url($social['url']); ?>" target="_blank" rel="noopener noreferrer" aria-label="<?php echo esc_attr($social['social_icon']); ?>" class="uk-margin-small-right">
+                <a href="<?php echo esc_url($social['social_url']); ?>" target="_blank" rel="noopener noreferrer" aria-label="<?php echo esc_attr($social['social_icon']); ?>" class="uk-margin-small-right">
                   <i class="fa-brands fa-<?php echo esc_attr($social['social_icon']); ?> fa-2xl" aria-hidden="true"></i>
                 </a>
               <?php endforeach; ?>
@@ -65,7 +70,7 @@
     
   </div> <!-- uk container -->
   
-  <div class="uk-container uk-container-xlarge uk-margin-xlarge-top uk-flex uk-flex-left uk-width-1-1 copyright-container">
+  <div class="uk-container uk-container-xlarge uk-width-1-1 copyright-container">
     <div class="footer-copyright">
       <div class="copyright">
         <?php echo wp_kses_post(get_field('copyright', 'options'));?>

@@ -203,11 +203,38 @@ body *{
     font-style: normal;
     font-weight: 900;
     line-height: 1.2;
+    padding-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .call-to-action--inner {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .uk-button {
     white-space: nowrap;
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  &.background--dark {
+    background-color: $blue;
+    * { color: #fff; }
+  }
+
+  &.background--orange {
+    background-color: $orange;
+    * { color: #fff; }
+  }
+
+  &.background--grey {
+    background-color: $gray-bg;
+    h1, h2, h3, h4, h5, h6 { color: $primary; }
+  }
+
+  &.background--light {
+    background-color: $white;
+    h1, h2, h3, h4, h5, h6 { color: $primary; }
   }
 }

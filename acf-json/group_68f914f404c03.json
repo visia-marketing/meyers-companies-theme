@@ -80,6 +80,7 @@
                 "light": "Light",
                 "dark": "Dark",
                 "grey": "Grey",
+                "orange": "Orange",
                 "image": "Image"
             },
             "default_value": false,

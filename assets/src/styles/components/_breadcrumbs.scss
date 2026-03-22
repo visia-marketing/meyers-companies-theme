@@ -1,8 +1,9 @@
 .page-breadcrumbs {
   color: $elk-gray !important;
+  margin-bottom: .33rem;
   
   nav {
-    font-size:  0.9375rem !important;
+    font-size:  0.875rem !important;
     font-weight: 400;
     color: $elk-gray !important;
   }
@@ -12,7 +13,7 @@
   }
 
   & *{
-    font-size:  0.9375rem !important;
+    font-size:  0.875rem !important;
     font-weight: 400;
   }
 

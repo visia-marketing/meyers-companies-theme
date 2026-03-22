@@ -20,7 +20,7 @@ if ( $source === 'default' ){
     $background = get_sub_field('cta_background');
 
     if( $background == 'image'){
-        $content_color = get_field('cta_text_color') ?? '';
+        $content_color = get_sub_field('cta_text_color') ?? '';
         $bg_image = get_sub_field('cta_background_image');
         $image = wp_get_attachment_image_url( $bg_image, 'large' );
     }

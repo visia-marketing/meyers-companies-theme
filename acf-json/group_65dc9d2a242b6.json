@@ -311,6 +311,27 @@
             "preview_size": "medium"
         },
         {
+            "key": "field_65dc9dc851c23",
+            "label": "Contact Info",
+            "name": "footer_contact_info",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
             "key": "field_699f257a96420",
             "label": "Social Media",
             "name": "social_media",
