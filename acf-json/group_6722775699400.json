@@ -41,6 +41,36 @@
             "toolbar": "full",
             "media_upload": 1,
             "delay": 0
+        },
+        {
+            "key": "field_6722775699401",
+            "label": "Column Ratio",
+            "name": "column_ratio",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "1-3": "1\/3 — 2\/3 (Left Narrow)",
+                "1-2": "1\/2 — 1\/2 (Equal)",
+                "2-3": "2\/3 — 1\/3 (Right Narrow)"
+            },
+            "default_value": "1-2",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         }
     ],
     "location": [
@@ -62,5 +92,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1772649345
+    "modified": 1774146638
 }

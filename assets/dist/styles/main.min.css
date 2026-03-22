@@ -13361,21 +13361,27 @@ p:has(.uk-button + .uk-button) {
   gap: 1.8rem;
 }
 
-.gform_wrapper.gravity-theme.uavionix_wrapper .gform_button {
-  padding-right: 28px;
-  margin-left: auto;
-  position: relative;
+.gform_wrapper.gravity-theme .gform_button {
+  background-color: #FF8200;
+  border-radius: 2rem;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: "acumin-pro", sans-serif;
+  font-size: 0.975rem;
+  font-weight: 700;
+  letter-spacing: 0.04rem;
+  line-height: 1.5;
+  padding: 0.65rem 2rem;
+  text-transform: uppercase;
+  transition: transform 160ms ease, background-color 160ms ease;
 }
-.gform_wrapper.gravity-theme.uavionix_wrapper .gform_button:before {
-  font-family: "Font Awesome 7 Free", "Font Awesome 7 Pro", "Font Awesome 7 Brands";
-  content: "\f054";
-  font-weight: 900;
-  position: absolute;
-  top: 5px;
-  right: 14px;
-  height: 30px;
-  font-size: 16px;
-  width: 8px;
+.gform_wrapper.gravity-theme .gform_button:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+.gform_wrapper.gravity-theme .gform_button:active {
+  transform: translateY(0px);
 }
 
 .gform_wrapper.gravity-theme .gform_required_legend {
@@ -15709,6 +15715,10 @@ body .sticky-sidebar ul > li a {
 
 .fc-section img:not(.uk-card img, .fc-section-cards img) {
   border-radius: 0.75rem;
+}
+
+img.not-round {
+  border-radius: 0 !important;
 }
 
 .fc-page-header.page-header .page-header-content-wrapper {

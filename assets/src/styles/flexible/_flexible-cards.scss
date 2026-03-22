@@ -229,3 +229,7 @@
 .fc-section img:not(.uk-card img, .fc-section-cards img) {
   border-radius: 0.75rem;
 }
+
+img.not-round {
+  border-radius: 0 !important;
+}

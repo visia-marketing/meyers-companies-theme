@@ -11,25 +11,17 @@
 
 
 switch ($column_ratio) {
-  case 1:
-    $left_col = 'uk-width-1-4@m';
-    $right_col = 'uk-width-3-4@m';
-    break;
-  case 2:
+  case '1-3':
     $left_col = 'uk-width-1-3@m';
     $right_col = 'uk-width-2-3@m';
     break;
-  case 4:
+  case '2-3':
     $left_col = 'uk-width-2-3@m';
     $right_col = 'uk-width-1-3@m';
     break;
-  case 5:
-    $left_col = 'uk-width-3-4@m';
-    $right_col = 'uk-width-1-4@m';
-    break;
-  default:
+  default: // '1-2' or empty
     $left_col = 'uk-width-1-2@m';
-    $right_col = 'uk-width-1-2@m';  
+    $right_col = 'uk-width-1-2@m';
 }
 
 
