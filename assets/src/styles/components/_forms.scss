@@ -8,37 +8,99 @@
     display: none;
   }
 
-  /* Make input fields transparent */
   .gfield input[type="text"],
   .gfield input[type="email"],
   .gfield input[type="tel"],
   .gfield input[type="url"],
-  .gfield textarea,
   .gfield select {
-    background-color: white;
+    background-color: $white;
+    border: 1.5px solid $light-gray;
+    border-radius: 2rem;
     box-shadow: none;
-    border: 1px solid grey; // Border color
-    color: $black; // Text color
-    padding: 10px;
-    border-radius: 5px;
+    color: $black;
+    font-family: $sans;
+    font-size: 1rem;
+    padding: 0.75rem 1.25rem;
     width: 100%;
+    transition: border-color 0.2s ease;
 
     &:focus {
-        //border-color: #0073aa; // Change border color on focus
-        outline: none;
+      border-color: $primary;
+      outline: none;
     }
 
     &::placeholder {
-      font-size: 16px;
-      opacity: 1; // Full opacity for placeholders
+      color: $medium-gray;
+      opacity: 1;
     }
   }
 
-  /* Hide labels */
-  .gfield_label {
-      //font-family: $condensed;
-      //text-transform: uppercase;
+  .gfield textarea {
+    background-color: $white;
+    border: 1.5px solid $light-gray;
+    border-radius: 1rem;
+    box-shadow: none;
+    color: $black;
+    font-family: $sans;
+    font-size: 1rem;
+    padding: 0.75rem 1.25rem;
+    width: 100%;
+    transition: border-color 0.2s ease;
+    resize: vertical;
+
+    &:focus {
+      border-color: $primary;
+      outline: none;
+    }
+
+    &::placeholder {
+      color: $medium-gray;
+      opacity: 1;
+    }
   }
+
+  // Floating label base
+  .gfield {
+    position: relative;
+    margin-top: 0.5rem;
+  }
+
+  .gfield_label {
+    position: absolute;
+    top: 0.75rem;
+    left: 1.25rem;
+    font-family: $sans;
+    font-size: 1rem;
+    color: $medium-gray;
+    pointer-events: none;
+    transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+    background: $white;
+    padding: 0 0.35rem;
+    z-index: 1;
+    line-height: 1;
+  }
+
+  // Float label up when focused or has value
+  .gfield.gf--focused,
+  .gfield.gf--has-value {
+    .gfield_label {
+      top: -0.55rem;
+      font-size: 0.75rem;
+      color: $primary;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="url"],
+    textarea {
+      padding-top: 1.1rem;
+      padding-bottom: 0.4rem;
+    }
+  }
+
+  // Required asterisk
+  .gfield_required { display: none; }
 
   .gfield--type-checkbox {
     margin-top: 12px;
