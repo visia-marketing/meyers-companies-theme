@@ -102,6 +102,20 @@
   // Required asterisk
   .gfield_required { display: none; }
 
+  // Reset floating label for checkboxes, radios, consent
+  .gfield--type-checkbox,
+  .gfield--type-radio,
+  .gfield--type-consent {
+    .gfield_label {
+      position: static;
+      font-size: 1rem;
+      color: $black;
+      background: none;
+      padding: 0;
+      pointer-events: auto;
+    }
+  }
+
   .gfield--type-checkbox {
     margin-top: 12px;
 
