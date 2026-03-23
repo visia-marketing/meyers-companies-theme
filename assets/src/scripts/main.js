@@ -141,6 +141,28 @@ import { CountUp } from 'countup.js';
       
       },
       finalize: function() {
+
+        // Gravity Forms floating labels
+        function initFloatingLabels() {
+          $('.gform_wrapper .gfield').each(function() {
+            var $field = $(this);
+            var $input = $field.find('input[type="text"], input[type="email"], input[type="tel"], input[type="url"], textarea, select');
+            if (!$input.length) return;
+
+            function checkValue() {
+              $field.toggleClass('gf--has-value', !!($input.val() && $input.val().trim() !== ''));
+            }
+
+            checkValue();
+            $input.on('focus', function() { $field.addClass('gf--focused'); })
+                  .on('blur',  function() { $field.removeClass('gf--focused'); checkValue(); })
+                  .on('input change', checkValue);
+          });
+        }
+
+        initFloatingLabels();
+        $(document).on('gform_post_render', initFloatingLabels);
+
       }
     },
     // Home page

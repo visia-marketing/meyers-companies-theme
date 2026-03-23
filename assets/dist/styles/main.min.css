@@ -13407,46 +13407,106 @@ p:has(.uk-button + .uk-button) {
 .gform_wrapper.gravity-theme .gform_required_legend {
   display: none;
 }
-.gform_wrapper.gravity-theme {
-  /* Make input fields transparent */
-}
 .gform_wrapper.gravity-theme .gfield input[type=text],
 .gform_wrapper.gravity-theme .gfield input[type=email],
 .gform_wrapper.gravity-theme .gfield input[type=tel],
 .gform_wrapper.gravity-theme .gfield input[type=url],
-.gform_wrapper.gravity-theme .gfield textarea,
 .gform_wrapper.gravity-theme .gfield select {
-  background-color: white;
+  background-color: #ffffff;
+  border: 1.5px solid #e6e6e6;
+  border-radius: 2rem;
   box-shadow: none;
-  border: 1px solid grey;
   color: #000000;
-  padding: 10px;
-  border-radius: 5px;
+  font-family: "acumin-pro", sans-serif;
+  font-size: 1rem;
+  padding: 0.75rem 1.25rem;
   width: 100%;
+  transition: border-color 0.2s ease;
 }
 .gform_wrapper.gravity-theme .gfield input[type=text]:focus,
 .gform_wrapper.gravity-theme .gfield input[type=email]:focus,
 .gform_wrapper.gravity-theme .gfield input[type=tel]:focus,
 .gform_wrapper.gravity-theme .gfield input[type=url]:focus,
-.gform_wrapper.gravity-theme .gfield textarea:focus,
 .gform_wrapper.gravity-theme .gfield select:focus {
+  border-color: #002F86;
   outline: none;
 }
-.gform_wrapper.gravity-theme .gfield input[type=text]::-moz-placeholder, .gform_wrapper.gravity-theme .gfield input[type=email]::-moz-placeholder, .gform_wrapper.gravity-theme .gfield input[type=tel]::-moz-placeholder, .gform_wrapper.gravity-theme .gfield input[type=url]::-moz-placeholder, .gform_wrapper.gravity-theme .gfield textarea::-moz-placeholder, .gform_wrapper.gravity-theme .gfield select::-moz-placeholder {
-  font-size: 16px;
+.gform_wrapper.gravity-theme .gfield input[type=text]::-moz-placeholder, .gform_wrapper.gravity-theme .gfield input[type=email]::-moz-placeholder, .gform_wrapper.gravity-theme .gfield input[type=tel]::-moz-placeholder, .gform_wrapper.gravity-theme .gfield input[type=url]::-moz-placeholder, .gform_wrapper.gravity-theme .gfield select::-moz-placeholder {
+  color: #c8c8c8;
   opacity: 1;
 }
 .gform_wrapper.gravity-theme .gfield input[type=text]::placeholder,
 .gform_wrapper.gravity-theme .gfield input[type=email]::placeholder,
 .gform_wrapper.gravity-theme .gfield input[type=tel]::placeholder,
 .gform_wrapper.gravity-theme .gfield input[type=url]::placeholder,
-.gform_wrapper.gravity-theme .gfield textarea::placeholder,
 .gform_wrapper.gravity-theme .gfield select::placeholder {
-  font-size: 16px;
+  color: #c8c8c8;
   opacity: 1;
 }
-.gform_wrapper.gravity-theme {
-  /* Hide labels */
+.gform_wrapper.gravity-theme .gfield textarea {
+  background-color: #ffffff;
+  border: 1.5px solid #e6e6e6;
+  border-radius: 1rem;
+  box-shadow: none;
+  color: #000000;
+  font-family: "acumin-pro", sans-serif;
+  font-size: 1rem;
+  padding: 0.75rem 1.25rem;
+  width: 100%;
+  transition: border-color 0.2s ease;
+  resize: vertical;
+}
+.gform_wrapper.gravity-theme .gfield textarea:focus {
+  border-color: #002F86;
+  outline: none;
+}
+.gform_wrapper.gravity-theme .gfield textarea::-moz-placeholder {
+  color: #c8c8c8;
+  opacity: 1;
+}
+.gform_wrapper.gravity-theme .gfield textarea::placeholder {
+  color: #c8c8c8;
+  opacity: 1;
+}
+.gform_wrapper.gravity-theme .gfield {
+  position: relative;
+  margin-top: 0.5rem;
+}
+.gform_wrapper.gravity-theme .gfield_label {
+  position: absolute;
+  top: 0.75rem;
+  left: 1.25rem;
+  font-family: "acumin-pro", sans-serif;
+  font-size: 1rem;
+  color: #c8c8c8;
+  pointer-events: none;
+  transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+  background: #ffffff;
+  padding: 0 0.35rem;
+  z-index: 1;
+  line-height: 1;
+}
+.gform_wrapper.gravity-theme .gfield.gf--focused .gfield_label,
+.gform_wrapper.gravity-theme .gfield.gf--has-value .gfield_label {
+  top: -0.55rem;
+  font-size: 0.75rem;
+  color: #002F86;
+}
+.gform_wrapper.gravity-theme .gfield.gf--focused input[type=text],
+.gform_wrapper.gravity-theme .gfield.gf--focused input[type=email],
+.gform_wrapper.gravity-theme .gfield.gf--focused input[type=tel],
+.gform_wrapper.gravity-theme .gfield.gf--focused input[type=url],
+.gform_wrapper.gravity-theme .gfield.gf--focused textarea,
+.gform_wrapper.gravity-theme .gfield.gf--has-value input[type=text],
+.gform_wrapper.gravity-theme .gfield.gf--has-value input[type=email],
+.gform_wrapper.gravity-theme .gfield.gf--has-value input[type=tel],
+.gform_wrapper.gravity-theme .gfield.gf--has-value input[type=url],
+.gform_wrapper.gravity-theme .gfield.gf--has-value textarea {
+  padding-top: 1.1rem;
+  padding-bottom: 0.4rem;
+}
+.gform_wrapper.gravity-theme .gfield_required {
+  display: none;
 }
 .gform_wrapper.gravity-theme .gfield--type-checkbox {
   margin-top: 12px;
