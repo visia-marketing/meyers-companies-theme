@@ -6,7 +6,7 @@ $sections = get_sub_field('sections'); // used for the nav loop
 
 <div class="uk-grid uk-grid-large sticky-sidebar" uk-grid id="sticky-sidebar-boundary">
 
-    <div class="uk-width-1-1 uk-width-4-5@m uk-flex-last@m" id="sticky-content">
+    <div class="uk-width-1-1 uk-width-3-4@m uk-flex-last@m" id="sticky-content">
 
         <?php $i = 0; if( have_rows('sections') ): while( have_rows('sections') ): the_row(); ?>
 
@@ -33,7 +33,7 @@ $sections = get_sub_field('sections'); // used for the nav loop
     </div>
 
 
-    <div class="uk-width-1-1 uk-width-1-5@m uk-flex-first@m">
+    <div class="uk-width-1-1 uk-width-1-4@m uk-flex-first@m">
 
         <div uk-sticky="offset: 200; end: #sticky-end; media: @m">
             <ul class="uk-nav uk-nav-default" uk-scrollspy-nav="closest: li; scroll: true">

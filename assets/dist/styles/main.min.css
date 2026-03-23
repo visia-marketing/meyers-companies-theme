@@ -14469,35 +14469,49 @@ p:has(.uk-button + .uk-button) {
   padding: 0 0 40px;
 }
 
-body#tinymce {
+body#tinymce,
+.mce-content-body {
   background-color: #fff;
   margin: 12px !important;
 }
-body#tinymce h1, body#tinymce h2, body#tinymce h3, body#tinymce h4, body#tinymce h5, body#tinymce h6 {
-  color: #002F86;
-  font-family: "acumin-pro-condensed", sans-serif;
-  font-weight: 700;
-  line-height: 1.2;
+body#tinymce h1, body#tinymce h2, body#tinymce h3, body#tinymce h4, body#tinymce h5, body#tinymce h6,
+.mce-content-body h1,
+.mce-content-body h2,
+.mce-content-body h3,
+.mce-content-body h4,
+.mce-content-body h5,
+.mce-content-body h6 {
+  color: #002F86 !important;
+  font-family: "acumin-pro-condensed", sans-serif !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
 }
-body#tinymce h1 {
-  font-size: 2.875rem;
+body#tinymce h1,
+.mce-content-body h1 {
+  font-size: 2.875rem !important;
 }
-body#tinymce h2 {
-  font-size: 2.5rem;
+body#tinymce h2,
+.mce-content-body h2 {
+  font-size: 2.5rem !important;
 }
-body#tinymce h3 {
-  font-size: 1.75rem;
+body#tinymce h3,
+.mce-content-body h3 {
+  font-size: 1.75rem !important;
 }
-body#tinymce h4 {
-  font-size: 1.25rem;
+body#tinymce h4,
+.mce-content-body h4 {
+  font-size: 1.25rem !important;
 }
-body#tinymce h5 {
-  font-size: 1rem;
+body#tinymce h5,
+.mce-content-body h5 {
+  font-size: 1rem !important;
 }
-body#tinymce h6 {
-  font-size: 0.875rem;
+body#tinymce h6,
+.mce-content-body h6 {
+  font-size: 0.875rem !important;
 }
-body#tinymce p {
+body#tinymce p,
+.mce-content-body p {
   font-family: "acumin-pro", sans-serif;
   color: #000000;
   font-size: 1rem;
@@ -15590,7 +15604,7 @@ body .sticky-sidebar ul > li a svg * {
 body .sticky-sidebar ul > li a {
   font-family: "acumin-pro-condensed", sans-serif;
   color: #002F86 !important;
-  font-size: 1.375rem;
+  font-size: 1.175rem;
   font-weight: 700;
   line-height: 1;
   text-transform: uppercase;
