@@ -22,6 +22,13 @@
     li::marker { color: $orange; }
   }
 
+  .sticky-sidebar .uk-nav {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 0.875rem;
+    li::marker { color: inherit; }
+  }
+
   & .top-border > .fc-section-heading{
       border-top: 1px solid $black;
       padding-top: 2rem;
@@ -106,17 +113,12 @@
     } 
 
 
-    & h2{
-      padding-top: 2.5rem;
-    }
-
     & p:has(.g-section-subtitle){
       margin-bottom: 0;
+    }
 
-      & + h2{
-        padding-top: 0;
-      }
-
+    & h2:has(.g-section-subtitle) {
+      margin-bottom: 0.2rem;
     }
 
   }

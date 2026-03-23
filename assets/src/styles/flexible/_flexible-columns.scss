@@ -54,6 +54,11 @@
 
 .sticky-section {
   min-height: 300px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $light-gray;
+    padding-bottom: 2rem;
+  }
 }
 
 body .sticky-sidebar{
@@ -62,31 +67,10 @@ body .sticky-sidebar{
     & > li{
       
 
-      & a{
-        position: relative;
-        &:before{
-            content: '';
-            width: 0%;
-            height: 2px; 
-            background: $orange;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            transition: width 0.2s ease-in-out;
-      }
-      }
-
       &.uk-active{
         & a{
-
-          &:before{
-            width: 100%;
-          }
-          
-          
-
+          color: $orange !important;
         }
-        
       }
 
 

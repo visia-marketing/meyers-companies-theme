@@ -13094,6 +13094,10 @@ body.hidden-scroll {
   margin-bottom: 0;
 }
 
+h2 {
+  margin-top: 30px;
+}
+
 @media (min-width: 1100px) {
   h3 {
     font-size: 1.85rem;
@@ -15572,22 +15576,13 @@ p:has(.g-section-subtitle) + h3 {
 .sticky-section {
   min-height: 300px;
 }
+.sticky-section:not(:last-child) {
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 2rem;
+}
 
-body .sticky-sidebar ul > li a {
-  position: relative;
-}
-body .sticky-sidebar ul > li a:before {
-  content: "";
-  width: 0%;
-  height: 2px;
-  background: #FF8200;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  transition: width 0.2s ease-in-out;
-}
-body .sticky-sidebar ul > li.uk-active a:before {
-  width: 100%;
+body .sticky-sidebar ul > li.uk-active a {
+  color: #FF8200 !important;
 }
 body .sticky-sidebar ul > li a svg * {
   fill: #FF8200;
@@ -16099,6 +16094,16 @@ body .fc-section-dark .callout-background--white h2 {
 .fc-page-header ul li::marker {
   color: #FF8200;
 }
+.fc-wrapper .sticky-sidebar .uk-nav,
+.fc-page-header .sticky-sidebar .uk-nav {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 0.875rem;
+}
+.fc-wrapper .sticky-sidebar .uk-nav li::marker,
+.fc-page-header .sticky-sidebar .uk-nav li::marker {
+  color: inherit;
+}
 .fc-wrapper .top-border > .fc-section-heading,
 .fc-page-header .top-border > .fc-section-heading {
   border-top: 1px solid #000000;
@@ -16173,17 +16178,13 @@ body .fc-section-dark .callout-background--white h2 {
 .fc-page-header .fc-section.center {
   text-align: center;
 }
-.fc-wrapper .fc-section h2,
-.fc-page-header .fc-section h2 {
-  padding-top: 2.5rem;
-}
 .fc-wrapper .fc-section p:has(.g-section-subtitle),
 .fc-page-header .fc-section p:has(.g-section-subtitle) {
   margin-bottom: 0;
 }
-.fc-wrapper .fc-section p:has(.g-section-subtitle) + h2,
-.fc-page-header .fc-section p:has(.g-section-subtitle) + h2 {
-  padding-top: 0;
+.fc-wrapper .fc-section h2:has(.g-section-subtitle),
+.fc-page-header .fc-section h2:has(.g-section-subtitle) {
+  margin-bottom: 0.2rem;
 }
 .fc-wrapper.fc-wrapper-tabs .fc-section,
 .fc-page-header.fc-wrapper-tabs .fc-section {
