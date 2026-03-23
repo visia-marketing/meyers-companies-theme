@@ -146,6 +146,7 @@ import { CountUp } from 'countup.js';
         function initFloatingLabels() {
           $('.gform_wrapper .gfield').each(function() {
             var $field = $(this);
+            if ($field.hasClass('gfield--type-checkbox') || $field.hasClass('gfield--type-radio') || $field.hasClass('gfield--type-consent')) return;
             var $input = $field.find('input[type="text"], input[type="email"], input[type="tel"], input[type="url"], textarea, select');
             if (!$input.length) return;
 

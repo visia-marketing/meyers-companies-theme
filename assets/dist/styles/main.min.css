@@ -13508,6 +13508,16 @@ p:has(.uk-button + .uk-button) {
 .gform_wrapper.gravity-theme .gfield_required {
   display: none;
 }
+.gform_wrapper.gravity-theme .gfield--type-checkbox .gfield_label,
+.gform_wrapper.gravity-theme .gfield--type-radio .gfield_label,
+.gform_wrapper.gravity-theme .gfield--type-consent .gfield_label {
+  position: static;
+  font-size: 1rem;
+  color: #000000;
+  background: none;
+  padding: 0;
+  pointer-events: auto;
+}
 .gform_wrapper.gravity-theme .gfield--type-checkbox {
   margin-top: 12px;
 }
