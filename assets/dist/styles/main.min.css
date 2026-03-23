@@ -14406,22 +14406,22 @@ body#tinymce h1, body#tinymce h2, body#tinymce h3, body#tinymce h4, body#tinymce
   line-height: 1.2;
 }
 body#tinymce h1 {
-  font-size: 2.5rem;
+  font-size: 2.875rem;
 }
 body#tinymce h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 body#tinymce h3 {
   font-size: 1.75rem;
 }
 body#tinymce h4 {
-  font-size: 1.5rem;
-}
-body#tinymce h5 {
   font-size: 1.25rem;
 }
-body#tinymce h6 {
+body#tinymce h5 {
   font-size: 1rem;
+}
+body#tinymce h6 {
+  font-size: 0.875rem;
 }
 body#tinymce p {
   font-family: "acumin-pro", sans-serif;
