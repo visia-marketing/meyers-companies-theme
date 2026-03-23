@@ -26,8 +26,11 @@
     "title": "Text Button",
     "selector": "a",
     "classes": "uk-button uk-button-text"
+  },
+  {
+    "title": "Card",
+    "block": "div",
+    "classes": "wysiwyg-card",
+    "wrapper": true
   }
-
-  
-  
 ]
