@@ -14399,6 +14399,36 @@ body#tinymce {
   background-color: #fff;
   margin: 12px !important;
 }
+body#tinymce h1, body#tinymce h2, body#tinymce h3, body#tinymce h4, body#tinymce h5, body#tinymce h6 {
+  color: #002F86;
+  font-family: "acumin-pro-condensed", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+body#tinymce h1 {
+  font-size: 2.5rem;
+}
+body#tinymce h2 {
+  font-size: 2rem;
+}
+body#tinymce h3 {
+  font-size: 1.75rem;
+}
+body#tinymce h4 {
+  font-size: 1.5rem;
+}
+body#tinymce h5 {
+  font-size: 1.25rem;
+}
+body#tinymce h6 {
+  font-size: 1rem;
+}
+body#tinymce p {
+  font-family: "acumin-pro", sans-serif;
+  color: #000000;
+  font-size: 1rem;
+  line-height: 1.6;
+}
 
 .g-section-subtitle {
   color: #FF8200;
