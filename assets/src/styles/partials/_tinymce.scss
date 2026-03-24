@@ -29,7 +29,7 @@ body#tinymce,
     color: $primary;
     &::before {
       content: '⬇ ';
-      color: $orange;
+      color: $secondary;
     }
   }
 }
@@ -95,10 +95,10 @@ p:has(.g-section-subtitle) + h3{
 
 .fc-section-dark{
   & a.uk-button-text{
-    color: $orange !important;
+    color: $secondary !important;
 
     &:after{
-      color: $orange !important;
+      color: $secondary !important;
     }
   }
 }

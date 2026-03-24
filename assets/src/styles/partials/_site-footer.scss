@@ -14,20 +14,20 @@
     color: #fff;
 
     &:hover {
-      color: $orange;
+      color: $secondary;
       text-decoration: none;
     }
   }
 
   .footer-menu a:hover,
   .footer-menu-legal a:hover {
-    color: $orange !important;
+    color: $secondary !important;
     text-decoration: none;
   }
 
   .social-icons a:hover,
   .social-icons a:hover i {
-    color: $orange !important;
+    color: $secondary !important;
   }
 
   .footer-contact-info p:last-child {
@@ -92,7 +92,7 @@
             vertical-align: top;
 
             &:hover {
-              color: $orange;
+              color: $secondary;
             }
           }
         }

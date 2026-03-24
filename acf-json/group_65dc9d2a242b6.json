@@ -520,6 +520,29 @@
             "selected": 0
         },
         {
+            "key": "field_69c2d0b650e37",
+            "label": "Accent Color",
+            "name": "accent_color",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "When you save this options page, the theme will generate a \"accent-color.css\" file in the root of the theme, which sets a css variable var(--accent-color). That variable is referenced by the variables.scss configuration.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#666666",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "allow_in_bindings": 0,
+            "show_custom_palette": 0,
+            "show_color_wheel": 1,
+            "custom_palette_source": "",
+            "palette_colors": ""
+        },
+        {
             "key": "field_65dc9d5351c1e",
             "label": "Google Tag Manager ID",
             "name": "google_tag_manager_id",
@@ -601,5 +624,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1774145149
+    "modified": 1774378939
 }
