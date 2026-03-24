@@ -125,3 +125,21 @@ function get_flexible_content() {
   }
 }
 
+add_action('acf/save_post', function ($post_id) {
+    if ($post_id !== 'options') {
+        return;
+    }
+
+    $accent_color = get_field('accent_color', 'option');
+
+    if (!$accent_color) {
+        return;
+    }
+
+    $css = ":root {\n    --accent-color: {$accent_color};\n}\n";
+
+    file_put_contents(
+        get_stylesheet_directory() . '/accent-color.css',
+        $css
+    );
+}, 20);
