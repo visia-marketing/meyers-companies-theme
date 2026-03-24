@@ -3,7 +3,9 @@
 	<div class="uk-container uk-container-xlarge">
 		<div class="uk-width-1-1">
       <div class="uk-flex uk-flex-between uk-flex-middle">
-        <?php bloginfo('description'); ?>
+        <?php $top_header_text = get_field('top_header_text', 'options'); if ($top_header_text) : ?>
+          <span class="top-header-text"><?php echo esc_html($top_header_text); ?></span>
+        <?php endif; ?>
         <div class="top-header-search show-for-medium uk-margin-auto-left"><?php get_template_part('searchform'); ?></div>
         <?php
           wp_nav_menu(['theme_location' => 'top_navigation', 'depth' => 1, 'menu_class' => 'top-header-navigation top-header-navigation-right']); 
@@ -18,7 +20,7 @@
 	<div class="uk-container uk-container-xlarge uk-flex uk-flex-middle uk-margin-top uk-margin-bottom">
     <div class="uk-width-1-5@m">
       <div class="main-logo">
-        <a href="<?= esc_url(home_url('/')); ?>"><img src="<?php the_field('main_logo', 'option');?>" alt="<?php bloginfo('name'); ?>"></a>
+        <a href="<?= esc_url(home_url('/')); ?>"><img src="<?php echo esc_url(get_field('main_logo', 'options'));?>" alt="<?php bloginfo('name'); ?>" loading="lazy"></a>
       </div>
     </div>
     <div class="uk-width-expand uk-flex uk-flex-right uk-flex-middle hide-for-medium">
@@ -28,7 +30,7 @@
       <div class="primary-navigation-wrapper">
         <?php
         if (has_nav_menu('primary_navigation')) :
-          wp_nav_menu(['theme_location' => 'primary_navigation', 'depth' => 2, 'menu_class' => 'menu primary-navigation uk-padding-remove uk-margin-remove', 'items_wrap' => '<ul class="%2$s" id="primary-navigation" data-responsive-menu="drilldown medium-dropdown">%3$s</ul>' ]); 
+          wp_nav_menu(['theme_location' => 'primary_navigation', 'depth' => 2, 'menu_class' => 'primary-navigation uk-padding-remove uk-margin-remove', 'items_wrap' => '<ul class="%2$s" id="primary-navigation">%3$s</ul>' ]);
           endif;
         ?>
       </div>

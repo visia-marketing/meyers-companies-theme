@@ -1,6 +1,6 @@
 //////////////////////////////////////////////////////////////////////////////////////////////
 //
-// Theme and Foundation Variables
+// Theme Variables
 //
 //////////////////////////////////////////////////////////////////////////////////////////////
 /// 
@@ -38,6 +38,7 @@ $white:       #ffffff;
 $orange:     #FF8200;
 $blue:       #002F86;
 $black:      #000000;
+$elk-gray:    #98a4ae;
 
 $lightGrade: linear-gradient(0deg, rgba(255, 255, 255, 0.00) -6.56%, #EDF4FA 88.2%);
 $darkGrade: linear-gradient(270deg, rgba(0, 43, 73, 0.70) -5%, rgba(0, 34, 57, 0.70) 70%);
@@ -92,10 +93,6 @@ $offcanvas-close-position: 32px;
 $offcanvas-close-padding: 10px;
 $offcanvas-close-position-s: 16px;
 
-// $global-font-size: 16px !default;
-// $base-body-font-size: 1.375rem;
-
-
 $base-heading-font-family: $condensed;
 $base-heading-font-weight: 700;
 $global-margin: 20px !default;
@@ -127,13 +124,12 @@ $card-title-line-height: 1 !default;
 
 
 $base-h2-font-size-m: $global-large-font-size;
-$base-h3-font-size: $global-large-font-size;
+$base-h3-font-size: 1.75rem;
 
-// $width-small-width: 150px !default;
-// $width-medium-width: 300px !default;
-// $width-large-width: 450px !default;
-// $width-xlarge-width: 600px !default;
 $width-2xlarge-width: 800px;
+
+// UIkit hook overrides (must be defined before UIkit import in main.scss)
+@mixin hook-card() { color: #000; }
 
 
 

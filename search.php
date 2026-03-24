@@ -38,12 +38,10 @@
                 </div>
                  <?php endif; ?>
                 <div class="search-results-cell-content">
-                  <h2><a href="<?php echo get_permalink(); ?>"><?php echo $title; ?></a></h2>
+                  <h2><a href="<?php echo esc_url(get_permalink()); ?>"><?php echo esc_html($title); ?></a></h2>
                   <span class="search-permalink"><?php the_permalink(); ?></span>
-                  <p><?php echo $excerpt; ?></p>
-                  <?php 
-                    echo '<a href="' . get_the_permalink() . '" class="read-more">Read More <i class="fa-solid fa-arrow-right-long"></i></a>';
-                  ?>
+                  <p><?php echo wp_kses_post($excerpt); ?></p>
+                  <a href="<?php echo esc_url(get_the_permalink()); ?>" class="read-more">Read More <i class="fa-solid fa-arrow-right-long"></i></a>
                 </div>
               </div>      
 
@@ -61,7 +59,7 @@
             <div class="search-results-none">
               <div class="uk-container">
                 <div class="uk-width-1-1">
-                  <?php the_field('no_results_message', 'options'); ?>
+                  <?php echo wp_kses_post(get_field('no_results_message', 'options')); ?>
                 </div>            
               </div>
             </div>  

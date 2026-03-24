@@ -16,8 +16,8 @@ function my_mce_color_options($init) {
   // build colour grid default+custom colors
   $init['textcolor_map'] = '['.$default_colors.','.$custom_colors.']';
 
-  // enable 6th uk-container for custom colours in grid
-  $init['textcolor_rows'] = 7;
+  // rows: ceil(41 colors / 8 cols) = 6
+  $init['textcolor_rows'] = 6;
 
   return $init;
 }
@@ -55,6 +55,17 @@ $init_array['style_formats'] =  $style_formats ;
 return $init_array;  
  
 } 
-// Attach callback to 'tiny_mce_before_init' 
-add_filter( 'tiny_mce_before_init', __NAMESPACE__ . '\\my_mce_before_init_insert_formats' ); 
+// Attach callback to 'tiny_mce_before_init'
+add_filter( 'tiny_mce_before_init', __NAMESPACE__ . '\\my_mce_before_init_insert_formats' );
+
+/**
+ * Load custom font in TinyMCE editor iframe
+ */
+function add_editor_fonts( $mce_css ) {
+  $global_font = get_field('google_typekit_font_url', 'options');
+  $font_url = $global_font ?: 'https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap';
+  $mce_css .= ',' . $font_url;
+  return $mce_css;
+}
+add_filter( 'mce_css', __NAMESPACE__ . '\\add_editor_fonts' );
 

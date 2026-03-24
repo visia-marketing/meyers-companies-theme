@@ -8,10 +8,40 @@
 @import "../flexible/animated_numbers";
 
 @import "../flexible/flexible-featured-callout";
+@import "../flexible/flexible-downloads";
 
 .fc-wrapper,
 .fc-page-header
 {
+
+  p { margin-top: 0; }
+
+  ul {
+    padding-left: 20px;
+    list-style-type: square;
+    li::marker { color: $orange; }
+  }
+
+  p + ul {
+    margin-top: 0;
+  }
+
+  p:has(+ ul) {
+    margin-bottom: 0.25rem;
+  }
+
+  .sticky-sidebar .uk-nav {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 0.875rem;
+    li::marker { color: inherit; }
+  }
+
+  .uk-accordion {
+    list-style-type: none;
+    padding-left: 0;
+    li::marker { color: inherit; }
+  }
 
   & .top-border > .fc-section-heading{
       border-top: 1px solid $black;
@@ -25,6 +55,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    &:has(.sticky-sidebar) {
+      overflow: visible;
+
+      > * {
+        width: 100%;
+      }
+    }
+
+    & > .uk-container{
+      // width: 100%;
+    }
 
      & > .fc-section-columns {
       min-width: calc(100% - 4rem);
@@ -85,17 +127,16 @@
     } 
 
 
-    & h2{
-      padding-top: 2.5rem;
-    }
-
     & p:has(.g-section-subtitle){
       margin-bottom: 0;
+    }
 
-      & + h2{
-        padding-top: 0;
-      }
+    & h2:has(.g-section-subtitle) {
+      margin-bottom: 0.2rem;
+    }
 
+    & h2:has(.g-section-subtitle) + * {
+      margin-top: 0.65rem;
     }
 
   }
@@ -116,35 +157,39 @@ body *{
     background-color: $white;
   
     //h1, h2, h3, h4, h5, h6, p, a, li, blockquote, .g-style-section-title, .g-style-section-heading, .g-section-subtitle {
-    & *:not(.g-section-subtitle, h1, h2, h3, h4, h5, h6) {
+    & *:not(.uk-button, .g-section-subtitle, h1, h2, h3, h4, h5, h6, a) {
       color: $black;
+    }
+
+    & p a {
+      color: $primary;
+      &:hover { color: $secondary; }
     }
 
     & h1,
     & h2,
     & h3,
     & h4,
-    & h5{
-      color: $blue;
+    & h5
+    & .uk-button-text{
+      color: $blue !important;
     }
-  
-    a.button.grey {
-      color: $primary;
+
+    & .cards-style--primary{
+      & h3{
+        color: $white !important;
+      }
     }
-  
+
   }
-  
+
   & .fc-section-dark {
     background-color: $blue;
-  
+
     & *:not(.g-section-subtitle) {
       color: #fff;
     }
-  
-    a.button.grey {
-      color: $primary;
-    }
-  
+
   }
   
   & .fc-section-grey,
@@ -152,10 +197,14 @@ body *{
   & .background--gray,
   & .background--grey {
     background-color: $gray-bg;
+
+    & h1, & h2, & h3, & h4, & h5, & h6 {
+      color: $primary;
+    }
   }
 
   & .background--image.background--light{
-    & * {
+    & *:not( .uk-button ) {
       color: $black;
     }
   }
@@ -173,49 +222,45 @@ body *{
 
 
 .fc-section-cta {
-  padding: 80px 0;
-  
-  &:after {
-    content: "";
-    position: absolute;
-    left: 10%;
-    top: 0;
-    height: 150%;
-    width: 300px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    opacity: .5;
-  }
-  
 
-  .flex {
-    display: flex;
-    flex-direction:column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-
-    @include breakpoint(medium) {
-      flex-direction: row;
-      gap: 50px;
-    }
-
-    h6 {
-      font-size: 22px;
-      margin-bottom: 0;
-      text-align: center;
-
-      @include breakpoint(medium) {
-        flex-direction: row;
-        text-align: left;
-      }
-
-    }
-
-    .button {
-      margin: 0;
-    }
-
+  & h2{
+    font-family: $sans;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 1.2;
+    padding-top: 0 !important;
+    margin-bottom: 0 !important;
   }
 
+  .call-to-action--inner {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .uk-button {
+    white-space: nowrap;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  &.background--dark {
+    background-color: $blue;
+    * { color: #fff; }
+  }
+
+  &.background--orange {
+    background-color: $orange;
+    * { color: #fff; }
+  }
+
+  &.background--grey {
+    background-color: $gray-bg;
+    h1, h2, h3, h4, h5, h6 { color: $primary; }
+  }
+
+  &.background--light {
+    background-color: $white;
+    h1, h2, h3, h4, h5, h6 { color: $primary; }
+  }
 }

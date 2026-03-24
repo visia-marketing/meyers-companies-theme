@@ -1,3 +1,61 @@
+a.download-link,
+span.download-link {
+  color: $primary;
+  text-decoration: none;
+
+  &::before {
+    font-family: $fontawesome;
+    font-weight: 400;
+    content: '\f56d';
+    color: $orange;
+    margin-right: 0.4rem;
+  }
+
+  &:hover {
+    color: $secondary;
+  }
+}
+
+.wysiwyg-card {
+  background: $white;
+  border-radius: 0.75rem;
+  filter: drop-shadow(3px 3px 8px rgba(0, 0, 0, 0.18));
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+
+  h1, h2, h3, h4, h5, h6 { color: $primary !important; }
+  p { color: $black !important; }
+
+  > *:last-child { margin-bottom: 0; }
+}
+
+h2 {
+  margin-top: 30px;
+}
+
+h3 {
+  @include breakpoint(medium) {
+    font-size: 1.85rem;
+  }
+}
+
+// Ensure all UIkit containers fill available width up to their max-width
+.uk-container {
+  width: 100%;
+  box-sizing: border-box;
+
+  &.uk-container-xsmall { max-width: $container-xsmall-max-width; }
+  &.uk-container-small  { max-width: $container-small-max-width; }
+  &.uk-container-large  { max-width: $container-large-max-width; }
+  &.uk-container-xlarge { max-width: $container-xlarge-max-width; }
+  &.uk-container-expand { max-width: none; }
+}
+
+p a {
+  color: $primary;
+  &:hover { color: $secondary; }
+}
+
 // Some global styles for sections of content
 html, body {
   -webkit-font-smoothing: antialiased;

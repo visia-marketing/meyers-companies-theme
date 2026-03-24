@@ -56,7 +56,6 @@ function setup() {
    */
   register_nav_menus([
     'primary_navigation'      => __('Primary Navigation', 'visia_starter_theme'),      // Main site navigation
-    //'store_navigation'        => __('Store Navigation', 'visia_starter_theme'),      // Commented out - likely for WooCommerce
     'top_navigation'          => __('Top Navigation', 'visia_starter_theme'),          // Top bar navigation
     'mobile_navigation'       => __('Mobile Navigation', 'visia_starter_theme'),       // Mobile-specific menu
     'footer_navigation_1'     => __('Footer Navigation 1', 'visia_starter_theme'),     // First footer column
@@ -77,7 +76,6 @@ function setup() {
    * @link http://codex.wordpress.org/Function_Reference/add_image_size
    */
   add_theme_support('post-thumbnails');
-  //set_post_thumbnail_size( 300, 190, true ); // Set featured image size (width, height, crop)
 
 
   if ( ! get_option( 'visia_image_sizes_set' ) ) {
@@ -95,6 +93,8 @@ function setup() {
 
 		update_option( 'visia_image_sizes_set', true );
 	}
+
+    add_image_size( 'elk-product-thumb', 450, 579, false);
 
 
   /**
@@ -124,7 +124,7 @@ function setup() {
    * This ensures the editor matches the front-end styling.
    * Custom editor styles can be added in /assets/styles/layouts/_tinymce.scss
    */
-  add_editor_style(Assets\asset_path('styles/main.css'));
+  add_editor_style(Assets\asset_path('dist/styles/main.min.css'));
 }
 
 // Hook the setup function to run after the theme is initialized
@@ -261,10 +261,6 @@ function assets() {
     wp_enqueue_script('comment-reply');
   }
 
-  /**
-   * Main Theme JavaScript
-   * Note: There's a duplicate enqueue here that should be removed
-   */
   wp_enqueue_script('sage/js', Assets\asset_path('dist/scripts/main.min.js'), ['jquery'], null, true);
 
 }

@@ -135,6 +135,38 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_6722779604col": {
+                    "key": "layout_6722779604col",
+                    "name": "section_four_column",
+                    "label": "Four Column",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6722779604c10",
+                            "label": "Four Column",
+                            "name": "four_column",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_6722779604col"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_68f147bf15582": {
                     "key": "layout_68f147bf15582",
                     "name": "section_cards",
@@ -326,6 +358,102 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_69a87b90954f4": {
+                    "key": "layout_69a87b90954f4",
+                    "name": "section_product_grid",
+                    "label": "Product Grid",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_69a87b98954f7",
+                            "label": "Product Grid",
+                            "name": "product_grid",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_69a87af36ae30"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_69a8bc55ee3fc": {
+                    "key": "layout_69a8bc55ee3fc",
+                    "name": "section_sticky_sidebar",
+                    "label": "Sticky Sidebar + Content",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_69a8bc6aee3ff",
+                            "label": "Sticky Sidebar",
+                            "name": "sticky_sidebar",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_69a8bb4cd5ee3"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_691f88df2536e": {
+                    "key": "layout_691f88df2536e",
+                    "name": "section_download_grid",
+                    "label": "Download Grid",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_691f88df_clone",
+                            "label": "Download Grid",
+                            "name": "download_grid",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_691f88df2536e"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -348,9 +476,9 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": true,
+    "active": false,
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1772582060
+    "modified": 1772665989
 }

@@ -1,209 +1,237 @@
 
-.fc-section-cards{
+.cards-grid-outer {
+  overflow: hidden;
+  width: 100%;
+}
 
-    & .uk-card{
+// ── Shared card foundation ────────────────────────────────────────────────
+.fc-section-cards {
+  row-gap: 2.5rem;
 
-        // ── Primary Style ──────────────────────────────────────────────
-        &.cards-style--primary{
+  > div { display: flex; }
 
-            & h3,
-            & p{
-                color: $white;
-            }
+  .uk-card {
+    border-radius: 0.75rem;
+    background: $white;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    filter: drop-shadow(3px 3px 8px rgba(0, 0, 0, 0.18));
 
-            & span{
-                color: $orange !important;
-                &:after{
-                    color: $orange;
-                }
-            }
+    .card-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 1.125rem;
 
-            &.tall{
+      h3, .card-title {
+        color: $blue;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1.3;
+        margin-bottom: 0.5rem;
 
-                & .uk-card--inner{
-                    border-radius:1.25rem;
-                    overflow: hidden;
+        a { color: inherit; }
+      }
 
-                    .card-media{
-                        & img{
-                            aspect-ratio: 3/4;
-                            object-fit: cover;
-                        }
-                    }
-                }
+      p {
+        margin-top: 0;
+        margin-bottom: 0.75rem;
+      }
 
-            }
+      .uk-button-text,
+      .uk-button-text:after {
+        color: $orange;
+      }
 
-            & .uk-card--inner{
-                border-radius:1.25rem;
-                overflow: hidden;
+      a.uk-button { margin-top: auto; }
+    }
+  }
 
-                .card-media{
-                    & img{
-                        aspect-ratio: 4/3;
-                        object-fit: cover;
-                    }
-                }
 
-                & .card-body{
-                    background: linear-gradient(180deg, rgba(0, 47, 134, 0.00) 0%, var(--ELK-Blue, rgba(0, 47, 134, 0.95)) 57.47%);
-                    background-size: 100% 400%;
-                    background-position: 0% 0%;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    height: 100%;
-                    width: 100%;
-                    display: flex;
-                    text-decoration: none;
-                    transition: background-position 0.5s ease-out;
-                    
+  // ── Primary Style ────────────────────────────────────────────────────────
+  .uk-card.cards-style--primary {
+    background: transparent;
+    filter: none;
 
-                    &:hover{
-                        background-position: 0% 33%;
-                        & .hover-panel--1{
-                            transition: height 0.2s ease-in-out, opacity 0.25s ease-in 0.15s;
-                            opacity: 1;
-                        }
-                    }
+    h3, p { color: $white; }
 
-                    & >*:not(.uk-button){
-                        max-width: 33rem;
-                    }
-
-                    & .hover-panel--1{
-                        padding-bottom: 0.5rem;
-                        opacity: 0;
-                        transition: opacity 0.25s ease-in, height 0.4s ease-in-out 0.1s;
-
-                        & .uk-button.uk-button-text{
-                            color: $secondary;
-                            &:after{
-                                color: $secondary;
-                            }
-
-                            &:hover{
-                                color: $white;
-                                 &:after{
-                                    color: $white;
-                                }
-                            }
-                        }
-                    }
-
-                    &:has(.hover-panel--0){
-                        background-position: 0% 25%;
-                    }
-
-                    & .hover-panel--0{
-
-                    }
-                }
-            }
-        }
-
-        // ── Basic Style ────────────────────────────────────────────────
-        &.cards-style--basic{
-            overflow: hidden;
-            margin-bottom: 0.5rem;
-            filter: drop-shadow( 3px 3px 8px rgba(0,0,0,0.25) );
-            
-            &:has( .hover-panel--1 ){
-                transition: transform 0.15s ease-in-out, filter 0.2s ease-in-out;
-
-                &:hover{
-                    transform: translateY(-1rem);
-                    filter: drop-shadow( 3px 13px 16px rgba(0,0,0,0.25) );
-                }
-            }
-
-            
-
-            & .uk-card--inner{
-                border-radius: 1.25rem 1.25rem 0 0;
-                overflow: hidden;
-                height: 100%;
-            }
-
-            .card-media{
-                & img{
-                    aspect-ratio: 3/2;
-                    object-fit: cover;
-                    min-width: 100%;
-                    overflow: hidden;
-                }
-            }
-
-            & div.card-body,
-            & a.card-body{
-                padding: 2rem;
-                padding-bottom: 4rem;
-                color: $black;
-                text-decoration: none;   
-                background: $white;
-                border-radius: 0 0 1.25rem 1.25rem;
-                
-
-                & h3{
-                    font-size: 1.75rem;
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: 1.3;
-                    color: $black;
-                }
-
-                &  span{ // Button
-                    color: $white !important;
-                }
-            }
-        }
+    span {
+      color: $orange !important;
+      &:after { color: $orange; }
     }
 
+    > .uk-card--inner { flex: 1; }
 
-    & .slick-arrow{
-        height: 100% !important;
-        width: 3rem;
-        z-index: 99;
+    &.tall .uk-card--inner {
+      border-radius: 0.75rem;
+      overflow: hidden;
 
-        &.slick-prev{
-            background: linear-gradient(90deg, rgba( $gray-bg, 1) 25%, rgba( $gray-bg, 0) 100%);
-
-            @media screen and (min-width: 1400px){
-                left: -3rem !important;
-            }
-        }
-
-        &.slick-next{
-            background: linear-gradient(270deg, rgba( $gray-bg, 1) 25%, rgba( $gray-bg, 0) 100%);
-
-            @media screen and (min-width: 1400px){
-                right: -3rem !important;
-            }
-        }
+      .card-media img {
+        aspect-ratio: 3/4;
+        object-fit: cover;
+      }
     }
 
+    .uk-card--inner {
+      border-radius: 0.75rem;
+      overflow: hidden;
+
+      .card-media img {
+        aspect-ratio: 4/3;
+        object-fit: cover;
+      }
+
+      .card-body {
+        padding-bottom: 1.5rem;
+        background: linear-gradient(180deg, rgba(0, 47, 134, 0.00) 0%, var(--ELK-Blue, rgba(0, 47, 134, 0.95)) 57.47%);
+        background-size: 100% 400%;
+        background-position: 0% 0%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        text-decoration: none;
+        transition: background-position 0.6s ease-in-out;
+
+        > *:not(.uk-button) { max-width: 33rem; }
+
+        &:has(.hover-panel--1) h3 { font-size: 1.75rem; }
+
+        .hover-panel--1 {
+          opacity: 0;
+          transition: opacity 0.4s ease-in-out;
+
+          .uk-button.uk-button-text {
+            color: $secondary;
+            &:after { color: $secondary; }
+          }
+        }
+
+        &:hover {
+          background-position: 0% 33%;
+
+          .hover-panel--1 { opacity: 1; }
+        }
+
+        &:has(.hover-panel--0) { background-position: 0% 25%; }
+      }
+    }
+  }
+
+
+  // ── Basic Style ──────────────────────────────────────────────────────────
+  .uk-card.cards-style--basic {
+    margin-bottom: 0.5rem;
+
+    &:has(.hover-panel--1) {
+      transition: transform 0.15s ease-in-out, filter 0.2s ease-in-out;
+
+      &:hover {
+        transform: translateY(-1rem);
+        filter: drop-shadow(3px 13px 16px rgba(0, 0, 0, 0.25));
+      }
+    }
+
+    .uk-card--inner {
+      border-radius: 0.75rem 0.75rem 0 0;
+      overflow: hidden;
+      height: 100%;
+    }
+
+    .card-media img {
+      aspect-ratio: 3/2;
+      object-fit: cover;
+      min-width: 100%;
+      overflow: hidden;
+    }
+
+    div.card-body,
+    a.card-body {
+      color: $black;
+      text-decoration: none;
+      background: $white;
+      border-radius: 0 0 0.75rem 0.75rem;
+      padding-bottom: 2rem;
+
+      span { color: $white !important; }
+    }
+  }
+
+
+  // ── Product Style ────────────────────────────────────────────────────────
+  .uk-card.cards-style--product {
+
+    .uk-card-media-top {
+      background-color: #f8f8f8;
+      padding: 1rem;
+
+      img {
+        aspect-ratio: 16/18;
+        object-fit: contain;
+        max-height: 220px;
+      }
+
+      .placeholder {
+        background: #f1f2f3;
+        aspect-ratio: 16/18;
+        width: 100%;
+        position: relative;
+
+        &:after {
+          content: 'Placeholder';
+          text-transform: uppercase;
+          letter-spacing: 5px;
+          color: gray;
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+
+  // ── Slick arrows ─────────────────────────────────────────────────────────
+  .slick-arrow {
+    height: 100% !important;
+    width: 3rem;
+    z-index: 99;
+
+    &.slick-prev {
+      background: linear-gradient(90deg, rgba($gray-bg, 1) 25%, rgba($gray-bg, 0) 100%);
+
+      @media screen and (min-width: 1400px) { left: -3rem !important; }
+    }
+
+    &.slick-next {
+      background: linear-gradient(270deg, rgba($gray-bg, 1) 25%, rgba($gray-bg, 0) 100%);
+
+      @media screen and (min-width: 1400px) { right: -3rem !important; }
+    }
+  }
 }
 
 
+.fc-section-dark .cards-style--basic *:not(h3, span) { color: $black !important; }
+.fc-section-dark .cards-style--basic h3 { color: $blue !important; }
+.fc-section-dark .cards-style--primary *:not(h3, span) { color: $white !important; }
+.fc-section-dark .cards-style--product h3 { color: $blue !important; }
+.fc-section-dark .cards-style--product p { color: $black !important; }
 
-.fc-section-dark .cards-style--basic *:not(h3, span){
-    color: $black !important;
+.fc-section-columns + .fc-section-cards { margin-top: 2rem; }
+
+// Images in flexible content outside of cards get matching radius
+.fc-section img:not(.uk-card img, .fc-section-cards img) {
+  border-radius: 0.75rem;
 }
 
-
-.fc-section-dark .cards-style--basic h3{
-    color: $blue !important;
-}
-
-
-.fc-section-dark .cards-style--primary *:not(h3, span){
-    color: $white !important;
-}
-
-
-
-
-
-.fc-section-columns + .fc-section-cards{
-    margin-top: 2rem;
+img.not-round {
+  border-radius: 0 !important;
 }

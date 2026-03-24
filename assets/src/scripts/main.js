@@ -21,11 +21,7 @@ import 'simple-lightbox';
 import AOS from 'aos';
 import { CountUp } from 'countup.js';
 
-// Font Awesome 7 Kit - all icons (standard + custom/pro icons)
-import '@awesome.me/kit-f71e020b2c';
 
-// If you only need specific modules:
-// import { Foundation, Accordion, Tabs } from 'foundation-sites';
 (function($) {
 
   // Use this variable to set up the common and page specific functions. If you
@@ -78,12 +74,8 @@ import '@awesome.me/kit-f71e020b2c';
           
         }
 
-        // wait until whole page is loaded
-        jQuery(document).ready(function($) {
-          setTimeout(
-            hoverCardsInit(),
-            500
-          )
+        jQuery(document).ready(function() {
+          setTimeout(hoverCardsInit, 500);
         });
 
 
@@ -149,6 +141,29 @@ import '@awesome.me/kit-f71e020b2c';
       
       },
       finalize: function() {
+
+        // Gravity Forms floating labels
+        function initFloatingLabels() {
+          $('.gform_wrapper .gfield').each(function() {
+            var $field = $(this);
+            if ($field.hasClass('gfield--type-checkbox') || $field.hasClass('gfield--type-radio') || $field.hasClass('gfield--type-consent')) return;
+            var $input = $field.find('input[type="text"], input[type="email"], input[type="tel"], input[type="url"], textarea, select');
+            if (!$input.length) return;
+
+            function checkValue() {
+              $field.toggleClass('gf--has-value', !!($input.val() && $input.val().trim() !== ''));
+            }
+
+            checkValue();
+            $input.on('focus', function() { $field.addClass('gf--focused'); })
+                  .on('blur',  function() { $field.removeClass('gf--focused'); checkValue(); })
+                  .on('input change', checkValue);
+          });
+        }
+
+        initFloatingLabels();
+        $(document).on('gform_post_render', initFloatingLabels);
+
       }
     },
     // Home page
@@ -163,16 +178,6 @@ import '@awesome.me/kit-f71e020b2c';
     // All Other Pages.
     'page': {
       init: function() {
-        
-        // Accordion
-        $('.accordion-topic').click(function(){
-          $(this).next('.accordion-response').slideToggle(500).toggleClass('current');
-          $(this).toggleClass('current');
-          $(this).parents('.accordion').siblings().find('.accordion-topic').slideUp(500);
-          $(this).parents('.accordion').siblings().find('.accordion-response').removeClass('current');
-        });
-        
-
       }
     },
   };

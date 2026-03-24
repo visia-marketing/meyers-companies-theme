@@ -14,13 +14,30 @@
     color: #fff;
 
     &:hover {
-      text-decoration: underline;
+      color: $orange;
+      text-decoration: none;
     }
-    
   }
 
-  .footer-logo {
+  .footer-menu a:hover,
+  .footer-menu-legal a:hover {
+    color: $orange !important;
+    text-decoration: none;
+  }
 
+  .social-icons a:hover,
+  .social-icons a:hover i {
+    color: $orange !important;
+  }
+
+  .footer-contact-info p:last-child {
+    margin-bottom: 0;
+  }
+
+  .footer-logo img {
+    max-width: 180px;
+    width: auto;
+    height: auto;
   }
 
   .footer-menu {
@@ -28,24 +45,37 @@
     margin: 0;
     padding: 0;
 
-    @include breakpoint(medium) {}
+    li:has(ul) + li{
+
+      @include breakpoint(medium) {
+        margin-top: 20px;
+      }
+    }
 
     li {
       padding: 0;
+      margin-bottom: 10px;
+
+      & + li:has(ul){
+
+        @include breakpoint(medium) {
+          margin-bottom: 0;
+          margin-top: 20px;
+        }
+      }
 
       > a {
         color: $white;
         display: inline-block;
-        font-size: 15px;
+        font-size: 1rem;
         font-weight: 700;
-        line-height: 30px;
+        line-height: 1.4;
         padding: 0;
         vertical-align: top;
       }
 
       ul {
         list-style: none;
-        margin: 0 0 30px;
         padding: 0;
 
         li {
@@ -55,24 +85,19 @@
           a {
             color: $white;
             display: inline-block;
-            font-size: 15px;
+            font-size: 1rem;
             font-weight: 400;
             line-height: 1.2;
-            padding: 11px 0;
+            padding: 6px 0;
             vertical-align: top;
-    
+
             &:hover {
-              color: $primary;
+              color: $orange;
             }
-    
           }
-
         }
-
       }
-
     }
-
   }
 
   .footer-badges {
@@ -149,9 +174,24 @@
 
   }
 
+  .copyright-container {
+    border-top: 1px solid rgba(#fff, 0.5);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 2rem;
+  }
+
   .footer-copyright {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 0.875rem;
+
+    .copyright p {
+      margin: 0;
+      font-size: 0.875rem;
+    }
 
     ul {
       display: flex;
@@ -161,12 +201,9 @@
       padding: 0;
 
       li {
-        font-size: 14px;
+        font-size: 0.875rem;
       }
-
     }
-
-
   }
 
   .footer-tagline {

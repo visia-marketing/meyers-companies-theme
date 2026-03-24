@@ -82,7 +82,6 @@ function get_flexible_content() {
        */
       $id = get_sub_field('id') ?: 'fc-section-' . get_row_index(); // Custom ID or auto-generated fallback
       $class = get_sub_field('class') ?: '';                        // Optional custom CSS classes
-      $border = get_sub_field('border') ?: '';                      // Border style classes   
       $background = get_sub_field('background') ?: '';              // Background type (color/image/etc)
       $background_image_id = get_sub_field('background_image');     // Background image attachment ID
       
@@ -112,7 +111,7 @@ function get_flexible_content() {
           echo '<div class="background-image" style="background: url(' . esc_url($background_image_url) . ')"></div>';
         }
 
-        echo '<div class="' . esc_attr($containerWidth) . ' uk-flex uk-flex-column uk-flex-'.$horizontal_align.'">';
+        echo '<div class="' . esc_attr($containerWidth) . ' uk-flex uk-flex-column uk-flex-' . esc_attr($horizontal_align) . '">';
 
 
           get_template_part('flexible/'.get_row_layout() );
@@ -126,70 +125,3 @@ function get_flexible_content() {
   }
 }
 
-
-
-/**
- * ACF Helper Functions
- * 
- * Collection of utility functions for common ACF output patterns.
- * Note: These are marked as "not currently in use" but kept for potential future use.
- */
-
-
-/**
- * Output ACF Image Attachment
- * 
- * Helper to display an image from an ACF image field that returns an attachment ID.
- * Wraps wp_get_attachment_image() with ACF-specific defaults.
- * 
- * @param int $image Attachment ID from ACF image field
- * @param string $size WordPress image size (thumbnail, medium, large, full, or custom)
- * @param string $class CSS class to apply to the image element
- */
-function acf_attachment_img($image, $size = 'full', $class = 'nc'){
-  if( $image ) {
-      echo wp_get_attachment_image( $image, $size,'', array( "class" => $class ) );
-  }
-}
-
-/**
- * Wrap ACF Field in HTML Element
- * 
- * Utility function to wrap any ACF field value in an HTML element.
- * Useful for consistent markup when outputting text fields.
- * 
- * @param mixed $field The ACF field value to output
- * @param string $element HTML element to wrap content in (div, p, h2, etc.)
- * @param string $class CSS class for the wrapper element
- */
-function acf_field($field, $element = 'div', $class='nc'){
-  if( !$field ){ return; } // Exit if field is empty
-  echo '<' . $element . ' class="' . $class . '">' . $field . '</' . $element . '>';
-}
-
-/**
- * Output ACF Link Field as Button
- * 
- * Renders an ACF link field as a styled button element.
- * Handles all link attributes (URL, target, title) and optional arrow icon.
- * 
- * @param array $link ACF link field array with url, title, and target
- * @param bool $has_arrow Whether to append a right arrow icon
- * @param string $class Additional CSS classes for the button
- * @param string $attr Additional HTML attributes as a string
- */
-function acf_button($link, $has_arrow=false, $class='nc', $attr=false){
-  if( !$link ) return; // Exit if no link provided
-  
-  // Set default target to _self if not specified
-  $link['target'] = $link['target'] ?: '_self'; ?>
-
-  <a href="<?= esc_url($link['url']); ?>" 
-     target="<?= $link['target'] ?>" 
-     class="btn <?= $class ?>"
-     <?php if($attr) echo ' ' . $attr ?>>
-    <?= $link['title']; ?>
-    <?php if($has_arrow){ echo '<i class="fa-solid fa-angle-right"></i>'; }; ?>
-  </a>
-  <?php
-}

@@ -250,7 +250,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "25",
+                        "width": "20",
                         "class": "",
                         "id": ""
                     },
@@ -277,7 +277,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "25",
+                        "width": "20",
                         "class": "",
                         "id": ""
                     },
@@ -294,21 +294,21 @@
                     "label": "Card Description",
                     "name": "card_description",
                     "aria-label": "",
-                    "type": "textarea",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "25",
+                        "width": "40",
                         "class": "",
                         "id": ""
                     },
                     "default_value": "",
-                    "maxlength": "",
-                    "allow_in_bindings": 1,
-                    "rows": 6,
-                    "placeholder": "",
-                    "new_lines": "",
+                    "allow_in_bindings": 0,
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0,
                     "parent_repeater": "field_672b87402abce"
                 },
                 {
@@ -321,7 +321,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "25",
+                        "width": "20",
                         "class": "",
                         "id": ""
                     },
@@ -351,5 +351,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1772589914
+    "modified": 1774148609
 }

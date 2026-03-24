@@ -35,7 +35,7 @@ if( $column_4['number'] == "" ) {
                     <div class="countup-animated-number">
                         <?php $data_start = ( $number_group['number'] == 0 ) ? 1234 : 0; ?>
 
-                        <?php if( $number_group['prepend']): ?><span class="prepend"><?php echo $number_group['prepend']; ?></span><?php endif; ?><span class="number-span" data-delay="<?php echo $delay; ?>" data-start="<?php echo esc_attr( $data_start ); ?>" data-target="<?php echo esc_attr( $number_group['number'] ); ?>">0</span><?php if( $number_group['append']): ?><span class="append"><?php echo $number_group['append']; ?></span><?php endif; ?>
+                        <?php if( $number_group['prepend']): ?><span class="prepend"><?php echo esc_html($number_group['prepend']); ?></span><?php endif; ?><span class="number-span" data-delay="<?php echo esc_attr($delay); ?>" data-start="<?php echo esc_attr( $data_start ); ?>" data-target="<?php echo esc_attr( $number_group['number'] ); ?>">0</span><?php if( $number_group['append']): ?><span class="append"><?php echo esc_html($number_group['append']); ?></span><?php endif; ?>
 
                     </div>
                 <?php endif; ?>

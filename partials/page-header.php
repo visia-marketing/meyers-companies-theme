@@ -11,7 +11,6 @@
 
   }
 
-
   if( is_array( $page_header_style) ){
     if( array_key_exists( 'background', $page_header_style) ){
       if( $page_header_style['background'] ){
@@ -29,22 +28,20 @@
       }    
     }
   }
-
-
  
 ?>
 
 
 <?php if( $show_page_header  ): ?>
-  <header class="fc-page-header page-header" id="page_header_<?php echo get_the_ID();?>">
+  <header class="fc-page-header page-header" id="page_header_<?php echo absint(get_the_ID()); ?>">
     <?php 
     if( $page_heading_background === 'image' ){
         echo wp_get_attachment_image( $page_heading_background_image, 'large', false, array( "class" => "page-header-image" ) );
     }
     ?>
-    <div class="page-header-content-wrapper fc-section fc-section-<?php echo $page_heading_background;?> page-header-<?php echo $page_heading_size; ?>">
+    <div class="page-header-content-wrapper fc-section fc-section-<?php echo esc_attr($page_heading_background ?? ''); ?> page-header-<?php echo esc_attr($page_heading_size ?? ''); ?>">
       <div class="uk-container uk-container-large uk-text-left uk-flex">
-          <div class="page-header-content uk-flex uk-flex-column uk-flex-center uk-margin-medium-top uk-margin-medium-bottom">
+          <div class="page-header-content uk-flex uk-flex-column uk-flex-center">
 
           <?php if( $show_breadcrumbs ): ?>
             <?php get_template_part('partials/page', 'breadcrumbs'); ?>

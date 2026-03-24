@@ -1,6 +1,6 @@
 <?php while (have_posts()) : the_post(); ?>
   
-  <article class="page page-<?php global $post; echo $post->post_name; ?>">
+  <article class="page page-<?php global $post; echo esc_attr($post->post_name); ?>">
 
     
     <?php get_template_part('partials/page-header'); ?>

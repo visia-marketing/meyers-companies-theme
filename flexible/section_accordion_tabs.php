@@ -22,35 +22,32 @@
 
     <div class="uk-container "> 
     <div class="uk-container">
-      <ul class="tabs  <?php echo $tab_count > 4 ? 'stretch-tabs' : ''; ?>" data-tabs id="<?php echo $tabs_id;?>">
+      <ul class="uk-tab tabs <?php echo $tab_count > 4 ? 'stretch-tabs' : ''; ?>" id="<?php echo esc_attr($tabs_id); ?>" uk-tab>
         <?php while( have_rows('tabs') ): the_row(); ?>
-       
-          <li class="tabs-title<?php echo (get_row_index() === 1) ? ' is-active' : ''; ?>">
-            <a href="#tab-<?php echo get_row_index(); ?>_<?php echo $tabs_id;?>">
-              <?php echo get_sub_field('tab_name'); ?>
-            </a>
+          <li>
+            <a href="#"><?php echo esc_html(get_sub_field('tab_name')); ?></a>
           </li>
         <?php endwhile; ?>
       </ul>
-      <div class="tabs-content" data-tabs-content="<?php echo $tabs_id;?>">
+      <ul class="uk-switcher tabs-content" id="<?php echo esc_attr($tabs_id); ?>-content">
         <?php while( have_rows('tabs') ): the_row(); ?>
-          <div class="tabs-panel<?php echo (get_row_index() === 1) ? ' is-active' : ''; ?>" id="tab-<?php echo get_row_index(); ?>_<?php echo $tabs_id;?>">
+          <li class="tabs-panel" id="tab-<?php echo get_row_index(); ?>_<?php echo esc_attr($tabs_id); ?>">
             <?php if( have_rows('accordion') ): ?>
-              <div class="accordion in-tabs">
+              <div class="accordion in-tabs" uk-accordion>
                 <?php while( have_rows('accordion') ): the_row(); ?>
-                  <div class="accordion-item">
-                    <div class="accordion-topic">
-                      <h4><?php echo get_sub_field('heading');?></h4>
-                      <div class="accordion-aruk-container"><i class="fa-solid fa-chevron-right"></i></div>
-                    </div>
-                    <div class="accordion-response"><?php echo get_sub_field('content');?></div>
-                  </div>
+                  <li class="accordion-item">
+                    <a class="uk-accordion-title accordion-topic" href>
+                      <h4><?php echo esc_html(get_sub_field('heading')); ?></h4>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                    <div class="uk-accordion-content accordion-response"><?php echo get_sub_field('content'); ?></div>
+                  </li>
                 <?php endwhile; ?>
               </div>
             <?php endif; ?>
-          </div>
+          </li>
         <?php endwhile; ?>
-      </div>
+      </ul>
     </div>
     </div>
   <?php endif; ?>

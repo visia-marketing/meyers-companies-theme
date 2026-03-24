@@ -1,6 +1,6 @@
 <div class="fc-section-columns">
   <?php get_template_part('flexible/section_header'); ?>
-  <div class="fc-columns-grid fc-columns-grid--3">
+  <div class="fc-columns-grid fc-columns-grid--4">
 
       <div>
         <div class="content content-columns">
@@ -15,6 +15,11 @@
       <div>
         <div class="content content-columns">
           <?php echo get_sub_field('column_3'); ?>
+        </div>
+      </div>
+      <div>
+        <div class="content content-columns">
+          <?php echo get_sub_field('column_4'); ?>
         </div>
       </div>
 
