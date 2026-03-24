@@ -19,7 +19,7 @@
   ul {
     padding-left: 20px;
     list-style-type: square;
-    li::marker { color: $orange; }
+    li::marker { color: $secondary; }
   }
 
   p + ul {
@@ -250,7 +250,7 @@ body *{
   }
 
   &.background--orange {
-    background-color: $orange;
+    background-color: $secondary;
     * { color: #fff; }
   }
 

@@ -35,7 +35,7 @@ $grey-border: $gray-border;
 $white:       #ffffff;
 
 // Brand Colors - Set the brand colors here
-$orange:     #FF8200;
+$secondary:     #FF8200;
 $blue:       #002F86;
 $black:      #000000;
 $elk-gray:    #98a4ae;
@@ -45,7 +45,7 @@ $darkGrade: linear-gradient(270deg, rgba(0, 43, 73, 0.70) -5%, rgba(0, 34, 57, 0
 
 
 $primary: $blue;
-$secondary: $orange;
+$secondary: var(--accent-color); //$secondary;
 $dark: darken($primary, 10%);
 
 
@@ -66,7 +66,7 @@ $sec-pad-xlarge:  9rem;
 
 
 // Top Bar
-$top-header-background: $orange;
+$top-header-background: $secondary;
 $top-header-color: $black;
 $top-header-link-color: $black;
 

@@ -42,7 +42,7 @@
 
       .uk-button-text,
       .uk-button-text:after {
-        color: $orange;
+        color: $secondary;
       }
 
       a.uk-button { margin-top: auto; }
@@ -58,8 +58,8 @@
     h3, p { color: $white; }
 
     span {
-      color: $orange !important;
-      &:after { color: $orange; }
+      color: $secondary !important;
+      &:after { color: $secondary; }
     }
 
     > .uk-card--inner { flex: 1; }
