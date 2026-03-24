@@ -4,8 +4,8 @@ span.download-link {
   text-decoration: none;
 
   &::before {
-    font-family: "Font Awesome 7 Free";
-    font-weight: 900;
+    font-family: $fontawesome;
+    font-weight: 400;
     content: '\f56d';
     color: $orange;
     margin-right: 0.4rem;

@@ -13084,8 +13084,8 @@ span.download-link {
 }
 a.download-link::before,
 span.download-link::before {
-  font-family: "Font Awesome 7 Free";
-  font-weight: 900;
+  font-family: "Font Awesome 7 Free", "Font Awesome 7 Pro", "Font Awesome 7 Brands";
+  font-weight: 400;
   content: "\f56d";
   color: #FF8200;
   margin-right: 0.4rem;
