@@ -1,3 +1,21 @@
+a.download-link,
+span.download-link {
+  color: $primary;
+  text-decoration: none;
+
+  &::before {
+    font-family: "Font Awesome 7 Free";
+    font-weight: 900;
+    content: '\f56d';
+    color: $orange;
+    margin-right: 0.4rem;
+  }
+
+  &:hover {
+    color: $secondary;
+  }
+}
+
 .wysiwyg-card {
   background: $white;
   border-radius: 0.75rem;

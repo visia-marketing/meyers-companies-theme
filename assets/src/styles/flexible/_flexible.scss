@@ -22,10 +22,24 @@
     li::marker { color: $orange; }
   }
 
+  p + ul {
+    margin-top: 0;
+  }
+
+  p:has(+ ul) {
+    margin-bottom: 0.25rem;
+  }
+
   .sticky-sidebar .uk-nav {
     list-style-type: none;
     padding-left: 0;
     font-size: 0.875rem;
+    li::marker { color: inherit; }
+  }
+
+  .uk-accordion {
+    list-style-type: none;
+    padding-left: 0;
     li::marker { color: inherit; }
   }
 
@@ -119,6 +133,10 @@
 
     & h2:has(.g-section-subtitle) {
       margin-bottom: 0.2rem;
+    }
+
+    & h2:has(.g-section-subtitle) + * {
+      margin-top: 0.65rem;
     }
 
   }

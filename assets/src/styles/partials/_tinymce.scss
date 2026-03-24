@@ -23,6 +23,15 @@ body#tinymce,
     font-size: 1rem;
     line-height: 1.6;
   }
+
+  a.download-link,
+  span.download-link {
+    color: $primary;
+    &::before {
+      content: '⬇ ';
+      color: $orange;
+    }
+  }
 }
 
 .g {

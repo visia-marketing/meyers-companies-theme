@@ -13077,6 +13077,24 @@ body.hidden-scroll {
     opacity: 0;
   }
 }
+a.download-link,
+span.download-link {
+  color: #002F86;
+  text-decoration: none;
+}
+a.download-link::before,
+span.download-link::before {
+  font-family: "Font Awesome 7 Free";
+  font-weight: 900;
+  content: "\f56d";
+  color: #FF8200;
+  margin-right: 0.4rem;
+}
+a.download-link:hover,
+span.download-link:hover {
+  color: #FF8200;
+}
+
 .wysiwyg-card {
   background: #ffffff;
   border-radius: 0.75rem;
@@ -14516,6 +14534,19 @@ body#tinymce p,
   color: #000000;
   font-size: 1rem;
   line-height: 1.6;
+}
+body#tinymce a.download-link,
+body#tinymce span.download-link,
+.mce-content-body a.download-link,
+.mce-content-body span.download-link {
+  color: #002F86;
+}
+body#tinymce a.download-link::before,
+body#tinymce span.download-link::before,
+.mce-content-body a.download-link::before,
+.mce-content-body span.download-link::before {
+  content: "⬇ ";
+  color: #FF8200;
 }
 
 .g-section-subtitle {
@@ -16108,6 +16139,14 @@ body .fc-section-dark .callout-background--white h2 {
 .fc-page-header ul li::marker {
   color: #FF8200;
 }
+.fc-wrapper p + ul,
+.fc-page-header p + ul {
+  margin-top: 0;
+}
+.fc-wrapper p:has(+ ul),
+.fc-page-header p:has(+ ul) {
+  margin-bottom: 0.25rem;
+}
 .fc-wrapper .sticky-sidebar .uk-nav,
 .fc-page-header .sticky-sidebar .uk-nav {
   list-style-type: none;
@@ -16116,6 +16155,15 @@ body .fc-section-dark .callout-background--white h2 {
 }
 .fc-wrapper .sticky-sidebar .uk-nav li::marker,
 .fc-page-header .sticky-sidebar .uk-nav li::marker {
+  color: inherit;
+}
+.fc-wrapper .uk-accordion,
+.fc-page-header .uk-accordion {
+  list-style-type: none;
+  padding-left: 0;
+}
+.fc-wrapper .uk-accordion li::marker,
+.fc-page-header .uk-accordion li::marker {
   color: inherit;
 }
 .fc-wrapper .top-border > .fc-section-heading,
@@ -16199,6 +16247,10 @@ body .fc-section-dark .callout-background--white h2 {
 .fc-wrapper .fc-section h2:has(.g-section-subtitle),
 .fc-page-header .fc-section h2:has(.g-section-subtitle) {
   margin-bottom: 0.2rem;
+}
+.fc-wrapper .fc-section h2:has(.g-section-subtitle) + *,
+.fc-page-header .fc-section h2:has(.g-section-subtitle) + * {
+  margin-top: 0.65rem;
 }
 .fc-wrapper.fc-wrapper-tabs .fc-section,
 .fc-page-header.fc-wrapper-tabs .fc-section {

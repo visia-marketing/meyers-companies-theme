@@ -32,5 +32,10 @@
     "block": "div",
     "classes": "wysiwyg-card",
     "wrapper": true
+  },
+  {
+    "title": "Download Link",
+    "inline": "span",
+    "classes": "download-link"
   }
 ]
