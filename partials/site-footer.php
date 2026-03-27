@@ -6,6 +6,12 @@
       <div class="footer-logo">
         <a href="<?= esc_url(home_url('/')); ?>"><img src="<?php echo esc_url(get_field('footer_logo', 'options'));?>" alt="<?php bloginfo('name'); ?>" loading="lazy"></a>
       </div>
+      <?php $footer_about = get_field('footer_about_info', 'options'); ?>
+      <?php if( $footer_about ): ?>
+        <div class="footer-about-info uk-margin-small-bottom">
+          <?php echo wp_kses_post($footer_about); ?>
+        </div>
+      <?php endif; ?>
     </div>
 
     <div class="uk-width-1-1@s uk-width-1-1@m uk-width-2-3@xl  uk-margin-medium-bottom uk-margin-remove-bottom@m">
