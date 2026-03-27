@@ -16017,6 +16017,21 @@ img.not-round {
   text-transform: none !important;
 }
 
+.featured-callout .uk-flex {
+  flex-wrap: wrap;
+}
+@media (min-width: 1100px) {
+  .featured-callout .uk-flex {
+    flex-wrap: nowrap;
+  }
+}
+@media (min-width: 1100px) {
+  .featured-callout .uk-flex > div:last-child {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
 .featured-callout .callout-background {
   border-radius: 1rem;
 }

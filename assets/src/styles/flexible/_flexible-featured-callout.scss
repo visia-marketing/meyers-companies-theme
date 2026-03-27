@@ -1,7 +1,21 @@
 
 .featured-callout{
 
+    .uk-flex {
+      flex-wrap: wrap;
 
+      @include breakpoint(medium) {
+        flex-wrap: nowrap;
+      }
+
+      > div:last-child {
+        @include breakpoint(medium) {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+        }
+      }
+    }
 
     & .callout-background{
         border-radius: 1rem;
