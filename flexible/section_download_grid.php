@@ -8,12 +8,12 @@ if ($downloads) : ?>
 
     <div class="download-grid">
 
-      <?php foreach ($downloads as $post) :
-        if (!$post) continue;
+      <?php foreach ($downloads as $download) :
+        if (!$download) continue;
 
-        $title     = get_the_title($post->ID);
-        $permalink = get_permalink($post->ID);
-        $thumbnail = get_the_post_thumbnail($post->ID, 'large');
+        $title     = get_the_title($download->ID);
+        $permalink = get_permalink($download->ID);
+        $thumbnail = get_the_post_thumbnail($download->ID, 'large');
       ?>
 
         <div class="download-item">

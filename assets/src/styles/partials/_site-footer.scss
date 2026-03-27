@@ -34,6 +34,14 @@
     margin-bottom: 0;
   }
 
+  .footer-about-info {
+    margin-top: 20px;
+
+    @include breakpoint(medium) {
+      padding-right: 40px;
+    }
+  }
+
   .footer-logo img {
     max-width: 180px;
     width: auto;
