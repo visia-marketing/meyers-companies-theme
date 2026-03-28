@@ -27,10 +27,10 @@ $thumbnails  = $images && count($images) > 1 ? array_slice($images, 1) : [];
                     </div>
                 <?php endif; ?>
 
-                <?php if ( $thumbnails ) : ?>
+                <?php if ( $images && count($images) > 1 ) : ?>
                     <div class="product-intro-thumbnails">
-                        <?php foreach ( $thumbnails as $thumb ) : ?>
-                            <div class="product-intro-thumb"
+                        <?php foreach ( $images as $i => $thumb ) : ?>
+                            <div class="product-intro-thumb<?php echo $i === 0 ? ' active' : ''; ?>"
                                  data-full="<?php echo esc_url( $thumb['sizes']['large'] ); ?>"
                                  data-alt="<?php echo esc_attr( $thumb['alt'] ); ?>">
                                 <img
