@@ -164,6 +164,18 @@ import { CountUp } from 'countup.js';
         initFloatingLabels();
         $(document).on('gform_post_render', initFloatingLabels);
 
+        // Product Intro thumbnail switcher
+        $(document).on('click', '.product-intro-thumb', function() {
+          var $thumb = $(this);
+          var $gallery = $thumb.closest('.product-intro-gallery');
+          $gallery.find('.product-intro-thumb').removeClass('active');
+          $thumb.addClass('active');
+          $gallery.find('.product-intro-featured').attr({
+            src: $thumb.data('full'),
+            alt: $thumb.data('alt')
+          });
+        });
+
       }
     },
     // Home page
