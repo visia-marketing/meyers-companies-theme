@@ -13697,17 +13697,17 @@ p:has(.uk-button + .uk-button) {
 
 /* Search Page */
 .main-search {
-  background-color: #F6F5F3;
+  background-color: #f9f9f9;
   padding: 20px 0 30px;
   position: relative;
   z-index: 99;
 }
 .main-search .main-search-bar {
-  background-color: #F6F5F3;
+  background-color: #f9f9f9;
   position: relative;
 }
 .main-search .main-search-bar .main-search-form {
-  border: 1px solid rgb(235.0714285714, 232.8571428571, 228.4285714286);
+  border: 1px solid rgb(236.25, 236.25, 236.25);
   border-radius: 10px;
   background-color: #fff;
   padding: 0.5rem;
@@ -15238,7 +15238,7 @@ p:has(.g-section-subtitle) + h3 {
   left: 0;
 }
 .woocommerce.single-product .xproduct.type-product form.cart div.quantity input {
-  background-color: #F6F5F3;
+  background-color: #f9f9f9;
   border: 1px solid rgba(238, 237, 242, 0.5);
   border-radius: 2px;
   color: rgba(0, 0, 0, 0.7);
@@ -15841,7 +15841,7 @@ body .sticky-sidebar ul > li a {
   z-index: 99;
 }
 .fc-section-cards .slick-arrow.slick-prev {
-  background: linear-gradient(90deg, #f6f5f3 25%, rgba(246, 245, 243, 0) 100%);
+  background: linear-gradient(90deg, #f9f9f9 25%, rgba(249, 249, 249, 0) 100%);
 }
 @media screen and (min-width: 1400px) {
   .fc-section-cards .slick-arrow.slick-prev {
@@ -15849,7 +15849,7 @@ body .sticky-sidebar ul > li a {
   }
 }
 .fc-section-cards .slick-arrow.slick-next {
-  background: linear-gradient(270deg, #f6f5f3 25%, rgba(246, 245, 243, 0) 100%);
+  background: linear-gradient(270deg, #f9f9f9 25%, rgba(249, 249, 249, 0) 100%);
 }
 @media screen and (min-width: 1400px) {
   .fc-section-cards .slick-arrow.slick-next {
@@ -16100,7 +16100,7 @@ body .fc-section-dark .callout-background--white h2 {
 }
 .download-grid .download-item .download-thumbnail {
   aspect-ratio: 100/140;
-  background: #F6F5F3;
+  background: #f9f9f9;
   border-radius: 6px;
   display: flex;
   justify-content: center;
@@ -16361,7 +16361,7 @@ body * .fc-section-dark *:not(.g-section-subtitle) {
   color: #fff;
 }
 body * .fc-section-grey, body * .fc-section-gray, body * .background--gray, body * .background--grey {
-  background-color: #F6F5F3;
+  background-color: #f9f9f9;
 }
 body * .fc-section-grey h1, body * .fc-section-grey h2, body * .fc-section-grey h3, body * .fc-section-grey h4, body * .fc-section-grey h5, body * .fc-section-grey h6, body * .fc-section-gray h1, body * .fc-section-gray h2, body * .fc-section-gray h3, body * .fc-section-gray h4, body * .fc-section-gray h5, body * .fc-section-gray h6, body * .background--gray h1, body * .background--gray h2, body * .background--gray h3, body * .background--gray h4, body * .background--gray h5, body * .background--gray h6, body * .background--grey h1, body * .background--grey h2, body * .background--grey h3, body * .background--grey h4, body * .background--grey h5, body * .background--grey h6 {
   color: #002F86;
@@ -16404,7 +16404,7 @@ body * .background--image.background--dark * {
   color: #fff;
 }
 .fc-section-cta.background--grey {
-  background-color: #F6F5F3;
+  background-color: #f9f9f9;
 }
 .fc-section-cta.background--grey h1, .fc-section-cta.background--grey h2, .fc-section-cta.background--grey h3, .fc-section-cta.background--grey h4, .fc-section-cta.background--grey h5, .fc-section-cta.background--grey h6 {
   color: #002F86;
