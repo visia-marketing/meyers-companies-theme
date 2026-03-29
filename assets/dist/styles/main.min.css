@@ -16172,7 +16172,7 @@ body .fc-section-dark .callout-background--white h2 {
   -o-object-fit: contain;
      object-fit: contain;
   display: block;
-  border-radius: 0.5rem;
+  border-radius: 0 !important;
 }
 .fc-section-product-intro .product-intro-thumbnails {
   display: flex;
@@ -16197,6 +16197,7 @@ body .fc-section-dark .callout-background--white h2 {
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
+  border-radius: 0 !important;
 }
 .fc-section-product-intro .product-intro-thumb:hover, .fc-section-product-intro .product-intro-thumb.active {
   border-color: var(--accent-color);
