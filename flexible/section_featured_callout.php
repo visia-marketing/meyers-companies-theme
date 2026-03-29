@@ -1,10 +1,24 @@
 <?php
 
-$design = get_sub_field('callout_design');
-$background_color = $design['background'];
-$image = $design['callout_image'];
+$source = get_sub_field('callout_source') ?: 'custom';
 
-$content = get_sub_field('callout_content');
+if ( $source === 'global' ) {
+    $index    = get_sub_field('global_callout_index');
+    $callouts = get_field('global_featured_callouts', 'options');
+    $callout  = isset( $callouts[ $index ] ) ? $callouts[ $index ] : null;
+
+    if ( ! $callout ) return;
+
+    $design           = $callout['callout_design'];
+    $background_color = $design['background'];
+    $image            = $design['callout_image'];
+    $content          = $callout['callout_content'];
+} else {
+    $design           = get_sub_field('callout_design');
+    $background_color = $design['background'];
+    $image            = $design['callout_image'];
+    $content          = get_sub_field('callout_content');
+}
 
 ?>
 
