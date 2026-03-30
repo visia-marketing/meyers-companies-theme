@@ -15756,7 +15756,9 @@ body .sticky-sidebar ul > li a {
 }
 .fc-section-cards .uk-card.cards-style--primary .uk-card--inner .card-body .hover-panel--1 {
   opacity: 0;
-  transition: opacity 0.4s ease-in-out;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
 }
 .fc-section-cards .uk-card.cards-style--primary .uk-card--inner .card-body .hover-panel--1 .uk-button.uk-button-text {
   color: var(--accent-color);
@@ -15769,6 +15771,7 @@ body .sticky-sidebar ul > li a {
 }
 .fc-section-cards .uk-card.cards-style--primary .uk-card--inner .card-body:hover .hover-panel--1 {
   opacity: 1;
+  max-height: 300px;
 }
 .fc-section-cards .uk-card.cards-style--primary .uk-card--inner .card-body:has(.hover-panel--0) {
   background-position: 0% 25%;
@@ -15803,9 +15806,25 @@ body .sticky-sidebar ul > li a {
   border-radius: 0 0 0.75rem 0.75rem;
   padding-bottom: 2rem;
 }
-.fc-section-cards .uk-card.cards-style--basic div.card-body span,
-.fc-section-cards .uk-card.cards-style--basic a.card-body span {
-  color: #ffffff !important;
+.fc-section-cards .uk-card.cards-style--basic div.card-body span.uk-button,
+.fc-section-cards .uk-card.cards-style--basic a.card-body span.uk-button {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  color: var(--accent-color) !important;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  box-shadow: none !important;
+}
+.fc-section-cards .uk-card.cards-style--basic div.card-body span.uk-button:after,
+.fc-section-cards .uk-card.cards-style--basic a.card-body span.uk-button:after {
+  content: "→";
+  color: var(--accent-color) !important;
 }
 .fc-section-cards .uk-card.cards-style--product .uk-card-media-top {
   background-color: #f8f8f8;

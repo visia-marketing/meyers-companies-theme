@@ -103,7 +103,9 @@
 
         .hover-panel--1 {
           opacity: 0;
-          transition: opacity 0.4s ease-in-out;
+          max-height: 0;
+          overflow: hidden;
+          transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
 
           .uk-button.uk-button-text {
             color: $secondary;
@@ -114,7 +116,10 @@
         &:hover {
           background-position: 0% 33%;
 
-          .hover-panel--1 { opacity: 1; }
+          .hover-panel--1 {
+            opacity: 1;
+            max-height: 300px;
+          }
         }
 
         &:has(.hover-panel--0) { background-position: 0% 25%; }
@@ -157,7 +162,25 @@
       border-radius: 0 0 0.75rem 0.75rem;
       padding-bottom: 2rem;
 
-      span { color: $white !important; }
+      span.uk-button {
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+        color: $secondary !important;
+        font-size: 0.875rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        box-shadow: none !important;
+
+        &:after {
+          content: '→';
+          color: $secondary !important;
+        }
+      }
     }
   }
 

@@ -42,36 +42,11 @@ import { CountUp } from 'countup.js';
       );
 
         function hoverCardsInit(){
-          // get all elements with data-hover-card
-          const hoverCards = document.querySelectorAll('.cards-style--primary');
+          const hoverCards = document.querySelectorAll('.cards-style--primary:not([data-hover-init])');
 
           hoverCards.forEach(card => {
-            // get the height of card-p ( if it exists )
-            const cardP = card.querySelector('.hover-panel--1');
-            let cardPHeight = 0;
-            if (cardP) {
-              cardPHeight = cardP.offsetHeight;
-            }
-            // set p height to 0 and overflow to hidden
-            if (cardP) {
-              cardP.style.height = '0';
-              cardP.style.overflow = 'hidden';
-            }
-            // add mouseenter event to card
-            card.addEventListener('mouseenter', () => {
-              if (cardP) {
-                cardP.style.height = cardPHeight + 'px';
-              }
-            });
-            // add mouseleave event to card
-            card.addEventListener('mouseleave', () => {
-              if (cardP) {
-                cardP.style.height = '0';
-              }
-            });
-  
+            card.setAttribute('data-hover-init', '1');
           });
-          
         }
 
         jQuery(document).ready(function() {
