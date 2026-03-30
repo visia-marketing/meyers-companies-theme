@@ -15639,7 +15639,7 @@ p:has(.g-section-subtitle) + h3 {
 }
 
 .sticky-section {
-  min-height: 300px;
+  min-height: 250px;
 }
 .sticky-section:not(:last-child) {
   border-bottom: 1px solid #e6e6e6;
