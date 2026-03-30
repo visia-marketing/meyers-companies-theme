@@ -35,7 +35,7 @@ $sections = get_sub_field('sections'); // used for the nav loop
 
     <div class="uk-width-1-1 uk-width-1-4@m uk-flex-first@m">
 
-        <div uk-sticky="offset: 200; end: #sticky-end; media: @m">
+        <div uk-sticky="offset: 100; end: #sticky-end; media: @m">
             <ul class="uk-nav uk-nav-default" uk-scrollspy-nav="closest: li; scroll: true">
 
                 <?php foreach( $sections as $i => $section ): ?>
