@@ -8,6 +8,10 @@
 .fc-section-cards {
   row-gap: 2.5rem;
 
+  @media (max-width: 959px) {
+    text-align: center;
+  }
+
   > div { display: flex; }
 
   .uk-card {

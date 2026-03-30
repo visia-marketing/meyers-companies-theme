@@ -21,6 +21,11 @@
     padding-top: 2rem;
     padding-bottom: 2rem;
     width: 100%;
+    text-align: center;
+
+    @include breakpoint(medium) {
+      text-align: left;
+    }
 
     &.page-header-expanded{
       padding-top: 12.5rem;
@@ -32,13 +37,21 @@
       padding-bottom: 14vh;
 
       & p{
-        font-size: 1.375rem;
+        font-size: 1rem;
+
+        @include breakpoint(medium) {
+          font-size: 1.375rem;
+        }
       }
 
       & h1{
-        font-size: 3.75rem;
+        font-size: 2.75rem;
         font-family: $sans;
-        line-height: 1;
+        line-height: 1.1;
+
+        @include breakpoint(medium) {
+          font-size: 3.75rem;
+        }
       }
     }
 

@@ -61,6 +61,14 @@
   }
 }
 
+.sticky-sidebar > div:first-child {
+  display: none;
+
+  @include breakpoint(medium) {
+    display: block;
+  }
+}
+
 body .sticky-sidebar{
 
   ul{

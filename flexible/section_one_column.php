@@ -35,7 +35,7 @@ switch ($column_width) {
 
   <?php get_template_part('flexible/section_header'); ?>
 
-    <div class="content uk-width-<?php echo esc_attr($column_width); ?>">
+    <div class="content uk-width-1-1 uk-width-<?php echo esc_attr($column_width); ?>@m">
       <?php echo get_sub_field('column_1'); ?>
     </div>
 

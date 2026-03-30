@@ -26,11 +26,46 @@ use Roots\Sage\Wrapper;
 
             <button class="uk-offcanvas-close" type="button" uk-close></button>
 
+            <div class="offcanvas-logo">
+                <a href="<?= esc_url(home_url('/')); ?>">
+                    <img src="<?php echo esc_url(get_field('footer_logo', 'options')); ?>" alt="<?php bloginfo('name'); ?>">
+                </a>
+            </div>
+
             <?php
             if (has_nav_menu('mobile_navigation')) :
               wp_nav_menu(['theme_location' => 'mobile_navigation', 'depth' => 3, 'menu_class' => 'mobile-navigation', 'items_wrap' => '<ul class="%2$s" id="mobile-navigation">%3$s</ul>' ]);
               endif;
             ?>
+
+            <script>
+            document.addEventListener('DOMContentLoaded', function() {
+              document.querySelectorAll('#mobile-navigation > li').forEach(function(li) {
+                var submenu = li.querySelector('ul.submenu');
+                if (!submenu) return;
+
+                var link = li.querySelector('a');
+                var row = document.createElement('div');
+                row.className = 'mobile-nav-row';
+
+                var toggle = document.createElement('button');
+                toggle.className = 'mobile-submenu-toggle';
+                toggle.innerHTML = '<i class="fa-solid fa-chevron-down"></i>';
+                toggle.setAttribute('aria-expanded', 'false');
+
+                li.insertBefore(row, link);
+                row.appendChild(link);
+                row.appendChild(toggle);
+
+                toggle.addEventListener('click', function() {
+                  var isOpen = submenu.style.display === 'block';
+                  submenu.style.display = isOpen ? 'none' : 'block';
+                  toggle.classList.toggle('is-open', !isOpen);
+                  toggle.setAttribute('aria-expanded', !isOpen);
+                });
+              });
+            });
+            </script>
 
             <div class="off-canvas-search">
               <form role="search" method="get" class="search-form" action="<?= esc_url(site_url()); ?>">

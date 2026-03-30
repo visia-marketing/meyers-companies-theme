@@ -238,6 +238,10 @@ body *{
 
 .fc-section-cta {
 
+  @media (max-width: 959px) {
+    text-align: center;
+  }
+
   & h2{
     font-family: $sans;
     font-size: 2rem;
