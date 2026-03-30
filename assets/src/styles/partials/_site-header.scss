@@ -75,6 +75,7 @@ $top-header-link-color: $top-header-link-color;
         align-items: center;
         text-transform: uppercase;
         position: relative;
+        padding: 20px 0;
 
         @include breakpoint(medium) {
           //display: inline-block;
@@ -82,7 +83,7 @@ $top-header-link-color: $top-header-link-color;
 
         > a {
           color: $main-header-link-color;
-          font-size: 15px;
+          font-size: .925rem;
           font-weight: 700;
           padding: 0 0;
           position: relative;
@@ -134,14 +135,25 @@ $top-header-link-color: $top-header-link-color;
           left: 50%;
           transform: translate(-50%);
           text-align: left;
-          padding: 1rem 0.75rem;
+          padding: .5rem 0.75rem;
           border: none;
-          border-top: 3px solid $primary;
+          border-top: 3px solid $secondary;
           margin-top: -3px;
           background-color: $white;
           min-width: 200px;
           list-style: none;
           z-index: 100;
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-bottom: 7px solid $secondary;
+          }
 
           & > li {
             margin: 1px 0;
@@ -153,8 +165,8 @@ $top-header-link-color: $top-header-link-color;
             }
 
             & > a {
-              color: $black;
-              font-size: 15px;
+              color: $primary;
+              font-size: .925rem;
               font-weight: 600;
 
               transition: all 0.3s;
@@ -169,7 +181,8 @@ $top-header-link-color: $top-header-link-color;
 
             &:hover > a,
             &:focus > a {
-              color: rgba($black,.7);
+              color: $secondary;
+              text-decoration: none;
             }
 
             &.active {
@@ -195,9 +208,9 @@ $top-header-link-color: $top-header-link-color;
           border: none;
           color: $white;
           //font-family: $condensed;
-          font-size: 1rem;
+          font-size: .925rem;
           font-weight: 700;
-          padding: 0.65rem 2rem;
+          padding: 0.55rem 1.75rem;
           text-transform: uppercase;
           position: relative;
           display: flex;
