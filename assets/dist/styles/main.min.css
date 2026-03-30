@@ -13435,7 +13435,7 @@ p:has(.uk-button + .uk-button) {
 .gform_wrapper.gravity-theme .gfield input[type=url],
 .gform_wrapper.gravity-theme .gfield select {
   background-color: #ffffff;
-  border: 1.5px solid #e6e6e6;
+  border: 1.5px solid #c8c8c8;
   border-radius: 2rem;
   box-shadow: none;
   color: #000000;
@@ -13467,7 +13467,7 @@ p:has(.uk-button + .uk-button) {
 }
 .gform_wrapper.gravity-theme .gfield textarea {
   background-color: #ffffff;
-  border: 1.5px solid #e6e6e6;
+  border: 1.5px solid #c8c8c8;
   border-radius: 1rem;
   box-shadow: none;
   color: #000000;
@@ -13496,11 +13496,11 @@ p:has(.uk-button + .uk-button) {
 }
 .gform_wrapper.gravity-theme .gfield_label {
   position: absolute;
-  top: 0.75rem;
+  top: 0.9rem;
   left: 1.25rem;
   font-family: "acumin-pro", sans-serif;
   font-size: 1rem;
-  color: #c8c8c8;
+  color: #585858;
   pointer-events: none;
   transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
   background: #ffffff;
@@ -16268,6 +16268,21 @@ body .fc-section-dark .callout-background--white h2 {
 .fc-wrapper .sticky-sidebar .uk-nav li::marker,
 .fc-page-header .sticky-sidebar .uk-nav li::marker {
   color: inherit;
+}
+.fc-wrapper .sticky-sidebar .uk-nav a,
+.fc-page-header .sticky-sidebar .uk-nav a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.fc-wrapper .sticky-sidebar .uk-nav img,
+.fc-page-header .sticky-sidebar .uk-nav img {
+  max-height: 25px;
+  width: auto;
+  flex-shrink: 0;
+  min-width: 30px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .fc-wrapper .uk-accordion,
 .fc-page-header .uk-accordion {

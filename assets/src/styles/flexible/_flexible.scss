@@ -36,6 +36,20 @@
     padding-left: 0;
     font-size: 0.875rem;
     li::marker { color: inherit; }
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    img {
+      max-height: 25px;
+      width: auto;
+      flex-shrink: 0;
+      min-width: 30px;
+      object-fit: contain;
+    }
   }
 
   .uk-accordion {

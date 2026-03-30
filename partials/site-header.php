@@ -17,7 +17,7 @@
 <?php endif; ?>
 
 <header class="main-header">
-	<div class="uk-container uk-container-xlarge uk-flex uk-flex-middle uk-margin-top uk-margin-bottom">
+	<div class="uk-container uk-container-xlarge uk-flex uk-flex-middle">
     <div class="uk-width-1-5@m">
       <div class="main-logo">
         <a href="<?= esc_url(home_url('/')); ?>"><img src="<?php echo esc_url(get_field('main_logo', 'options'));?>" alt="<?php bloginfo('name'); ?>" loading="lazy"></a>
