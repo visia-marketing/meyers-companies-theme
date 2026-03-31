@@ -6,31 +6,37 @@
       <div class="footer-logo">
         <a href="<?= esc_url(home_url('/')); ?>"><img src="<?php echo esc_url(get_field('footer_logo', 'options'));?>" alt="<?php bloginfo('name'); ?>" loading="lazy"></a>
       </div>
+      <?php $footer_about = get_field('footer_about_info', 'options'); ?>
+      <?php if( $footer_about ): ?>
+        <div class="footer-about-info uk-margin-small-bottom">
+          <?php echo wp_kses_post($footer_about); ?>
+        </div>
+      <?php endif; ?>
     </div>
 
     <div class="uk-width-1-1@s uk-width-1-1@m uk-width-2-3@xl  uk-margin-medium-bottom uk-margin-remove-bottom@m">
       <div class="uk-grid uk-grid-small">
 
-        <div class="uk-width-1-1@s uk-width-1-4@m ">   
+        <div class="uk-width-1-1@s uk-width-1-4@m footer-nav-col">
           <?php
           if (has_nav_menu('footer_navigation_1')) :
-          wp_nav_menu(['theme_location' => 'footer_navigation_1', 'depth' => 2, 'menu_class' => 'footer-menu' ]); 
+          wp_nav_menu(['theme_location' => 'footer_navigation_1', 'depth' => 2, 'menu_class' => 'footer-menu' ]);
           endif;
           ?>
         </div>
 
-        <div class="uk-width-1-1@s uk-width-1-4@m">   
+        <div class="uk-width-1-1@s uk-width-1-4@m footer-nav-col">
           <?php
           if (has_nav_menu('footer_navigation_2')) :
-          wp_nav_menu(['theme_location' => 'footer_navigation_2', 'depth' => 2, 'menu_class' => 'footer-menu ' ]); 
+          wp_nav_menu(['theme_location' => 'footer_navigation_2', 'depth' => 2, 'menu_class' => 'footer-menu ' ]);
           endif;
           ?>
         </div>
 
-        <div class="uk-width-1-1@s uk-width-1-4@m ">   
+        <div class="uk-width-1-1@s uk-width-1-4@m footer-nav-col">
           <?php
           if (has_nav_menu('footer_navigation_3')) :
-          wp_nav_menu(['theme_location' => 'footer_navigation_3', 'depth' => 2, 'menu_class' => 'footer-menu ' ]); 
+          wp_nav_menu(['theme_location' => 'footer_navigation_3', 'depth' => 2, 'menu_class' => 'footer-menu ' ]);
           endif;
           ?>
         </div>

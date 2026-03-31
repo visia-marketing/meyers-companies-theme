@@ -7,8 +7,7 @@ $col_class = $per_row == 4 ? 'uk-width-1-2@s uk-width-1-4@m' : 'uk-width-1-2@s u
 $args = array(
     'post_type'      => 'elkhart-product',
     'posts_per_page' => -1,
-    'order'          => 'ASC',
-    'orderby'        => 'menu_order',
+    'orderby'        => 'post__in',
     'post__in'       => (array) $selected,
 );
 

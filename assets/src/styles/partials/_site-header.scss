@@ -20,29 +20,17 @@ $top-header-link-color: $top-header-link-color;
 
   
   .main-logo {
-    // display: flex;
-    // align-items: center;
-    // height: 100%;
-    // margin-right: auto;
-
-    & a{
-      // display: flex;
-      // height: 100%;
-      // padding: 1rem 0;
-    }
-
     img {
-      //height: 19px;
-      // width: 100%;
-      // vertical-align: middle;
-      // max-height: 100%;
+      max-width: 240px;
+      width: 100%;
+      height: auto;
+      padding: 8px 0;
 
       @include breakpoint(medium) {
-        //height: 34px;
+        max-width: 320px;
+        padding: 0;
       }
-
     }
-
   }
 
 }
@@ -67,6 +55,7 @@ $top-header-link-color: $top-header-link-color;
       justify-content: center;
       gap: 1.5rem;
       height: 100%;
+      padding: 8px 0 !important;
 
 
       > li {
@@ -75,6 +64,7 @@ $top-header-link-color: $top-header-link-color;
         align-items: center;
         text-transform: uppercase;
         position: relative;
+        padding: 20px 0;
 
         @include breakpoint(medium) {
           //display: inline-block;
@@ -82,7 +72,7 @@ $top-header-link-color: $top-header-link-color;
 
         > a {
           color: $main-header-link-color;
-          font-size: 15px;
+          font-size: .925rem;
           font-weight: 700;
           padding: 0 0;
           position: relative;
@@ -134,14 +124,25 @@ $top-header-link-color: $top-header-link-color;
           left: 50%;
           transform: translate(-50%);
           text-align: left;
-          padding: 1rem 0.75rem;
+          padding: .5rem 0.75rem;
           border: none;
-          border-top: 3px solid $primary;
+          border-top: 3px solid $secondary;
           margin-top: -3px;
           background-color: $white;
           min-width: 200px;
           list-style: none;
           z-index: 100;
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-bottom: 7px solid $secondary;
+          }
 
           & > li {
             margin: 1px 0;
@@ -153,8 +154,8 @@ $top-header-link-color: $top-header-link-color;
             }
 
             & > a {
-              color: $black;
-              font-size: 15px;
+              color: $primary;
+              font-size: .925rem;
               font-weight: 600;
 
               transition: all 0.3s;
@@ -169,7 +170,8 @@ $top-header-link-color: $top-header-link-color;
 
             &:hover > a,
             &:focus > a {
-              color: rgba($black,.7);
+              color: $secondary;
+              text-decoration: none;
             }
 
             &.active {
@@ -195,9 +197,9 @@ $top-header-link-color: $top-header-link-color;
           border: none;
           color: $white;
           //font-family: $condensed;
-          font-size: 1rem;
+          font-size: .925rem;
           font-weight: 700;
-          padding: 0.65rem 2rem;
+          padding: 0.55rem 1.75rem;
           text-transform: uppercase;
           position: relative;
           display: flex;
@@ -267,11 +269,16 @@ $top-header-link-color: $top-header-link-color;
   .top-header-text {
     color: #fff;
     font-family: $sans;
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 1.95px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1.65px;
     text-transform: uppercase;
     line-height: 1;
+    display: none;
+
+    @include breakpoint(medium) {
+      display: block;
+    }
   }
 
   .top-header-search {
@@ -335,12 +342,12 @@ $top-header-link-color: $top-header-link-color;
       line-height: 1;
 
       i {
-        color: $black;
+        color: #fff;
         font-size: 12px;
       }
 
       &:hover i {
-        color: $primary;
+        color: #fff;
       }
     }
 
@@ -361,7 +368,7 @@ $top-header-link-color: $top-header-link-color;
       display: inline-block;
 
       a {
-        color: $top-header-link-color;
+        color: #fff;
         display: inline-block;
         font-size: 13px;
         font-weight: 400;
@@ -410,57 +417,97 @@ $top-header-link-color: $top-header-link-color;
 
 
 .uk-offcanvas-bar {
+  background-color: $primary !important;
+  color: #fff;
+
+  .offcanvas-logo {
+    display: block;
+    margin-bottom: 1.5rem;
+
+    img {
+      max-width: 160px;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .uk-offcanvas-close {
+    color: #fff;
+  }
+
+
 
   > ul.mobile-navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 
     > li {
-      border-bottom: 1px solid #d9d9d9;
+      border-bottom: 1px solid rgba(#fff, 0.2);
+      list-style: none;
 
       > a {
         color: #fff;
         font-weight: 600;
-        padding: 12px 0;
+        padding: 16px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-decoration: none;
       }
 
-      &.active > a {
-        background-color: transparent;
-        color: $primary;
+      > .mobile-submenu-toggle {
+        background: none;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        padding: 16px 0 16px 16px;
+        font-size: 12px;
+        line-height: 1;
+        opacity: 0.7;
+
+        &.is-open {
+          opacity: 1;
+          i { transform: rotate(180deg); }
+        }
+
+        i { transition: transform 0.2s ease; }
+      }
+
+      > .mobile-nav-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      &.active > .mobile-nav-row > a {
+        color: $secondary;
       }
 
       > ul.submenu {
-        display: block;
-        padding: 0 0 20px;
+        display: none;
+        padding: 0 0 12px 1rem;
+        margin: 0;
+        list-style: none;
+        border-left: 2px solid rgba(#fff, 0.4);
 
         > li {
+          list-style: none;
 
           > a {
-            color: #fff;
+            color: rgba(#fff, 0.85);
             font-size: 14px;
+            padding: 6px 0;
+            display: block;
+            text-decoration: none;
+
+            &:hover { color: #fff; }
           }
 
           &.active > a {
-            background-color: transparent;
-            color: $primary;
+            color: $secondary;
           }
-
-          ul {
-            margin: 20px;
-            border-left: 1px solid $primary;
-
-            li > a {
-              color: #fff;
-              font-size: 13px;
-            }
-
-            li.active > a {
-              background-color: transparent;
-              color: $white;
-              text-decoration: underline;
-            }
-          }
-
         }
-
       }
 
     }

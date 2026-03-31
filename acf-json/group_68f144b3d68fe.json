@@ -454,6 +454,38 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_69b2c3d4e5f04": {
+                    "key": "layout_69b2c3d4e5f04",
+                    "name": "section_product_intro",
+                    "label": "Product Intro",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_69b2c3d4e5f05",
+                            "label": "Product Intro",
+                            "name": "product_intro",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_69b2c3d4e5f01"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -480,5 +512,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1772665989
+    "modified": 1774300000
 }

@@ -3,6 +3,69 @@
     "title": "COMPONENT: Featured Callout",
     "fields": [
         {
+            "key": "field_69fc_callout_source",
+            "label": "Callout Source",
+            "name": "callout_source",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "custom": "Custom",
+                "global": "Global (from Theme Settings)"
+            },
+            "default_value": "custom",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_69fc_global_callout_select",
+            "label": "Select Global Callout",
+            "name": "global_callout_index",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_69fc_callout_source",
+                        "operator": "==",
+                        "value": "global"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {},
+            "default_value": "",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 1,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "— Select a callout —",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
             "key": "field_6984b1ec372da",
             "label": "Callout Content",
             "name": "callout_content",
@@ -10,7 +73,15 @@
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_69fc_callout_source",
+                        "operator": "==",
+                        "value": "custom"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "50",
                 "class": "",
@@ -31,7 +102,15 @@
             "type": "group",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_69fc_callout_source",
+                        "operator": "==",
+                        "value": "custom"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "50",
                 "class": "",
@@ -118,5 +197,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1772582293
+    "modified": 1774810647
 }

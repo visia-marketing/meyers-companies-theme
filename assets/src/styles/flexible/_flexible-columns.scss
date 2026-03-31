@@ -53,11 +53,19 @@
 
 
 .sticky-section {
-  min-height: 300px;
+  min-height: 250px;
 
   &:not(:last-child) {
     border-bottom: 1px solid $light-gray;
     padding-bottom: 2rem;
+  }
+}
+
+.sticky-sidebar > div:last-child {
+  display: none;
+
+  @include breakpoint(medium) {
+    display: block;
   }
 }
 

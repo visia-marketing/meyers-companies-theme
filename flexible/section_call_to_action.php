@@ -43,14 +43,14 @@ if ( $source === 'default' ){
 
 <div class="fc-section-cta fc-section-columns call-to-action call-to-action--<?php echo esc_attr($source);?> call-to-action-<?php echo esc_attr($background); ?> background--<?php echo esc_attr($background);?> background--<?php echo esc_attr($content_color ?? '');?>" id="<?php echo esc_attr($cta_id); ?>">
 
-    <div class="call-to-action--inner uk-container uk-flex uk-padding-medium">
+    <div class="call-to-action--inner uk-container uk-flex uk-flex-wrap uk-padding-medium">
 
         <div class="uk-width-1-1 uk-width-4-5@m uk-margin-auto-left uk-margin-auto-right">
             <?php echo wp_kses_post($content); ?>
 
         </div>
 
-        <div class="uk-width-1-1 uk-width-1-5@m uk-flex uk-flex-left uk-flex-middle">
+        <div class="uk-width-1-1 uk-width-1-5@m uk-flex uk-flex-center uk-flex-left@m uk-flex-middle">
             <?php if( is_array($button) ): ?>
                 <?php if( array_key_exists('url', $button) ): ?>
                     <a href="<?php echo esc_url( $button['url'] ); ?>" class="uk-button uk-button-secondary uk-margin-remove" <?php if( $button['target'] ): ?> target="<?php echo esc_attr( $button['target'] ); ?>" <?php endif; ?>>

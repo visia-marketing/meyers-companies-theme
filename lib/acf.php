@@ -143,3 +143,22 @@ add_action('acf/save_post', function ($post_id) {
         $css
     );
 }, 20);
+
+/**
+ * Dynamically populate the "Select Global Callout" dropdown
+ * from the global_featured_callouts repeater on the options page.
+ */
+add_filter('acf/load_field/key=field_69fc_global_callout_select', function( $field ) {
+    $field['choices'] = [];
+
+    $callouts = get_field('global_featured_callouts', 'options');
+
+    if ( $callouts ) {
+        foreach ( $callouts as $i => $callout ) {
+            $label = ! empty( $callout['callout_label'] ) ? $callout['callout_label'] : 'Callout ' . ( $i + 1 );
+            $field['choices'][ $i ] = $label;
+        }
+    }
+
+    return $field;
+});
