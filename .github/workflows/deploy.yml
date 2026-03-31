@@ -53,8 +53,17 @@ jobs:
           IP: ${{ secrets[format('KINSTA_LIVE_{0}_IP', matrix.server)] }}
           PATH_: ${{ secrets[format('KINSTA_LIVE_{0}_PATH', matrix.server)] }}
         run: |
+          echo "--- Debug: checking secrets ---"
+          [ -z "$SSH_KEY" ]     && echo "ERROR: SSH_KEY is empty"     || echo "SSH_KEY: set"
+          [ -z "$PORT" ]        && echo "ERROR: PORT is empty"        || echo "PORT: set ($PORT)"
+          [ -z "$IP" ]          && echo "ERROR: IP is empty"          || echo "IP: set"
+          [ -z "$PATH_" ]       && echo "ERROR: PATH_ is empty"       || echo "PATH_: set"
+          [ -z "$SERVER_USER" ] && echo "SERVER_USER: empty (will use GLOBAL_USER)" || echo "SERVER_USER: set"
+          [ -z "$GLOBAL_USER" ] && echo "GLOBAL_USER: empty"          || echo "GLOBAL_USER: set"
+          echo "--- End debug ---"
           echo "$SSH_KEY" > private_key
           chmod 600 private_key
           USER="${SERVER_USER:-$GLOBAL_USER}"
-          rsync -az --delete -e "ssh -i private_key -p $PORT -o StrictHostKeyChecking=no" ./ "$USER@$IP:$PATH_/"
+          [ -z "$USER" ] && echo "ERROR: USER is empty, cannot connect" && exit 1
+          rsync -avz --delete -e "ssh -i private_key -p $PORT -o StrictHostKeyChecking=no -v" ./ "$USER@$IP:$PATH_/"
           rm private_key
