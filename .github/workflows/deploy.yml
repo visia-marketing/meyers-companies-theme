@@ -10,28 +10,51 @@ jobs:
   deploy-staging:
     if: github.ref == 'refs/heads/staging'
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        server: [ELKHART, AMERIKART]
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Deploy to staging
+
+      - name: Deploy Theme to Staging Server ${{ matrix.server }}
+        env:
+          SSH_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          PORT: ${{ secrets[format('KINSTA_STAGING_{0}_PORT', matrix.server)] }}
+          SERVER_USER: ${{ secrets[format('KINSTA_STAGING_{0}_USER', matrix.server)] }}
+          GLOBAL_USER: ${{ secrets.KINSTA_USER }}
+          IP: ${{ secrets[format('KINSTA_STAGING_{0}_IP', matrix.server)] }}
+          PATH_: ${{ secrets[format('KINSTA_STAGING_{0}_PATH', matrix.server)] }}
         run: |
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > private_key
+          echo "$SSH_KEY" > private_key
           chmod 600 private_key
-          
-          rsync -az --delete -e "ssh -i private_key -p ${{ secrets.KINSTA_STAGING_PORT }} -o StrictHostKeyChecking=no" ./ ${{ secrets.KINSTA_STAGING_USER }}@${{ secrets.KINSTA_STAGING_IP }}:${{ secrets.KINSTA_STAGING_PATH }}/
+          USER="${SERVER_USER:-$GLOBAL_USER}"
+          rsync -az --delete -e "ssh -i private_key -p $PORT -o StrictHostKeyChecking=no" ./ "$USER@$IP:$PATH_/'"
           rm private_key
 
   deploy-live:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        server: [ELKHART, AMERIKART]
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Deploy Theme to Live
+      - name: Deploy Theme to Live Server ${{ matrix.server }}
+        env:
+          SSH_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          PORT: ${{ secrets[format('KINSTA_LIVE_{0}_PORT', matrix.server)] }}
+          SERVER_USER: ${{ secrets[format('KINSTA_LIVE_{0}_USER', matrix.server)] }}
+          GLOBAL_USER: ${{ secrets.KINSTA_USER }}
+          IP: ${{ secrets[format('KINSTA_LIVE_{0}_IP', matrix.server)] }}
+          PATH_: ${{ secrets[format('KINSTA_LIVE_{0}_PATH', matrix.server)] }}
         run: |
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > private_key
+          echo "$SSH_KEY" > private_key
           chmod 600 private_key
-          
-          rsync -az --delete -e "ssh -i private_key -p ${{ secrets.KINSTA_LIVE_PORT }} -o StrictHostKeyChecking=no" ./ ${{ secrets.KINSTA_LIVE_USER }}@${{ secrets.KINSTA_LIVE_IP }}:${{ secrets.KINSTA_LIVE_PATH }}/
+          USER="${SERVER_USER:-$GLOBAL_USER}"
+          rsync -az --delete -e "ssh -i private_key -p $PORT -o StrictHostKeyChecking=no" ./ "$USER@$IP:$PATH_/'"
           rm private_key
