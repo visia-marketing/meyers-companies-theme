@@ -30,7 +30,7 @@ jobs:
           echo "$SSH_KEY" > private_key
           chmod 600 private_key
           USER="${SERVER_USER:-$GLOBAL_USER}"
-          rsync -az --delete -e "ssh -i private_key -p $PORT -o StrictHostKeyChecking=no" ./ "$USER@$IP:$PATH_/'"
+          rsync -az --delete -e "ssh -i private_key -p $PORT -o StrictHostKeyChecking=no" ./ "$USER@$IP:$PATH_/"
           rm private_key
 
   deploy-live:
@@ -56,5 +56,5 @@ jobs:
           echo "$SSH_KEY" > private_key
           chmod 600 private_key
           USER="${SERVER_USER:-$GLOBAL_USER}"
-          rsync -az --delete -e "ssh -i private_key -p $PORT -o StrictHostKeyChecking=no" ./ "$USER@$IP:$PATH_/'"
+          rsync -az --delete -e "ssh -i private_key -p $PORT -o StrictHostKeyChecking=no" ./ "$USER@$IP:$PATH_/"
           rm private_key
