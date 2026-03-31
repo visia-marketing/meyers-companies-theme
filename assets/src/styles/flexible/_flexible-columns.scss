@@ -61,7 +61,7 @@
   }
 }
 
-.sticky-sidebar > div:first-child {
+.sticky-sidebar > div:last-child {
   display: none;
 
   @include breakpoint(medium) {
