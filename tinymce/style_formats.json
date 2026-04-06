@@ -2,20 +2,17 @@
   {
     "title": "Section Subtitle",
     "inline": "span",
-    "classes": "g-section-subtitle",
-    "wrapper": true
+    "classes": "g-section-subtitle"
   },
   {
     "title": "Section Title",
     "inline": "span",
-    "classes": "g-section-title",
-    "wrapper": true
+    "classes": "g-section-title"
   },
   {
     "title": "Highlight Orange",
     "inline": "span",
-    "classes": "g-section-highlight-orange",
-    "wrapper": true
+    "classes": "g-section-highlight-orange"
   },
   {
     "title": "Button with Arrow",
