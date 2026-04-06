@@ -224,6 +224,39 @@
     }
   }
 
+    // ── Product Style ────────────────────────────────────────────────────────
+  .uk-card.cards-style--blog {
+
+    .uk-card-media-top {
+      background-color: #f8f8f8;
+
+      img {
+        aspect-ratio: 16/10;
+        object-fit: cover;
+      }
+
+      .placeholder {
+        background: #f1f2f3;
+        aspect-ratio: 16/10;
+        width: 100%;
+        position: relative;
+
+        &:after {
+          content: 'Placeholder';
+          text-transform: uppercase;
+          letter-spacing: 5px;
+          color: gray;
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+
 
   // ── Slick arrows ─────────────────────────────────────────────────────────
   .slick-arrow {
