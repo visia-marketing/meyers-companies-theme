@@ -422,6 +422,38 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_69d4081700135": {
+                    "key": "layout_69d4081700135",
+                    "name": "section_download_grid",
+                    "label": "Download Grid",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_69d4081f00138",
+                            "label": "Download Grid",
+                            "name": "download_grid",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_691f88df2536e"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -450,5 +482,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1775494505
+    "modified": 1775503409
 }
