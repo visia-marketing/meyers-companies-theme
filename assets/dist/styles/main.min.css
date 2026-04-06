@@ -15988,6 +15988,32 @@ body .sticky-sidebar ul > li a {
   align-items: center;
   justify-content: center;
 }
+.fc-section-cards .uk-card.cards-style--blog .uk-card-media-top {
+  background-color: #f8f8f8;
+}
+.fc-section-cards .uk-card.cards-style--blog .uk-card-media-top img {
+  aspect-ratio: 16/10;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.fc-section-cards .uk-card.cards-style--blog .uk-card-media-top .placeholder {
+  background: #f1f2f3;
+  aspect-ratio: 16/10;
+  width: 100%;
+  position: relative;
+}
+.fc-section-cards .uk-card.cards-style--blog .uk-card-media-top .placeholder:after {
+  content: "Placeholder";
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: gray;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .fc-section-cards .slick-arrow {
   height: 100% !important;
   width: 3rem;
