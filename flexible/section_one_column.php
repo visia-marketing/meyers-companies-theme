@@ -4,8 +4,6 @@
 $column_width = get_sub_field('column_width'); 
 
 
-
-
 // convert column width (1-6) to uk-width classes
 switch ($column_width) {
   case 1:
