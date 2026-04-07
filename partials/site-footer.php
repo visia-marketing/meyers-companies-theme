@@ -89,4 +89,10 @@
     </div>
   </div>
 
+<style>
+    :root {
+      --accent-color: <?php echo esc_attr(get_field('accent_color', 'options') ?: '#f58220'); ?>;
+    }
+  </style>
+
 </footer>

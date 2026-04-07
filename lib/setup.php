@@ -247,8 +247,6 @@ function assets() {
   wp_enqueue_style('sage/css', Assets\asset_path('/dist/styles/main.min.css'), false, null); // Compiled theme styles
   wp_enqueue_style('default-css', get_stylesheet_uri() , false, null); // WordPress default stylesheet (style.css)
 
-    wp_enqueue_style('accent-color-override', get_stylesheet_directory_uri().'/accent-color.css' , false, null); // WordPress default stylesheet (style.css)
-
   /**
    * Font Awesome 7 Kit
    * Loads custom Font Awesome kit with standard and pro icons

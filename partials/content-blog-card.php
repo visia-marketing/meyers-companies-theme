@@ -21,7 +21,7 @@ if( array_key_exists( 'post', $args ) ){
             }
             echo wp_kses_post($excerpt);
         ?></p>
-        <a class="uk-button uk-button-arrow uk-button-text" href="<?php echo esc_url(get_the_permalink($id)); ?>">View Product</a>
+        <a class="uk-button uk-button-arrow uk-button-text" href="<?php echo esc_url(get_the_permalink($id)); ?>">Read more</a>
     </div>
 
 </div>
