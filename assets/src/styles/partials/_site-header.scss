@@ -437,12 +437,12 @@ $top-header-link-color: $top-header-link-color;
 
 
 
-  > ul.mobile-navigation {
+  & ul.mobile-navigation {
     list-style: none;
     padding: 0;
     margin: 0;
 
-    > li {
+    & > li {
       border-bottom: 1px solid rgba(#fff, 0.2);
       list-style: none;
 
@@ -454,6 +454,32 @@ $top-header-link-color: $top-header-link-color;
         justify-content: space-between;
         align-items: center;
         text-decoration: none;
+      }
+
+      &:last-child {
+        border-bottom: none;
+        display: flex;
+        justify-content: stretch;
+
+        & > a{
+          background-color: $secondary;
+          border-radius: 2rem;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          margin: 16px 0;
+          text-transform: uppercase;
+          font-family: $acumin;
+          font-size: 0.975rem;
+          font-weight: 700;
+          padding: 0.65rem 2rem;
+          text-transform: uppercase;
+          text-align: center;
+          line-height: 1.5;
+          display: inline-flex;
+          letter-spacing: 0.04rem;
+          flex-grow: 1;
+        }
       }
 
       & .mobile-submenu-toggle {
