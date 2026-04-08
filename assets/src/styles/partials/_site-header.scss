@@ -419,6 +419,7 @@ $top-header-link-color: $top-header-link-color;
 .uk-offcanvas-bar {
   background-color: $primary !important;
   color: #fff;
+  padding: 32px 20px;
 
   .offcanvas-logo {
     display: block;
@@ -432,8 +433,13 @@ $top-header-link-color: $top-header-link-color;
   }
 
   .uk-offcanvas-close {
-    color: #fff;
-  }
+    color: $white;
+    position: absolute;
+    z-index: 1000;
+    top: 16px !important;
+    right: 16px !important;
+    padding: 10px;
+}
 
 
 
