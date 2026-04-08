@@ -14244,6 +14244,7 @@ p:has(.uk-button + .uk-button) {
 .uk-offcanvas-bar {
   background-color: #002F86 !important;
   color: #fff;
+  padding: 32px 20px;
 }
 .uk-offcanvas-bar .offcanvas-logo {
   display: block;
@@ -14255,7 +14256,12 @@ p:has(.uk-button + .uk-button) {
   height: auto;
 }
 .uk-offcanvas-bar .uk-offcanvas-close {
-  color: #fff;
+  color: #ffffff;
+  position: absolute;
+  z-index: 1000;
+  top: 16px !important;
+  right: 16px !important;
+  padding: 10px;
 }
 .uk-offcanvas-bar ul.mobile-navigation {
   list-style: none;
