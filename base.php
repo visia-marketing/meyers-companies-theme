@@ -22,7 +22,7 @@ use Roots\Sage\Wrapper;
 
     <!-- This is the off-canvas -->
     <div id="uk-off-canvas" uk-offcanvas="mode: push">
-        <div class="uk-offcanvas-bar">
+        <div class="uk-offcanvas-bar uk-flex uk-flex-column">
 
             <button class="uk-offcanvas-close" type="button" uk-close></button>
 
@@ -50,7 +50,7 @@ use Roots\Sage\Wrapper;
 
                 var toggle = document.createElement('button');
                 toggle.className = 'mobile-submenu-toggle';
-                toggle.innerHTML = '<i class="fa-solid fa-chevron-down"></i>';
+                toggle.innerHTML = '<div class="icon-container"><span uk-icon="icon: plus;"></span> <span uk-icon="icon: minus;"></span></div>';
                 toggle.setAttribute('aria-expanded', 'false');
 
                 li.insertBefore(row, link);

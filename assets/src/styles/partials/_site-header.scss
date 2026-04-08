@@ -446,7 +446,7 @@ $top-header-link-color: $top-header-link-color;
       border-bottom: 1px solid rgba(#fff, 0.2);
       list-style: none;
 
-      > a {
+      & a {
         color: #fff;
         font-weight: 600;
         padding: 16px 0;
@@ -456,7 +456,7 @@ $top-header-link-color: $top-header-link-color;
         text-decoration: none;
       }
 
-      > .mobile-submenu-toggle {
+      & .mobile-submenu-toggle {
         background: none;
         border: none;
         color: #fff;
@@ -466,9 +466,22 @@ $top-header-link-color: $top-header-link-color;
         line-height: 1;
         opacity: 0.7;
 
+        & span:last-child{
+            display: none;
+        }
+
         &.is-open {
           opacity: 1;
-          i { transform: rotate(180deg); }
+
+          & span:first-child{
+            display: none;
+          }
+          & span:last-child{
+            display: inline-block;
+          }
+
+          
+
         }
 
         i { transition: transform 0.2s ease; }
@@ -489,12 +502,18 @@ $top-header-link-color: $top-header-link-color;
         padding: 0 0 12px 1rem;
         margin: 0;
         list-style: none;
-        border-left: 2px solid rgba(#fff, 0.4);
+        //border-left: 2px solid rgba(#fff, 0.4);
 
-        > li {
+        & li {
           list-style: none;
 
-          > a {
+          & .submenu{
+            padding-left: 0.75rem;
+            margin-left: 0.25rem;
+            border-left: 1px solid rgba( #fff, 0.2);
+          }
+
+          & a {
             color: rgba(#fff, 0.85);
             font-size: 14px;
             padding: 6px 0;
@@ -515,7 +534,7 @@ $top-header-link-color: $top-header-link-color;
   }
 
   .off-canvas-search {
-    margin-top: 60px;
+    margin-top: auto;
     padding: 4px 0;
 
     .search-form {
@@ -523,6 +542,7 @@ $top-header-link-color: $top-header-link-color;
       align-items: center;
       justify-content: space-between;
       gap: 2px;
+      margin-top: 2rem;
 
       label {
         display: flex;
@@ -544,6 +564,8 @@ $top-header-link-color: $top-header-link-color;
           height: 32px;
           margin-bottom: 0;
           position: relative;
+          width: 100%;
+          padding-left: 1rem;
 
           @include breakpoint(medium) {
             font-size: 13px;
@@ -554,19 +576,33 @@ $top-header-link-color: $top-header-link-color;
           &:focus { background-color: #fff; }
         }
 
+        & + button{
+
+          background-color: $secondary;
+          border: none;
+          padding: 0;
+          line-height:24px;
+          color: #fff;
+          padding: 0.5rem !important;
+          border-radius: 5px;
+
+          & i{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+        }
+
+
+
       }
 
-      .uk-button {
-        background-color: $primary;
-        border: none;
-        padding: 0;
-        line-height: 32px;
-        color: #fff;
 
-        i { margin: 0 9px; }
-      }
 
     }
+
+
 
   }
 
