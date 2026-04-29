@@ -21,7 +21,7 @@
                 "3": "3",
                 "4": "4"
             },
-            "default_value": false,
+            "default_value": 4,
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
@@ -54,5 +54,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1777472380
+    "modified": 1777473218
 }
