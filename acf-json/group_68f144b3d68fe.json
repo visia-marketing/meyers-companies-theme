@@ -327,6 +327,38 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_69f26044bf552": {
+                    "key": "layout_69f26044bf552",
+                    "name": "section_product_intro",
+                    "label": "Product Intro",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_69f26052bf555",
+                            "label": "Product Intro",
+                            "name": "product_intro",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_69b2c3d4e5f01"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_69a87b90954f4": {
                     "key": "layout_69a87b90954f4",
                     "name": "section_product_grid",
@@ -381,6 +413,38 @@
                             },
                             "clone": [
                                 "group_69a8bb4cd5ee3"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_69d3e21a89eab": {
+                    "key": "layout_69d3e21a89eab",
+                    "name": "section_post_grid",
+                    "label": "Blog Grid",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_69d3e2eea8b32",
+                            "label": "Blog Post Cards Grid",
+                            "name": "blog_post_grid",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_69d3dde4a47d2"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -482,5 +546,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1777472415
+    "modified": 1777492076
 }
