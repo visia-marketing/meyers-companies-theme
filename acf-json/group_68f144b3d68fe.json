@@ -135,38 +135,6 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_6722779604col": {
-                    "key": "layout_6722779604col",
-                    "name": "section_four_column",
-                    "label": "Four Column",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_6722779604c10",
-                            "label": "Four Column",
-                            "name": "four_column",
-                            "aria-label": "",
-                            "type": "clone",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "clone": [
-                                "group_6722779604col"
-                            ],
-                            "display": "seamless",
-                            "layout": "block",
-                            "prefix_label": 0,
-                            "prefix_name": 0
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
                 "layout_68f147bf15582": {
                     "key": "layout_68f147bf15582",
                     "name": "section_cards",
@@ -423,14 +391,46 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_691f88df2536e": {
-                    "key": "layout_691f88df2536e",
+                "layout_69d3e21a89eab": {
+                    "key": "layout_69d3e21a89eab",
+                    "name": "section_post_grid",
+                    "label": "Blog Grid",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_69d3e2eea8b32",
+                            "label": "Blog Post Cards Grid",
+                            "name": "blog_post_grid",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_69d3dde4a47d2"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_69d4081700135": {
+                    "key": "layout_69d4081700135",
                     "name": "section_download_grid",
                     "label": "Download Grid",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_691f88df_clone",
+                            "key": "field_69d4081f00138",
                             "label": "Download Grid",
                             "name": "download_grid",
                             "aria-label": "",
@@ -455,16 +455,16 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_69b2c3d4e5f04": {
-                    "key": "layout_69b2c3d4e5f04",
-                    "name": "section_product_intro",
-                    "label": "Product Intro",
+                "layout_69f2138585452": {
+                    "key": "layout_69f2138585452",
+                    "name": "section_post_grid",
+                    "label": "Post Grid",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_69b2c3d4e5f05",
-                            "label": "Product Intro",
-                            "name": "product_intro",
+                            "key": "field_69f2138e85455",
+                            "label": "Post Grid",
+                            "name": "post_grid",
                             "aria-label": "",
                             "type": "clone",
                             "instructions": "",
@@ -476,7 +476,7 @@
                                 "id": ""
                             },
                             "clone": [
-                                "group_69b2c3d4e5f01"
+                                "group_69f21335223b4"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -512,5 +512,7 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1774300000
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1777472415
 }
