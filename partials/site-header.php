@@ -18,7 +18,7 @@
 
 <header class="main-header">
 	<div class="uk-container uk-container-xlarge uk-flex uk-flex-middle">
-    <div class="uk-width-1-5@m">
+    <div class="uk-width-3-4 uk-width-1-5@m">
       <div class="main-logo">
         <a href="<?= esc_url(home_url('/')); ?>"><img src="<?php echo esc_url(get_field('main_logo', 'options'));?>" alt="<?php bloginfo('name'); ?>" loading="lazy"></a>
       </div>

@@ -7,6 +7,8 @@
     "advanced_configuration": true,
     "import_source": "",
     "import_date": "",
+    "allow_ai_access": false,
+    "ai_description": "",
     "labels": {
         "name": "Elkhart Products",
         "singular_name": "Product",
@@ -67,10 +69,10 @@
     "supports": [
         "title",
         "editor",
-        "excerpt",
-        "page-attributes",
         "thumbnail",
-        "custom-fields"
+        "custom-fields",
+        "excerpt",
+        "page-attributes"
     ],
     "taxonomies": "",
     "has_archive": false,
@@ -78,7 +80,7 @@
     "rewrite": {
         "permalink_rewrite": "custom_permalink",
         "slug": "products",
-        "with_front": "1",
+        "with_front": "0",
         "feeds": "0",
         "pages": "1"
     },
@@ -88,5 +90,5 @@
     "delete_with_user": false,
     "register_meta_box_cb": "",
     "enter_title_here": "",
-    "modified": 1772653136
+    "modified": 1775582069
 }
