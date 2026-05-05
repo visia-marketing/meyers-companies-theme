@@ -49,9 +49,11 @@ use Roots\Sage\Wrapper;
                 row.className = 'mobile-nav-row';
 
                 var toggle = document.createElement('button');
+                toggle.type = 'button';
                 toggle.className = 'mobile-submenu-toggle';
-                toggle.innerHTML = '<div class="icon-container"><span uk-icon="icon: plus;"></span> <span uk-icon="icon: minus;"></span></div>';
+                toggle.innerHTML = '<div class="icon-container" aria-hidden="true"><span uk-icon="icon: plus;"></span> <span uk-icon="icon: minus;"></span></div>';
                 toggle.setAttribute('aria-expanded', 'false');
+                toggle.setAttribute('aria-label', 'Toggle ' + (link ? link.textContent.trim() : '') + ' submenu');
 
                 li.insertBefore(row, link);
                 row.appendChild(link);
@@ -71,9 +73,9 @@ use Roots\Sage\Wrapper;
               <form role="search" method="get" class="search-form" action="<?= esc_url(site_url()); ?>">
                 <label>
                   <span class="screen-reader-text">Search</span>
-                  <input type="search" class="search-field" id="search-field" placeholder="Search…" value="" name="s">
+                  <input type="search" class="search-field" id="search-field-mobile" placeholder="Search…" value="" name="s">
                 </label>
-                <button class="uk-button"> <i class="fa-solid fa-magnifying-glass"></i></button>
+                <button type="submit" class="uk-button" aria-label="Search"> <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></button>
               </form>
             </div>
 
@@ -83,14 +85,16 @@ use Roots\Sage\Wrapper;
 
 
     <div class="off-canvas-content" data-off-canvas-content>
-    
+
+      <a class="screen-reader-text skip-link" href="#main">Skip to main content</a>
+
       <?php do_action('get_header'); ?>
-        
+
       <?php get_template_part('partials/site-header'); ?>
 
-      <div class="wrap" role="document">
-        <main class="main">
-          
+      <div class="wrap">
+        <main id="main" class="main" tabindex="-1">
+
           <?php include Wrapper\template_path(); ?>
 
         </main><!-- /.main -->

@@ -4,8 +4,7 @@
     <div class="uk-container">
       <div class="uk-width-1-1">
         
-        <br>
-        <p><br><?php _e( 'Search Results Found For', 'locale' ); ?>: "<?php the_search_query(); ?>" </p>
+        <h1><?php _e( 'Search Results Found For', 'locale' ); ?>: &ldquo;<?php the_search_query(); ?>&rdquo;</h1>
 
         <?php if ( have_posts() ) { ?>
 
@@ -41,7 +40,7 @@
                   <h2><a href="<?php echo esc_url(get_permalink()); ?>"><?php echo esc_html($title); ?></a></h2>
                   <span class="search-permalink"><?php the_permalink(); ?></span>
                   <p><?php echo wp_kses_post($excerpt); ?></p>
-                  <a href="<?php echo esc_url(get_the_permalink()); ?>" class="read-more">Read More <i class="fa-solid fa-arrow-right-long"></i></a>
+                  <a href="<?php echo esc_url(get_the_permalink()); ?>" class="read-more">Read More <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i></a>
                 </div>
               </div>      
 

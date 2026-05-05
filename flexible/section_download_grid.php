@@ -17,12 +17,12 @@ if ($downloads) : ?>
       ?>
 
         <div class="download-item">
-          <a href="<?php echo esc_url($permalink); ?>" target="_blank" rel="noopener">
+          <a href="<?php echo esc_url($permalink); ?>" target="_blank" rel="noopener" aria-label="<?php echo esc_attr( sprintf( 'Download %s', $title ) ); ?>">
             <div class="download-thumbnail">
               <?php echo $thumbnail; ?>
             </div>
           </a>
-          <a href="<?php echo esc_url($permalink); ?>" target="_blank" rel="noopener" class="download-title"><i class="fa-sharp fa-solid fa-download"></i><?php echo esc_html($title); ?></a>
+          <a href="<?php echo esc_url($permalink); ?>" target="_blank" rel="noopener" class="download-title"><i class="fa-sharp fa-solid fa-download" aria-hidden="true"></i><?php echo esc_html($title); ?></a>
         </div>
 
       <?php endforeach; ?>
