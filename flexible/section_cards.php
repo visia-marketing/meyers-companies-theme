@@ -71,9 +71,11 @@ switch ($per_row) {
 
                     <<?php if( $card_url != ''): ?>a href="<?php echo esc_url($card_url ?: '#'); ?>" <?php else:?>div<?php endif;?> class="card-body uk-card-body uk-flex uk-flex-column<?php echo ($card_style === 'primary') ? ' uk-flex-right uk-height-1-1' : ''; ?>">
 
+                        <?php if( !empty( $card['card_title'] ) ): ?>
                         <h3 class="card-title uk-card-title uk-margin-remove-top uk-margin-small-bottom">
                             <?php echo $card['card_title']; ?>
                         </h3>
+                        <?php endif; ?>
 
                         <div class="hover-panel hover-panel--<?php echo $hover ?: 0; ?>">
 
@@ -84,7 +86,7 @@ switch ($per_row) {
                             <?php endif; ?>
 
                             <?php if( $card_url != ''): ?>
-                                <span class="uk-button <?php if( strpos($card_style, 'primary') !== false ): ?> uk-button-text <?php endif; ?> uk-button-arrow uk-flex uk-flex-inline">
+                                <span class="uk-button <?php if( strpos($card_style, 'primary') !== false ): ?> uk-button-text <?php endif; ?> uk-button-arrow uk-flex uk-flex-inline" aria-hidden="true">
                                     <?php echo $card_title; ?>
                                 </span>
                             <?php endif; ?>

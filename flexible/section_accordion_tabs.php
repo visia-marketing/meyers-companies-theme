@@ -37,8 +37,8 @@
                 <?php while( have_rows('accordion') ): the_row(); ?>
                   <li class="accordion-item">
                     <a class="uk-accordion-title accordion-topic" href>
-                      <h4><?php echo esc_html(get_sub_field('heading')); ?></h4>
-                      <i class="fa-solid fa-chevron-right"></i>
+                      <h3><?php echo esc_html(get_sub_field('heading')); ?></h3>
+                      <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
                     </a>
                     <div class="uk-accordion-content accordion-response"><?php echo get_sub_field('content'); ?></div>
                   </li>
