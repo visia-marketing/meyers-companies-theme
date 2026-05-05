@@ -3,9 +3,49 @@
   text-align: center;
 }
 
-// Remove focus outline
-:focus {
-  outline: none;
+// Visible focus indicator for keyboard users (WCAG 2.4.7)
+:focus-visible {
+  outline: 2px solid $primary;
+  outline-offset: 2px;
+}
+
+// Visually hidden but accessible to screen readers
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+
+  &:focus {
+    background-color: #fff;
+    clip: auto;
+    clip-path: none;
+    color: $primary;
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    height: auto;
+    left: 1rem;
+    line-height: normal;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    top: 1rem;
+    width: auto;
+    z-index: 100000;
+  }
+}
+
+// In-content paragraph links: underline so they're visually distinct (WCAG 1.4.1)
+.content p a:not(.uk-button):not(.button),
+.fc-section-columns p a:not(.uk-button):not(.button),
+.page-content p a:not(.uk-button):not(.button) {
+  text-decoration: underline;
 }
 
 // anchor transitions

@@ -1,3 +1,5 @@
+<header class="main-header">
+
 <?php if (has_nav_menu('top_navigation')) : ?>
 <div class="top-header">
 	<div class="uk-container uk-container-xlarge">
@@ -7,16 +9,17 @@
           <span class="top-header-text"><?php echo esc_html($top_header_text); ?></span>
         <?php endif; ?>
         <div class="top-header-search show-for-medium uk-margin-auto-left"><?php get_template_part('searchform'); ?></div>
-        <?php
-          wp_nav_menu(['theme_location' => 'top_navigation', 'depth' => 1, 'menu_class' => 'top-header-navigation top-header-navigation-right']); 
-        ?>
+        <nav aria-label="Utility">
+          <?php
+            wp_nav_menu(['theme_location' => 'top_navigation', 'depth' => 1, 'menu_class' => 'top-header-navigation top-header-navigation-right']);
+          ?>
+        </nav>
       </div>
 		</div>
 	</div>
 </div>
 <?php endif; ?>
 
-<header class="main-header">
 	<div class="uk-container uk-container-xlarge uk-flex uk-flex-middle">
     <div class="uk-width-3-4 uk-width-1-5@m">
       <div class="main-logo">
@@ -24,7 +27,7 @@
       </div>
     </div>
     <div class="uk-width-expand uk-flex uk-flex-right uk-flex-middle hide-for-medium">
-      <button class="menu-icon" type="button" uk-toggle="target: #uk-off-canvas"></button>
+      <button class="menu-icon" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="uk-off-canvas" uk-toggle="target: #uk-off-canvas"></button>
 		</div>
     <div class="uk-width-expand@m show-for-medium">
       <div class="primary-navigation-wrapper">

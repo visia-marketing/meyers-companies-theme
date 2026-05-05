@@ -19,7 +19,7 @@ $accordion = $fields;
 
       <?php foreach ($accordion as $item ): ?>
         <li class="uk-margin-remove-top">
-          <a class="uk-accordion-title uk-flex uk-flex-middle uk-flex-between" href><h4 class="uk-margin-top uk-margin-bottom"><?php echo esc_html($item['heading']); ?></h4> <span uk-icon="icon: chevron-down; ratio: 1.5"></span></a>
+          <a class="uk-accordion-title uk-flex uk-flex-middle uk-flex-between" href><h3 class="uk-margin-top uk-margin-bottom"><?php echo esc_html($item['heading']); ?></h3> <span uk-icon="icon: chevron-down; ratio: 1.5"></span></a>
           <div class="uk-accordion-content uk-margin-medium-bottom"><?php echo wp_kses_post($item['content']); ?></div>
         </li>
       <?php endforeach; ?>

@@ -6,6 +6,8 @@
     <div class="uk-container">
       <div class="uk-width-1-1">
 
+      <h1><?php _e('Page Not Found', 'visia_starter_theme'); ?></h1>
+
       <div class="uk-alert uk-alert-warning">
         <?php _e('Sorry, but the page you were trying to view does not exist.', 'visia_starter_theme'); ?>
       </div>

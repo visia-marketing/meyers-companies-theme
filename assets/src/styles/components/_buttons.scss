@@ -56,7 +56,8 @@
       }
 
       &:focus-visible {
-          outline: none;
+          outline: 2px solid $primary;
+          outline-offset: 2px;
       }
 
     &.uk-button-large{
