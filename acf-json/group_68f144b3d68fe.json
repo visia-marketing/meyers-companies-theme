@@ -455,38 +455,6 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_69d3e21a89eab": {
-                    "key": "layout_69d3e21a89eab",
-                    "name": "section_post_grid",
-                    "label": "Blog Grid",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_69d3e2eea8b32",
-                            "label": "Blog Post Cards Grid",
-                            "name": "blog_post_grid",
-                            "aria-label": "",
-                            "type": "clone",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "clone": [
-                                "group_69d3dde4a47d2"
-                            ],
-                            "display": "seamless",
-                            "layout": "block",
-                            "prefix_label": 0,
-                            "prefix_name": 0
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
                 "layout_69d4081700135": {
                     "key": "layout_69d4081700135",
                     "name": "section_download_grid",
@@ -578,5 +546,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1778097767
+    "modified": 1778099537
 }
