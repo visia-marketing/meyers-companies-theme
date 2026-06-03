@@ -14027,9 +14027,7 @@ p:has(.uk-button + .uk-button) {
     align-items: center;
     text-transform: uppercase;
     position: relative;
-    padding: 10px 0;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    padding: 15px 0;
   }
   .main-header .primary-navigation-wrapper .primary-navigation > li > a {
     color: #002F86;
@@ -14066,18 +14064,13 @@ p:has(.uk-button + .uk-button) {
   }
   .main-header .primary-navigation-wrapper .primary-navigation > li.active:after {
     content: "";
-    position: absolute;
-    bottom: 0px;
-    height: 4px;
     width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
     background-color: var(--accent-color);
   }
-  .main-header .primary-navigation-wrapper .primary-navigation > li:after {
+  .main-header .primary-navigation-wrapper .primary-navigation > li:not(:last-child):after {
     content: "";
     position: absolute;
-    bottom: 0px;
+    bottom: -5px;
     height: 4px;
     width: 0;
     left: 50%;
@@ -14181,6 +14174,7 @@ p:has(.uk-button + .uk-button) {
 .top-header {
   background-color: #002F86;
   color: #ffffff;
+  padding: 6px 0;
 }
 .top-header .top-header-flex {
   display: flex;
@@ -14864,7 +14858,7 @@ p:has(.g-section-subtitle) + h3 {
 }
 
 .fc-section-dark a.uk-button-text {
-  color: var(--accent-color) !important;
+  color: #002F86 !important;
 }
 .fc-section-dark a.uk-button-text:after {
   color: var(--accent-color) !important;
