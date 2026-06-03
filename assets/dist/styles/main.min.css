@@ -14082,7 +14082,7 @@ p:has(.uk-button + .uk-button) {
     width: 0;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #c8c8c8;
+    background-color: #002F86;
     transition: width 0.3s ease;
   }
   .main-header .primary-navigation-wrapper .primary-navigation > li:hover:after {
