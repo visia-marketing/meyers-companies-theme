@@ -290,7 +290,7 @@ $top-header-link-color: $top-header-link-color;
 .top-header {
   background-color: $top-header-background;
   color: $top-header-color;
-  // border-top: 4px solid $secondary;
+  border-top: 4px solid $secondary;
   padding: 6px 0;
 
   .top-header-flex {
