@@ -118,7 +118,7 @@ p:has(.g-section-subtitle) + h3{
 
 .fc-section-dark{
   & a.uk-button-text{
-    color: $secondary !important;
+    color: $primary !important;
 
     &:after{
       color: $secondary !important;
