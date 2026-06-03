@@ -64,9 +64,7 @@ $top-header-link-color: $top-header-link-color;
         align-items: center;
         text-transform: uppercase;
         position: relative;
-        padding: 10px 0;
-        margin-top: 10px;
-        margin-bottom: 10px;
+        padding: 15px 0;
 
         @include breakpoint(medium) {
           //display: inline-block;
@@ -121,12 +119,7 @@ $top-header-link-color: $top-header-link-color;
 
           &:after {
             content: "";
-            position: absolute;
-            bottom: 0px;
-            height: 4px;
             width: 100%;
-            left: 50%;
-            transform: translateX(-50%);
             background-color: var(--accent-color);
 
           } 
@@ -134,10 +127,10 @@ $top-header-link-color: $top-header-link-color;
 
         }
 
-        &:after {
+        &:not(:last-child):after {
           content: "";
           position: absolute;
-          bottom: 0px;
+          bottom: -5px;
           height: 4px;
           width: 0;
           left: 50%;
@@ -297,6 +290,8 @@ $top-header-link-color: $top-header-link-color;
 .top-header {
   background-color: $top-header-background;
   color: $top-header-color;
+  // border-top: 4px solid $secondary;
+  padding: 6px 0;
 
   .top-header-flex {
     display: flex;
