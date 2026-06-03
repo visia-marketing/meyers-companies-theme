@@ -14869,6 +14869,9 @@ p:has(.g-section-subtitle) + h3 {
 .fc-section-dark a.uk-button-text:after {
   color: var(--accent-color) !important;
 }
+.fc-section-dark .g-section-subtitle {
+  color: #ffffff;
+}
 
 .wc-card {
   background-color: #fff;
