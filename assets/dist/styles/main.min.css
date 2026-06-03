@@ -13440,22 +13440,24 @@ p:has(.uk-button + .uk-button) {
 }
 
 .gform_wrapper.gravity-theme .gform_button {
-  background-color: var(--accent-color);
   border-radius: 2rem;
   border: none;
-  color: #ffffff;
-  cursor: pointer;
-  font-family: "acumin-pro", sans-serif;
-  font-size: 0.975rem;
+  font-size: 0.925rem;
   font-weight: 700;
-  letter-spacing: 0.04rem;
-  line-height: 1.5;
-  padding: 0.65rem 2rem;
+  padding: 0.55rem 1.75rem;
   text-transform: uppercase;
-  transition: transform 160ms ease, background-color 160ms ease;
+  position: relative;
+  display: flex;
+  gap: 0.5rem;
+  background-color: #ffffff;
+  border: 2px solid var(--accent-color);
+  color: #273b84;
+  transition: transform 160ms ease, background-color 160ms ease, color 160ms ease;
+  white-space: nowrap;
+  cursor: pointer;
 }
 .gform_wrapper.gravity-theme .gform_button:hover {
-  color: #ffffff;
+  color: #002F86;
   transform: translateY(-2px);
 }
 .gform_wrapper.gravity-theme .gform_button:active {
@@ -14174,6 +14176,7 @@ p:has(.uk-button + .uk-button) {
 .top-header {
   background-color: #002F86;
   color: #ffffff;
+  border-top: 4px solid var(--accent-color);
   padding: 6px 0;
 }
 .top-header .top-header-flex {
