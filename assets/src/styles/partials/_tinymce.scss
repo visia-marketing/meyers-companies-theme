@@ -124,4 +124,8 @@ p:has(.g-section-subtitle) + h3{
       color: $secondary !important;
     }
   }
+
+  .g-section-subtitle{
+    color: $white;
+  }
 }
