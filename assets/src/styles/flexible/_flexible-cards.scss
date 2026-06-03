@@ -62,7 +62,7 @@
     h3, p { color: $white; }
 
     span {
-      color: $secondary !important;
+      color: $white !important;
       &:after { color: $secondary; }
     }
 
@@ -170,7 +170,7 @@
         background: none !important;
         border: none !important;
         padding: 0 !important;
-        color: $secondary !important;
+        color: $primary !important;
         font-size: 0.875rem;
         font-weight: 700;
         text-transform: uppercase;

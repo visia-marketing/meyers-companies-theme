@@ -64,7 +64,9 @@ $top-header-link-color: $top-header-link-color;
         align-items: center;
         text-transform: uppercase;
         position: relative;
-        padding: 20px 0;
+        padding: 10px 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
 
         @include breakpoint(medium) {
           //display: inline-block;
@@ -81,7 +83,7 @@ $top-header-link-color: $top-header-link-color;
 
           &:hover {
             background-color: transparent;
-            color: $secondary;
+            color: $primary;
           }
 
         }
@@ -109,12 +111,47 @@ $top-header-link-color: $top-header-link-color;
 
         &.active {
 
+          position: relative;
+
           > a {
             background-color: transparent;
-            color: $secondary;
+            color: $primary;
           }
 
+
+          &:after {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            height: 4px;
+            width: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--accent-color);
+
+          } 
+
+
         }
+
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: 0px;
+          height: 4px;
+          width: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: $primary;
+          transition: width 0.3s ease;
+
+        }
+
+        &:hover:after {
+          width: 100%;
+        }
+
+        
 
         ul.submenu {
           box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
@@ -170,7 +207,7 @@ $top-header-link-color: $top-header-link-color;
 
             &:hover > a,
             &:focus > a {
-              color: $secondary;
+              color: $primary;
               text-decoration: none;
             }
 
@@ -192,11 +229,8 @@ $top-header-link-color: $top-header-link-color;
         }
 
         &:last-child a {
-          background-color: $secondary;
           border-radius: 2rem;
           border: none;
-          color: $white;
-          //font-family: $condensed;
           font-size: .925rem;
           font-weight: 700;
           padding: 0.55rem 1.75rem;
@@ -204,6 +238,10 @@ $top-header-link-color: $top-header-link-color;
           position: relative;
           display: flex;
           gap: 0.5rem;
+
+          background-color: #ffffff;
+          border: 2px solid var(--accent-color);
+          color: #273b84;
 
           transition:
           transform 160ms ease,
@@ -231,7 +269,7 @@ $top-header-link-color: $top-header-link-color;
 
 
           &:after {
-            color: #fff;
+            color: var(--accent-color);
             content: "\f178";
             font-family: $fontawesome;
             font-weight: 400;
@@ -385,6 +423,10 @@ $top-header-link-color: $top-header-link-color;
           top: 50%;
           margin-top: -8px;
         }
+      }
+
+      & .fa-solid {
+        color: var(--accent-color);
       }
 
       &.top-menu-fa-email::before {

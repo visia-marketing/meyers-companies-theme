@@ -37,7 +37,7 @@ body#tinymce,
 .g {
 
   &-section-subtitle {
-    color: $secondary;
+    color: $primary;
     display: block;
     font-family: $sans;
     font-size: 0.975rem;
@@ -47,12 +47,28 @@ body#tinymce,
     margin-bottom: 0px;
     text-transform: uppercase;
 
+    position: relative;
+    margin-bottom: 50px;
+
     @include breakpoint(medium) {
       font-size: 1.125rem;
       letter-spacing: 3.5px;
     }
 
+    &:after{
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      height: 4px;
+      width: 46px;
+      left: 0;
+      background-color: var(--accent-color);
+    }
+
+    
+
   }
+
 
   &-section-title {
     color: $black;
@@ -85,6 +101,13 @@ body#tinymce,
     color: $secondary;
   }
 
+}
+
+
+[style*="text-align: center"] .g-section-subtitle:after,
+[style*="text-align:center"] .g-section-subtitle:after {
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 p:has(.g-section-subtitle) + h1,
