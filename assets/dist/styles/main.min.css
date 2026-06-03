@@ -14812,7 +14812,7 @@ body#tinymce span.download-link::before,
 .g-section-subtitle:after {
   content: "";
   position: absolute;
-  bottom: -20px;
+  bottom: -26px;
   height: 4px;
   width: 46px;
   left: 0;
