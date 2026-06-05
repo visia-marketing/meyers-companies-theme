@@ -680,7 +680,8 @@
                             "preview_size": "medium",
                             "parent_repeater": "field_69fc_callouts_repeater"
                         }
-                    ]
+                    ],
+                    "parent_repeater": "field_69fc_callouts_repeater"
                 }
             ]
         },
@@ -786,6 +787,27 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_6a2301e583597",
+            "label": "Header Scripts",
+            "name": "header_scripts",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": 12,
+            "placeholder": "",
+            "new_lines": ""
         }
     ],
     "location": [
@@ -807,5 +829,7 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1774810647
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1780679155
 }
