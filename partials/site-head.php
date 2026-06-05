@@ -24,4 +24,12 @@
     <!-- End Google Tag Manager -->
   <?php endif; ?>
 
+  <?php if( get_field('header_scripts', 'options') ): ?>
+    <?php 
+    echo '<!-- Header Scripts -->';
+      $header_scripts =get_field('header_scripts', 'options');
+      echo $header_scripts;
+       ?>
+  <?php endif; ?>
+
 </head>
