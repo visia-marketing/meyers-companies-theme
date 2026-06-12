@@ -21,8 +21,9 @@ add_action('send_headers', 'add_security_headers');
 function add_security_headers() {
     $nonce = base64_encode(random_bytes(16)); // Generate a unique nonce for each request
     header("Cache-Control: no-cache, must-revalidate");
-    header("Content-Security-Policy: default-src 'self' https:; script-src 'self' 'unsafe-inline' https: http:;style-src 'self' https: 'unsafe-inline';font-src 'self' https: data:;img-src 'self' https: data:;frame-src https:;connect-src 'self' https:;object-src 'none';base-uri 'self';form-action 'self';");
-    header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload");
+    // header("Content-Security-Policy: default-src 'self' https:; script-src 'self' 'unsafe-inline' https: http:;style-src 'self' https: 'unsafe-inline';font-src 'self' https: data:;img-src 'self' https: data:;frame-src https:;connect-src 'self' https:;object-src 'none';base-uri 'self';form-action 'self';");
+	header("Content-Security-Policy: default-src 'self' https:; script-src 'self' 'unsafe-inline' https: http:;style-src 'self' https: 'unsafe-inline';font-src 'self' https: data:;img-src 'self' https: data:;frame-src https:;connect-src 'self' https:;object-src 'none';base-uri 'self';form-action 'self' https://forms.hsforms.com https://*.hsforms.com;");
+	header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload");
     header("X-Content-Type-Options: nosniff");
     header("X-Frame-Options: SAMEORIGIN");
     header("X-XSS-Protection: 1; mode=block");
