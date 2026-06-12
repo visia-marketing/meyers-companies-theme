@@ -1,23 +1,11 @@
 <?php while (have_posts()) : the_post(); ?>
-  
-  <article class="page page-<?php global $post; echo esc_attr($post->post_name); ?>">
 
+  <article class="page page-flexible page-flexible-<?php echo get_post_type( $post->ID ); ?> page-<?php global $post; echo $post->post_name; ?>" id="overview">
     
-    <?php get_template_part('partials/page-header'); ?>
+    <?php get_template_part('templates/page-header'); ?>
 
-		
-    <section class="page-content-wrapper">
-      <div class="uk-container">
-        <div class="uk-width-1-1">
-					
-          <div class="page-content">
-            <?php the_content(); ?>
-          </div>
-          
-        </div>
-      </div>
-    </section>
+    <?php get_flexible_content(); ?>
 
   </article>
-  
+
 <?php endwhile; ?>
