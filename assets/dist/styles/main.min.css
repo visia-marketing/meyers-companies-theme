@@ -14064,15 +14064,15 @@ p:has(.uk-button + .uk-button) {
     background-color: transparent;
     color: #002F86;
   }
-  .main-header .primary-navigation-wrapper .primary-navigation > li.active:after {
+  .main-header .primary-navigation-wrapper .primary-navigation > li.active:not(:last-child):after {
     content: "";
     width: 100%;
-    background-color: var(--accent-color);
+    background-color: #002F86;
   }
   .main-header .primary-navigation-wrapper .primary-navigation > li:not(:last-child):after {
     content: "";
     position: absolute;
-    bottom: -5px;
+    bottom: -1px;
     height: 4px;
     width: 0;
     left: 50%;
