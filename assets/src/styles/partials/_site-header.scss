@@ -117,11 +117,10 @@ $top-header-link-color: $top-header-link-color;
           }
 
 
-          &:after {
+          &:not(:last-child):after {
             content: "";
             width: 100%;
-            background-color: var(--accent-color);
-
+            background-color: $primary;
           } 
 
 
@@ -130,14 +129,13 @@ $top-header-link-color: $top-header-link-color;
         &:not(:last-child):after {
           content: "";
           position: absolute;
-          bottom: -5px;
+          bottom: -1px;
           height: 4px;
           width: 0;
           left: 50%;
           transform: translateX(-50%);
           background-color: $primary;
           transition: width 0.3s ease;
-
         }
 
         &:hover:after {
