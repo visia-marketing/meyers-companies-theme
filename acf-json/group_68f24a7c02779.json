@@ -89,27 +89,6 @@
             "endpoint": 1
         },
         {
-            "key": "field_68f24a7c154ad",
-            "label": "Heading",
-            "name": "page_heading",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "H1",
-            "append": ""
-        },
-        {
             "key": "field_68f24b8ab8872",
             "label": "Style",
             "name": "page_header_style",
@@ -218,6 +197,13 @@
                 "operator": "==",
                 "value": "elkhart-product"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "landing-page"
+            }
         ]
     ],
     "menu_order": 1,
@@ -232,5 +218,7 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1772639294
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1783369929
 }
