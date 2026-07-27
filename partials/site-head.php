@@ -4,13 +4,13 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <script>!function(){window.semaphore=window.semaphore||[],window.ketch=function(){window.semaphore.push(arguments)};var e=document.createElement("script");e.type="text/javascript",e.src="https://global.ketchcdn.com/web/v3/config/myers_industries_inc/elkhart/boot.js",e.defer=e.async=!0,document.getElementsByTagName("head")[0].appendChild(e)}();</script>
+
   <?php $font = get_field( 'google_typekit_font_url', 'options'); ?>
   <?php if( strpos( $font, 'google' ) !== false || empty($font) ): ?>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <?php endif; ?>
-
-
 
   <?php wp_head(); ?> 
 
