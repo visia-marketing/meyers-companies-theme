@@ -20,7 +20,7 @@
 </div>
 <?php endif; ?>
 
-	<div class="uk-container uk-container-xlarge uk-flex uk-flex-middle">
+	<div class="uk-container uk-container-xlarge uk-flex uk-flex-middle uk-flex-wrap">
     <div class="uk-width-3-4 uk-width-1-5@m">
       <div class="main-logo">
         <a href="<?= esc_url(home_url('/')); ?>"><img src="<?php echo esc_url(get_field('main_logo', 'options'));?>" alt="<?php bloginfo('name'); ?>" loading="lazy"></a>
@@ -29,7 +29,7 @@
     <div class="uk-width-expand uk-flex uk-flex-right uk-flex-middle hide-for-medium">
       <button class="menu-icon" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="uk-off-canvas" uk-toggle="target: #uk-off-canvas"></button>
 		</div>
-    <div class="uk-width-expand@m show-for-medium">
+    <div class="uk-width-1-1 uk-width-expand@l show-for-medium">
       <div class="primary-navigation-wrapper">
         <?php
         if (has_nav_menu('primary_navigation')) :
