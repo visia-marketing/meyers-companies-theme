@@ -1,0 +1,102 @@
+.steps-container{
+
+    .step{
+
+        & .eyebrow-container{
+            padding: 1.5rem;
+            padding-left: 3rem;
+            background-color: $blue;
+            clip-path: polygon(0 0, calc(100% - 2rem) 0, 100% 50%, calc(100% - 2rem) 100%, 0 100%, 0% 50%);
+
+
+            @media screen and (max-width: 768px){
+                clip-path: polygon(0 0, calc(100% - 2rem) 0, 100% 50%, calc(100% - 2rem) 100%, 0 100%, 2rem 50%);
+                margin-left: -1rem;
+            }
+
+
+
+            & .g-section-subtitle{
+                color:#fff;
+                &:after{
+                    display: none !important;
+                }
+            }
+
+        }
+
+        &:not(:first-child){
+            & .eyebrow-container{
+                // padding-left: 3rem;
+                margin-left: -1rem;
+
+                clip-path: polygon(0 0, calc(100% - 2rem) 0, 100% 50%, calc(100% - 2rem) 100%, 0 100%, 2rem 50%);
+            }
+            
+        }
+
+        & .step-content{
+            padding-top: 1.5rem;
+        }
+
+        
+
+    }
+
+   
+
+
+
+}
+
+& .fc-section-dark,
+& .fc-section-image{
+
+    .steps-container{
+
+        .step{
+            & .eyebrow-container{
+                background-color: $white;
+
+                & .g-section-subtitle{
+                    color:$primary;
+                }
+
+            }
+        }
+
+    }
+
+}
+
+& .fc-section-image{
+    .steps-container{
+
+         filter: drop-shadow(0 0 1.75rem #041a42);
+
+        & .step{
+
+            & .eyebrow-container{
+                clip-path: polygon(0 0, calc(100% - 2rem) 0, 100% 50%, calc(100% - 2rem) 100%, 0 100%, 2rem 50%);
+                margin-left: -1rem;
+            }
+
+            & .step-content{
+                
+                // background-color: rgba(255,255,255,0.5);
+                // padding: 2rem;
+                // margin-right:3rem;
+                // margin-bottom: 2rem;
+
+                & p{
+                    text-shadow: 0 0 1rem #041a42;
+                }
+
+                // & h3{
+                //     color: $blue;
+                // }
+            }
+        }
+
+    }
+}
