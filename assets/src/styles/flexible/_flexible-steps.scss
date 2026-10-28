@@ -5,13 +5,15 @@
         & .eyebrow-container{
             padding: 1.5rem;
             padding-left: 3rem;
+            margin-right: -1rem;
             background-color: $blue;
             clip-path: polygon(0 0, calc(100% - 2rem) 0, 100% 50%, calc(100% - 2rem) 100%, 0 100%, 0% 50%);
 
 
-            @media screen and (max-width: 768px){
-                clip-path: polygon(0 0, calc(100% - 2rem) 0, 100% 50%, calc(100% - 2rem) 100%, 0 100%, 2rem 50%);
-                margin-left: -1rem;
+            @media screen and (max-width: 991px){
+               clip-path: polygon(0 0, calc(100% - 2rem) 0, 100% 50%, calc(100% - 2rem) 100%, 0 100%, 2rem 50%);
+                margin-left: 0rem;
+                
             }
 
 
@@ -28,15 +30,30 @@
         &:not(:first-child){
             & .eyebrow-container{
                 // padding-left: 3rem;
-                margin-left: -1rem;
-
+                margin-left: -2rem;
                 clip-path: polygon(0 0, calc(100% - 2rem) 0, 100% 50%, calc(100% - 2rem) 100%, 0 100%, 2rem 50%);
+                @media screen and (max-width: 991px){
+                    margin-left: 0 !important;
+                }
+
             }
             
         }
 
+        &:first-child{
+            & .eyebrow-container{
+                padding-left: 2rem;
+                @media screen and (max-width: 991px){
+                    padding-left: 3rem;
+                }
+            }
+        }
+
         & .step-content{
             padding-top: 1.5rem;
+            @media screen and (max-width: 991px){
+                padding-left: 3rem;
+            }
         }
 
         
@@ -76,10 +93,13 @@
 
         & .step{
 
-            & .eyebrow-container{
-                clip-path: polygon(0 0, calc(100% - 2rem) 0, 100% 50%, calc(100% - 2rem) 100%, 0 100%, 2rem 50%);
-                margin-left: -1rem;
-            }
+            // & .eyebrow-container{
+            //     clip-path: polygon(0 0, calc(100% - 2rem) 0, 100% 50%, calc(100% - 2rem) 100%, 0 100%, 2rem 50%);
+            //     // margin-left: -1rem;
+            //     // @media screen and (max-width: 991px){
+            //     //     margin-left: 0;
+            //     // }
+            // }
 
             & .step-content{
                 
