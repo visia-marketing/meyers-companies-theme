@@ -16479,13 +16479,14 @@ body .fc-section-dark .callout-background--white h2 {
 .steps-container .step .eyebrow-container {
   padding: 1.5rem;
   padding-left: 3rem;
+  margin-right: -1rem;
   background-color: #002F86;
   clip-path: polygon(0 0, calc(100% - 2rem) 0, 100% 50%, calc(100% - 2rem) 100%, 0 100%, 0% 50%);
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .steps-container .step .eyebrow-container {
     clip-path: polygon(0 0, calc(100% - 2rem) 0, 100% 50%, calc(100% - 2rem) 100%, 0 100%, 2rem 50%);
-    margin-left: -1rem;
+    margin-left: 0rem;
   }
 }
 .steps-container .step .eyebrow-container .g-section-subtitle {
@@ -16495,11 +16496,29 @@ body .fc-section-dark .callout-background--white h2 {
   display: none !important;
 }
 .steps-container .step:not(:first-child) .eyebrow-container {
-  margin-left: -1rem;
+  margin-left: -2rem;
   clip-path: polygon(0 0, calc(100% - 2rem) 0, 100% 50%, calc(100% - 2rem) 100%, 0 100%, 2rem 50%);
+}
+@media screen and (max-width: 991px) {
+  .steps-container .step:not(:first-child) .eyebrow-container {
+    margin-left: 0 !important;
+  }
+}
+.steps-container .step:first-child .eyebrow-container {
+  padding-left: 2rem;
+}
+@media screen and (max-width: 991px) {
+  .steps-container .step:first-child .eyebrow-container {
+    padding-left: 3rem;
+  }
 }
 .steps-container .step .step-content {
   padding-top: 1.5rem;
+}
+@media screen and (max-width: 991px) {
+  .steps-container .step .step-content {
+    padding-left: 3rem;
+  }
 }
 
 & .fc-section-dark .steps-container .step .eyebrow-container,
@@ -16513,10 +16532,6 @@ body .fc-section-dark .callout-background--white h2 {
 
 & .fc-section-image .steps-container {
   filter: drop-shadow(0 0 1.75rem #041a42);
-}
-& .fc-section-image .steps-container .step .eyebrow-container {
-  clip-path: polygon(0 0, calc(100% - 2rem) 0, 100% 50%, calc(100% - 2rem) 100%, 0 100%, 2rem 50%);
-  margin-left: -1rem;
 }
 & .fc-section-image .steps-container .step .step-content p {
   text-shadow: 0 0 1rem #041a42;
