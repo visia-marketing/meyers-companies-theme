@@ -16478,10 +16478,11 @@ body .fc-section-dark .callout-background--white h2 {
 
 .steps-container .step .eyebrow-container {
   padding: 1.5rem;
-  padding-left: 3rem;
+  padding-left: 2rem;
   margin-right: -1rem;
   background-color: #002F86;
   clip-path: polygon(0 0, calc(100% - 2rem) 0, 100% 50%, calc(100% - 2rem) 100%, 0 100%, 0% 50%);
+  text-align: center;
 }
 @media screen and (max-width: 991px) {
   .steps-container .step .eyebrow-container {
@@ -16505,7 +16506,7 @@ body .fc-section-dark .callout-background--white h2 {
   }
 }
 .steps-container .step:first-child .eyebrow-container {
-  padding-left: 2rem;
+  padding-left: 1rem;
 }
 @media screen and (max-width: 991px) {
   .steps-container .step:first-child .eyebrow-container {
@@ -16521,20 +16522,95 @@ body .fc-section-dark .callout-background--white h2 {
   }
 }
 
-& .fc-section-dark .steps-container .step .eyebrow-container,
-& .fc-section-image .steps-container .step .eyebrow-container {
-  background-color: #ffffff;
-}
-& .fc-section-dark .steps-container .step .eyebrow-container .g-section-subtitle,
-& .fc-section-image .steps-container .step .eyebrow-container .g-section-subtitle {
-  color: #002F86;
-}
-
 & .fc-section-image .steps-container {
   filter: drop-shadow(0 0 1.75rem #041a42);
 }
 & .fc-section-image .steps-container .step .step-content p {
   text-shadow: 0 0 1rem #041a42;
+}
+
+.steps-container .step:where(:first-child:last-child) .eyebrow-container {
+  background-color: #1C4699;
+}
+
+.steps-container .step:where(:nth-child(1):nth-last-child(2)) .eyebrow-container {
+  background-color: rgb(28, 70, 153);
+}
+
+.steps-container .step:where(:nth-child(2):nth-last-child(1)) .eyebrow-container {
+  background-color: rgb(70, 114, 194);
+}
+
+.steps-container .step:where(:nth-child(1):nth-last-child(3)) .eyebrow-container {
+  background-color: rgb(28, 70, 153);
+}
+
+.steps-container .step:where(:nth-child(2):nth-last-child(2)) .eyebrow-container {
+  background-color: rgb(49, 92, 174);
+}
+
+.steps-container .step:where(:nth-child(3):nth-last-child(1)) .eyebrow-container {
+  background-color: rgb(70, 114, 194);
+}
+
+.steps-container .step:where(:nth-child(1):nth-last-child(4)) .eyebrow-container {
+  background-color: rgb(28, 70, 153);
+}
+
+.steps-container .step:where(:nth-child(2):nth-last-child(3)) .eyebrow-container {
+  background-color: rgb(42, 85, 167);
+}
+
+.steps-container .step:where(:nth-child(3):nth-last-child(2)) .eyebrow-container {
+  background-color: rgb(56, 99, 180);
+}
+
+.steps-container .step:where(:nth-child(4):nth-last-child(1)) .eyebrow-container {
+  background-color: rgb(70, 114, 194);
+}
+
+.steps-container .step:where(:nth-child(1):nth-last-child(5)) .eyebrow-container {
+  background-color: rgb(28, 70, 153);
+}
+
+.steps-container .step:where(:nth-child(2):nth-last-child(4)) .eyebrow-container {
+  background-color: rgb(39, 81, 163);
+}
+
+.steps-container .step:where(:nth-child(3):nth-last-child(3)) .eyebrow-container {
+  background-color: rgb(49, 92, 174);
+}
+
+.steps-container .step:where(:nth-child(4):nth-last-child(2)) .eyebrow-container {
+  background-color: rgb(60, 103, 184);
+}
+
+.steps-container .step:where(:nth-child(5):nth-last-child(1)) .eyebrow-container {
+  background-color: rgb(70, 114, 194);
+}
+
+.steps-container .step:where(:nth-child(1):nth-last-child(6)) .eyebrow-container {
+  background-color: rgb(28, 70, 153);
+}
+
+.steps-container .step:where(:nth-child(2):nth-last-child(5)) .eyebrow-container {
+  background-color: rgb(36, 79, 161);
+}
+
+.steps-container .step:where(:nth-child(3):nth-last-child(4)) .eyebrow-container {
+  background-color: rgb(45, 88, 169);
+}
+
+.steps-container .step:where(:nth-child(4):nth-last-child(3)) .eyebrow-container {
+  background-color: rgb(53, 96, 178);
+}
+
+.steps-container .step:where(:nth-child(5):nth-last-child(2)) .eyebrow-container {
+  background-color: rgb(62, 105, 186);
+}
+
+.steps-container .step:where(:nth-child(6):nth-last-child(1)) .eyebrow-container {
+  background-color: rgb(70, 114, 194);
 }
 
 .fc-wrapper p,

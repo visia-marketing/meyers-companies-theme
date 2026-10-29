@@ -4,10 +4,11 @@
 
         & .eyebrow-container{
             padding: 1.5rem;
-            padding-left: 3rem;
+            padding-left: 2rem;
             margin-right: -1rem;
             background-color: $blue;
             clip-path: polygon(0 0, calc(100% - 2rem) 0, 100% 50%, calc(100% - 2rem) 100%, 0 100%, 0% 50%);
+            text-align: center;
 
 
             @media screen and (max-width: 991px){
@@ -42,7 +43,7 @@
 
         &:first-child{
             & .eyebrow-container{
-                padding-left: 2rem;
+                padding-left: 1rem;
                 @media screen and (max-width: 991px){
                     padding-left: 3rem;
                 }
@@ -73,10 +74,10 @@
 
         .step{
             & .eyebrow-container{
-                background-color: $white;
+                //background-color: $white;
 
                 & .g-section-subtitle{
-                    color:$primary;
+                    //color:$primary;
                 }
 
             }
@@ -118,5 +119,25 @@
             }
         }
 
+    }
+}
+
+// STEP Grade
+// First step = $step-start, last step = $step-end, evenly mixed in between (2–6 steps).
+// :where() keeps specificity low so the dark/image section overrides still win.
+$step-start: #1C4699;
+$step-end: #4672C2;
+
+.steps-container .step:where(:first-child:last-child) .eyebrow-container{
+    background-color: $step-start;
+}
+
+@for $n from 2 through 6 {
+    @for $i from 1 through $n {
+        $c: mix($step-end, $step-start, percentage(($i - 1) / ($n - 1)));
+
+        .steps-container .step:where(:nth-child(#{$i}):nth-last-child(#{$n - $i + 1})) .eyebrow-container{
+            background-color: rgb(round(red($c)), round(green($c)), round(blue($c)));
+        }
     }
 }
