@@ -1,4 +1,12 @@
-<?php $source = get_sub_field('cta_content_source');?>
+<?php
+
+$source = get_sub_field('cta_content_source');
+
+if( !empty( $args) ){
+    $source = $args['source'];
+}
+
+?>
 <?php $cta_id = 'call-to-action-' . rand(); ?>
 <?php
 if ( $source === 'default' ){
